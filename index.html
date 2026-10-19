@@ -1,0 +1,827 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Instrumentos de investigación Muysabue</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<style>
+/* Layout: infografía plana de estilo retro sobre fondo crema. Bloque de título con panel oscuro, tres bloques numerados 01-02-03 (ciclos), banda oscura con el recorrido de la información, un panel por ciclo con numeral grande y la cadena elemento → técnica → instrumento. Diseño de un solo tema (claro) elegido a propósito. */
+:root{
+  color-scheme:light;
+  --cream:#f6ebd2; --cream2:#efdfbd; --paper:#fffaf0;
+  --ink:#2a2340; --ink2:#3a3156; --text:#2a2340; --muted:#5f5670;
+  --teal:#0f7c72; --teal-s:#d3ebe5;
+  --orange:#ef8f2a; --orange-s:#fbe2c2;
+  --magenta:#c51f6c; --magenta-s:#f6d3e2;
+  --onink:#f6ebd2; --onink-m:#bdb3cf;
+  --display:"Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --body:"Barlow", "Segoe UI", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+body{background:var(--cream);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.5}
+.wrap{max-width:1600px;margin:0 auto;padding-left:max(24px, env(safe-area-inset-left, 0px), 2.5vw);padding-right:max(24px, env(safe-area-inset-right, 0px), 2.5vw)}
+@media (max-width:600px){.wrap{padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}}
+h1,h2,h3,h4{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.05}
+p{margin:0}
+button{font:inherit;color:inherit;cursor:pointer}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--magenta);outline-offset:3px;border-radius:6px}
+.code{font-family:var(--display);font-weight:700;letter-spacing:.04em}
+.ic{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* Encabezado */
+.top .wrap{padding-block:28px 0;display:grid;grid-template-columns:1.25fr 1fr;gap:0}
+.top-l{padding:6px 32px 26px 0;display:grid;gap:16px;align-content:center}
+.eyebrow{font-family:var(--display);font-weight:700;font-size:clamp(1rem,1.3vw,1.25rem);letter-spacing:.14em;text-transform:uppercase;color:var(--magenta)}
+.colorbar{display:flex;height:10px;max-width:420px}
+.colorbar i{flex:1}
+.proj{font-size:clamp(1.2rem,2.2vw,1.75rem);font-weight:600;line-height:1.35;max-width:46ch}
+.meta{font-size:clamp(.95rem,1.15vw,1.1rem);color:var(--muted);max-width:70ch}
+.top-r{background:var(--ink);color:var(--onink);padding:0;display:grid;grid-template-columns:minmax(0,1fr) 42%;align-items:end;position:relative;overflow:hidden;min-height:340px}
+.top-title{padding:28px;display:grid;gap:14px;position:relative;z-index:1}
+.top-course{font-family:var(--display);font-weight:600;font-size:clamp(1rem,1.4vw,1.3rem);letter-spacing:.06em;text-transform:uppercase;color:var(--onink-m);border-top:2px solid var(--onink-m);padding-top:12px;line-height:1.35}
+.top-pic{align-self:stretch;width:100%;height:100%;min-height:340px;object-fit:cover;object-position:50% 12%;display:block}
+.top-r h1{position:relative;z-index:1;font-size:clamp(1.9rem,3.4vw,3.6rem);font-weight:800;text-transform:uppercase;letter-spacing:.01em}
+.top-r h1 span{display:block;font-weight:500;font-size:.5em;letter-spacing:.04em;margin-top:.35em;color:var(--onink)}
+.hbtns{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.btn{border:0;background:var(--ink);color:var(--onink);padding:13px 24px;border-radius:999px;font-family:var(--display);font-weight:700;font-size:clamp(1.05rem,1.3vw,1.3rem);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.btn:hover{background:var(--magenta)}
+.btn.alt{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.btn.alt:hover{background:var(--ink);color:var(--onink)}
+@media (max-width:820px){.top .wrap{grid-template-columns:1fr}.top-l{padding-right:0}.top-r{order:-1}}
+
+/* Bloques 01 02 03 */
+.trio .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:0;padding-block:0}
+.tb{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;align-items:start;padding:22px 22px 24px;text-decoration:none;color:var(--fg);background:var(--bk)}
+.tb .num{grid-row:1/4;font-family:var(--display);font-weight:500;font-size:clamp(3.4rem,7vw,5rem);line-height:.85;color:var(--fg)}
+.tb h2{font-size:1.5rem;text-transform:uppercase;letter-spacing:.03em}
+.tb p{font-size:.92rem;border-left:2px solid currentColor;padding-left:10px;opacity:.95}
+.tb .cnt{font-family:var(--display);font-weight:700;font-size:.95rem;letter-spacing:.08em;text-transform:uppercase}
+.tb:hover{filter:brightness(1.06)}
+@media (max-width:820px){.trio .wrap{grid-template-columns:1fr}}
+
+/* Contexto */
+#contexto .wrap{padding-block:26px}
+.ctxgrid{display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
+.ctxgrid>.ctx{flex:0 0 calc((100% - 42px)/4)}
+.ctxgrid>.ctx.wide{flex-basis:100%}
+@media (max-width:1100px){.ctxgrid>.ctx{flex-basis:calc((100% - 14px)/2)}}
+@media (max-width:600px){.ctxgrid>.ctx{flex-basis:100%}}
+.ctx{background:var(--paper);border-radius:16px;padding:16px 18px;display:grid;gap:8px;align-content:start;min-width:0}
+.ctx h3{display:flex;align-items:center;gap:10px;font-size:1.25rem;text-transform:uppercase;letter-spacing:.05em}
+.ctx h3 .dot{width:30px;height:30px;border-radius:50%;background:var(--dc);color:#fff;display:grid;place-items:center}
+.ctx h3 .dot .ic{width:17px;height:17px}
+.ctx p{font-size:.94rem}
+.ctx.wide{grid-column:1/-1}
+.ctx-pic{margin:0;padding:0;overflow:hidden;min-height:260px;position:relative}
+.ctx-pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+
+/* Recorrido */
+.flow{background:var(--ink);color:var(--onink)}
+.flow .wrap{padding-block:30px;display:grid;grid-template-columns:1fr auto;gap:24px 36px;align-items:start}
+.flow h2{font-size:clamp(1.8rem,4vw,2.4rem);text-transform:uppercase;letter-spacing:.03em}
+.flow .lead{color:var(--onink-m);font-size:.95rem;margin-top:6px;max-width:58ch}
+.track{display:grid;gap:18px;margin-top:20px}
+.lane{display:flex;align-items:flex-start;gap:4px;flex-wrap:wrap;position:relative}
+.lane-lbl{flex-basis:100%;font-family:var(--display);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.85rem;color:var(--cc)}
+.node{display:grid;justify-items:center;gap:6px;background:none;border:0;padding:0;width:72px;color:var(--onink)}
+.node .circ{width:52px;height:52px;border-radius:50%;background:var(--cc);color:var(--con);display:grid;place-items:center;box-shadow:0 0 0 4px var(--ink),0 0 0 6px var(--cc);transition:transform .15s ease}
+.node.brief .circ{background:var(--ink);color:var(--cc);box-shadow:0 0 0 4px var(--ink),0 0 0 6px var(--cc)}
+.node:hover .circ{transform:scale(1.08)}
+.node .code{font-size:.85rem}
+.ghost{visibility:hidden}
+@media (max-width:700px){.ghost{display:none}}
+.dash{flex:1 1 24px;min-width:10px;max-width:none;border-top:3px dashed var(--onink-m);margin-top:26px;opacity:.6}
+.lane-arrow{font-family:var(--display);font-size:1.4rem;color:var(--onink-m);margin-top:12px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:.88rem;color:var(--onink-m);margin-top:6px}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.lg{width:18px;height:18px;border-radius:50%;background:var(--onink)}
+.lg.b{background:transparent;box-shadow:inset 0 0 0 3px var(--onink)}
+.stack{display:grid;gap:10px;justify-items:center;min-width:150px}
+.hero-img{display:block;width:180px;height:auto;border-radius:22px;box-shadow:0 0 0 4px var(--ink),0 0 0 7px var(--onink)}
+.stack .seg{display:grid;place-items:center;font-family:var(--display);font-weight:600;font-size:1.9rem;color:var(--con);background:var(--cc)}
+.stack .cap{font-family:var(--display);font-weight:800;font-size:1.6rem;text-transform:uppercase;letter-spacing:.05em;color:var(--onink)}
+.stack .sub{font-size:.85rem;color:var(--onink-m);text-align:center;max-width:16ch}
+@media (max-width:820px){.flow .wrap{grid-template-columns:1fr}.stack{justify-items:center}.hero-img{width:150px}}
+
+/* Ciclos */
+.cycle .wrap{padding-block:34px 6px}
+.cyc{display:grid;grid-template-columns:clamp(280px,24%,380px) 1fr;background:var(--paper);border-radius:22px;overflow:hidden}
+.cyc-side{background:var(--cc);color:var(--con);padding:26px 24px;display:grid;gap:12px;align-content:start;position:relative;overflow:hidden}
+.cyc-side .big{font-family:var(--display);font-weight:500;font-size:7rem;line-height:.8}
+.cyc-side{display:flex;flex-direction:column}
+.cyc-img{display:block;width:100%;height:auto;margin-top:auto;border-radius:18px;position:relative;z-index:1;box-shadow:0 0 0 4px var(--paper)}
+@media (max-width:980px){.cyc-img{max-width:280px;align-self:center}}
+.cyc-side .tag{font-family:var(--display);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.95rem}
+.cyc-side h2{font-size:2rem;text-transform:uppercase}
+.cyc-side .oe{font-size:.94rem;border-top:2px solid currentColor;padding-top:12px}
+.cyc-side .oe b{font-family:var(--display);font-size:1.1rem;letter-spacing:.04em}
+.cyc-side .ring{position:absolute;right:-70px;bottom:-70px;width:180px;height:180px;border-radius:50%;border:22px solid currentColor;opacity:.12}
+.cyc-main{display:grid;min-width:0}
+.phase{padding:22px 24px;display:grid;gap:14px;border-top:2px dashed var(--cream2)}
+.phase:first-child{border-top:0}
+.phase-h{display:flex;gap:16px;align-items:center}
+.phase-h .pt{display:grid;gap:2px}
+.pbadge{width:76px;height:76px;border-radius:50%;background:var(--cc);color:var(--con);display:grid;place-items:center;flex:none;box-shadow:0 0 0 4px var(--paper),0 0 0 7px var(--cc)}
+.pbadge .ic{width:44px;height:44px;stroke-width:2}
+.phase{border-left:8px solid var(--cc)}
+.phase-h .dur{color:var(--ccd)}
+.phase-h h3{font-size:1.8rem;text-transform:uppercase;letter-spacing:.03em;color:var(--ccd)}
+.phase-h .dur{font-family:var(--display);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.9rem;color:var(--muted)}
+.chain{display:grid;grid-template-columns:1fr 40px 1fr 40px 1.3fr;gap:8px;align-items:start}
+.link{display:grid;gap:8px;align-content:start;min-width:0;background:var(--cs);border-radius:14px;padding:12px 14px}
+.link h4{font-size:1rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ccd)}
+.link ul{margin:0;padding-left:18px;font-size:.9rem;display:grid;gap:4px}
+.link.ins{background:transparent;padding:0}
+.ac{width:36px;height:36px;border-radius:50%;background:var(--cc);color:var(--con);display:grid;place-items:center;margin-top:40px;justify-self:center}
+.ac .ic{width:18px;height:18px;stroke-width:2.6}
+.tiles{display:grid;gap:8px}
+.tile{display:grid;grid-template-columns:auto 1fr;gap:0 12px;align-items:center;text-align:left;background:var(--paper);border:2px solid var(--cc);border-radius:14px;padding:8px 12px 8px 8px;transition:transform .12s ease, background .12s ease}
+.tile:hover{background:var(--cs);transform:translateX(2px)}
+.tile .pic{grid-row:1/4;width:84px;height:88px;object-fit:cover;object-position:50% 0;border-radius:14px;box-shadow:0 0 0 3px var(--cc);background:var(--cs)}
+[hidden]{display:none!important}
+.dlg-media{display:grid}
+.dlg-pic{width:112px;height:118px;object-fit:cover;object-position:50% 0;border-radius:18px;box-shadow:0 0 0 4px var(--con);background:var(--paper)}
+.tile .circ{grid-row:1/4;width:44px;height:44px;border-radius:50%;background:var(--cc);color:var(--con);display:grid;place-items:center}
+.tile.brief{border-style:dashed}
+.tile.brief .circ{background:var(--paper);color:var(--ccd);box-shadow:inset 0 0 0 2px var(--cc)}
+.tile .code{font-size:.85rem;color:var(--ccd)}
+.tile .nm{font-size:.92rem;font-weight:700;line-height:1.25}
+.tile .hint{font-size:.78rem;color:var(--muted)}
+.bridge{display:flex;gap:12px;align-items:center;margin:0 24px 22px;padding:12px 16px;background:var(--ink);color:var(--onink);border-radius:14px;font-size:.92rem}
+.bridge .ac{margin:0;flex:none}
+@media (max-width:980px){.cyc{grid-template-columns:1fr}.cyc-side .big{font-size:5rem}}
+@media (max-width:760px){.chain{grid-template-columns:1fr}.chain .ac{margin:0;transform:rotate(90deg)}}
+
+/* Referencias */
+.refs .wrap{padding-block:40px 50px;display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,44%);gap:16px 36px;align-items:start}
+.refs h2{grid-column:1/-1}
+.refs ol{grid-column:1}
+.refs-top{grid-column:1;justify-self:start;margin-top:12px}
+.refs-pic{grid-column:2;grid-row:2 / span 2}
+@media (max-width:900px){.refs ol,.refs-top,.refs-pic{grid-column:1;grid-row:auto}}
+.refs-pic{display:block;width:100%;height:auto;border-radius:22px;box-shadow:0 0 0 4px var(--paper),0 0 0 7px var(--ink);position:sticky;top:calc(env(safe-area-inset-top, 0px) + 20px)}
+@media (max-width:900px){.refs .wrap{grid-template-columns:1fr}.refs-pic{position:static}}
+.refs h2{font-size:2.2rem;text-transform:uppercase;letter-spacing:.03em;display:flex;align-items:center;gap:14px}
+.refs h2::after{content:"";flex:1;height:3px;background:var(--ink)}
+.refs ol{margin:0;padding:0;list-style:none;display:grid;gap:10px;font-size:.92rem;max-width:100ch}
+.refs li{padding-left:2em;text-indent:-2em;overflow-wrap:anywhere}
+footer{background:var(--ink);color:var(--onink-m)}
+footer .wrap{padding-block:18px 26px;font-size:.85rem}
+
+/* Ficha */
+dialog{border:0;padding:0;border-radius:22px;width:min(1080px,calc(100vw - 24px));max-height:calc(100dvh - 32px);background:var(--paper);color:var(--text)}
+dialog::backdrop{background:rgba(42,35,64,.72)}
+.dl-head{position:sticky;top:0;z-index:2;background:var(--cc);color:var(--con);padding:18px 20px 0;display:grid;gap:8px}
+.dl-top{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center}
+.dl-head .circ{width:58px;height:58px;border-radius:50%;background:var(--con);color:var(--cc);display:grid;place-items:center}
+.dl-head .circ .ic{width:30px;height:30px}
+.dl-head .code{font-size:1rem;opacity:.9}
+.dl-head h2{font-size:clamp(1.4rem,3.4vw,2rem);text-transform:uppercase}
+.dl-sub{font-family:var(--display);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.9rem;opacity:.9}
+.xbtn{border:0;background:var(--con);color:var(--cc);border-radius:50%;width:40px;height:40px;font-size:1.4rem;line-height:1;align-self:start}
+.tabs{display:flex;gap:4px;margin-top:4px}
+.tab{border:0;background:transparent;padding:9px 18px;border-radius:12px 12px 0 0;font-family:var(--display);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:1rem;color:var(--con);opacity:.8}
+.tab[aria-selected="true"]{background:var(--paper);color:var(--text);opacity:1}
+.dl-body{padding:20px;display:grid;gap:14px}
+.chainmini{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.85rem}
+.chainmini .pill{background:var(--cs);border-radius:999px;padding:4px 12px}
+.chainmini .a{color:var(--ccd);font-weight:700}
+.qa{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:12px}
+.q{background:var(--cream);border-radius:14px;padding:12px 16px;display:grid;gap:6px;align-content:start;min-width:0}
+.q h4{font-size:1.1rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ccd);display:flex;gap:8px;align-items:center}
+.q h4::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--cc);flex:none}
+.q p{font-size:.94rem}
+.q.full{grid-column:1/-1}
+.evtags{display:flex;flex-wrap:wrap;gap:6px}
+.evtags span{font-family:var(--display);font-weight:700;letter-spacing:.05em;font-size:.88rem;background:var(--ink);color:var(--onink);padding:2px 10px;border-radius:999px}
+.struct{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px}
+.sblock{background:var(--cream);border-radius:14px;padding:12px 16px;display:grid;gap:6px;align-content:start}
+.sblock h4{font-size:1.1rem;text-transform:uppercase;letter-spacing:.05em;display:flex;gap:10px;align-items:center}
+.sblock h4 .n{width:26px;height:26px;border-radius:50%;background:var(--cc);color:var(--con);display:grid;place-items:center;font-size:.9rem;flex:none}
+.sblock ul{margin:0;padding-left:18px;font-size:.92rem;display:grid;gap:3px}
+.snote{font-size:.88rem;color:var(--muted)}
+
+/* Técnica ↔ instrumento */
+.tlist{list-style:none;padding-left:0!important;gap:6px!important}
+.tec,.elm{display:block;width:100%;text-align:left;border:0;background:var(--paper);border-radius:10px;padding:7px 10px 7px 26px;position:relative;font-size:.9rem;line-height:1.35;transition:background .15s ease,color .15s ease,opacity .15s ease,transform .15s ease}
+.tec::before,.elm::before{content:"";position:absolute;left:10px;top:.95em;width:8px;height:8px;border-radius:50%;background:var(--cc)}
+.tec:hover,.tec.hl,.elm:hover,.elm.hl{background:var(--cc);color:var(--con)}
+.tec.hl,.elm.hl{transform:translateX(3px)}
+.tec.hl::before,.tec:hover::before,.elm.hl::before,.elm:hover::before{background:var(--con)}
+.tec[aria-pressed="true"],.elm[aria-pressed="true"]{box-shadow:inset 0 0 0 2px var(--ink)}
+.thint{font-size:.82rem;color:var(--muted)}
+.tile{transition:transform .15s ease,background .15s ease,opacity .15s ease,box-shadow .15s ease}
+.tile.hl{background:var(--cs);box-shadow:0 0 0 3px var(--cc);transform:translateX(5px)}
+.phase.has-hl .tec:not(.hl),.phase.has-hl .elm:not(.hl),.phase.has-hl .tile:not(.hl){opacity:.38}
+.ac{transition:box-shadow .2s ease}
+.phase.has-hl .ac{animation:nudge .9s ease-in-out infinite;box-shadow:0 0 0 6px var(--cs)}
+@keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(7px)}}
+@keyframes nudgev{0%,100%{transform:rotate(90deg) translateX(0)}50%{transform:rotate(90deg) translateX(7px)}}
+@media (max-width:760px){.phase.has-hl .ac{animation-name:nudgev}}
+@media (prefers-reduced-motion:reduce){.phase.has-hl .ac{animation:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v10H10l-6 4z"/><path d="M8 9h8M8 12h5"/></symbol>
+    <symbol id="i-group" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2 20c0-3.3 2.7-6 6-6s6 2.7 6 6M12 15.5c1-1 2.4-1.5 4-1.5 3.3 0 6 2.7 6 6"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 12h7M9 16h7"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M10 6h10M10 12h10M10 18h10M3.5 6l1.5 1.5L7.5 5M3.5 12l1.5 1.5L7.5 11M3.5 18l1.5 1.5L7.5 17"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c1 1 1 2 1 2.5h6c0-.5 0-1.5 1-2.5A6 6 0 0 0 12 3z"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></symbol>
+    <symbol id="i-frames" viewBox="0 0 24 24"><rect x="3" y="4" width="8" height="7" rx="1"/><rect x="13" y="4" width="8" height="7" rx="1"/><rect x="3" y="13" width="8" height="7" rx="1"/><rect x="13" y="13" width="8" height="7" rx="1"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></symbol>
+    <symbol id="i-cursor" viewBox="0 0 24 24"><path d="M5 3l14 7-6 2-2 7z"/><path d="M13 12l5 5"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M6 3h12v18H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M8 3v18M11 8h5M11 12h5"/></symbol>
+    <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v14c0 1.7 3.1 3 7 3s7-1.3 7-3V5M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/></symbol>
+    <symbol id="i-levels" viewBox="0 0 24 24"><path d="M5 20v-4M10 20v-8M15 20V8M20 20V4M3 20h19"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1 6.2-5.5-2.9-5.5 2.9 1-6.2L3 9.6l6.2-.9z"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></symbol>
+    <symbol id="i-dt-emp" viewBox="0 0 24 24"><path d="M12 20.5s-8-4.9-8-11A4.5 4.5 0 0 1 12 6.6a4.5 4.5 0 0 1 8 2.9c0 6.1-8 11-8 11z"/><circle cx="12" cy="11" r="1.8"/><path d="M9 16c.5-1.6 1.6-2.5 3-2.5s2.5.9 3 2.5"/></symbol>
+    <symbol id="i-dt-def" viewBox="0 0 24 24"><circle cx="11" cy="13" r="8"/><circle cx="11" cy="13" r="4.5"/><circle cx="11" cy="13" r="1"/><path d="M11 13l8.5-8.5M16.5 4.5h3v3"/></symbol>
+    <symbol id="i-dt-ide" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c1 1 1 2 1 2.5h6c0-.5 0-1.5 1-2.5A6 6 0 0 0 12 3z"/><path d="M10 12.5l1-1.5 1 1.5 1-1.5 1 1.5"/></symbol>
+    <symbol id="i-dt-pro" viewBox="0 0 24 24"><path d="M15.5 3.5l5 5L9 20H4v-5z"/><path d="M13 6l5 5M4 15l5 5"/></symbol>
+    <symbol id="i-dt-eva" viewBox="0 0 24 24"><rect x="5" y="3" width="15" height="18" rx="2"/><path d="M3 7h3M3 12h3M3 17h3M9 8h5M9 12h5M9 16h5"/><path d="M15.5 7.5l1 1 2-2M15.5 11.5l1 1 2-2M15.5 15l2.5 2.5M18 15l-2.5 2.5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-q" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.5V14M12 17.5v.01"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></symbol>
+    <symbol id="i-people" viewBox="0 0 24 24"><circle cx="12" cy="7" r="3.5"/><path d="M5 21c0-3.9 3.1-7 7-7s7 3.1 7 7"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.5 3.8 9S14.5 18.5 12 21M12 3C9.5 5.5 8.2 8.5 8.2 12s1.3 6.5 3.8 9"/></symbol>
+  </defs>
+</svg>
+
+<header class="top" id="inicio">
+  <div class="wrap">
+    <div class="top-l">
+      <p class="eyebrow">Guía 2.1 · Grupo 31 C6</p>
+      <div class="colorbar" aria-hidden="true"><i style="background:var(--teal)"></i><i style="background:var(--orange)"></i><i style="background:var(--magenta)"></i><i style="background:var(--ink)"></i></div>
+      <p class="proj">Hipermedia lúdica con narrativas inspiradas en cosmovisiones de pueblos originarios para fortalecer el pensamiento ciudadano en 4.º y 5.º de primaria</p>
+      <p class="meta">Nataly Johana Barandica Pérez · Sergio Andrés Barandica Pérez · David Eduardo Moreno Mateus. Directora: Mg. Mónica Yurley Gómez Vargas. Maestría en Tecnología e Innovación Educativa, Universidad Santo Tomás.</p>
+      <div class="hbtns">
+        <button class="btn" id="btnCtx" aria-expanded="false" aria-controls="contexto"><svg class="ic"><use href="#i-compass"/></svg><span>Ver contexto del proyecto</span></button>
+        <a class="btn alt" href="#referencias">Referencias</a>
+      </div>
+    </div>
+    <div class="top-r">
+      <div class="top-title">
+        <h1>Infografía de instrumentos <span>Aspectos Formales de la Investigación</span></h1>
+        <p class="top-course">Opción de Grado II<br>Docente: Lina María Preciado Restrepo</p>
+      </div>
+      <img class="top-pic" src="img/personaje-titulo.webp" alt="Ilustración de referencia: la protagonista como investigadora, con libros y bata" width="700" height="1050">
+    </div>
+  </div>
+</header>
+
+<nav class="trio" aria-label="Ciclos del proyecto"><div class="wrap" id="trio"></div></nav>
+
+<section id="contexto" hidden>
+  <div class="wrap">
+    <div class="ctxgrid">
+      <div class="ctx wide" style="--dc:var(--magenta)"><h3><span class="dot"><svg class="ic"><use href="#i-target"/></svg></span>Problema</h3><p>En la prueba Saber 5.º de 2023, el 84 % de los estudiantes del país se ubicó en el nivel 1 de Pensamiento Ciudadano; la proporción llegó al 88 % en el sector oficial y al 91 % en la zona rural (Icfes, 2024a). El árbol de problemas relaciona este desempeño con tres causas: pocas oportunidades en el aula para ejercitar el pensamiento ciudadano (pedagógica), una representación escasa y estereotipada de los pueblos originarios (epistémica y cultural) y el acceso limitado a internet y a computador (tecnológica). En términos tecnológicos: los estudiantes de 4.º y 5.º del Instituto de Promoción Social de Piedecuesta no cuentan con un recurso digital que les permita ejercitar esas competencias en situaciones cotidianas, que represente a los pueblos originarios desde sus propias cosmovisiones y que se ajuste a los dispositivos y la conectividad del aula.</p></div>
+      <div class="ctx" style="--dc:var(--orange)"><h3><span class="dot"><svg class="ic"><use href="#i-q"/></svg></span>Pregunta</h3><p>¿Cómo desarrollar una hipermedia lúdica que, mediante narrativas inspiradas en cosmovisiones de pueblos originarios, contribuya al fortalecimiento del pensamiento ciudadano de los estudiantes de 4.º y 5.º de básica primaria del Instituto de Promoción Social de Piedecuesta (Santander)?</p></div>
+      <div class="ctx" style="--dc:var(--teal)"><h3><span class="dot"><svg class="ic"><use href="#i-check"/></svg></span>Objetivo general</h3><p>Desarrollar una hipermedia lúdica con narrativas inspiradas en cosmovisiones de pueblos originarios para contribuir al fortalecimiento del pensamiento ciudadano de los estudiantes de 4.º y 5.º de básica primaria del Instituto de Promoción Social de Piedecuesta (Santander).</p></div>
+      <div class="ctx" style="--dc:var(--ink)"><h3><span class="dot"><svg class="ic"><use href="#i-globe"/></svg></span>Línea</h3><p>Tecnología Educativa. Modalidad: proyecto tecnológico (recurso educativo digital en formato de aplicación web progresiva, PWA).</p></div>
+      <div class="ctx" style="--dc:var(--magenta)"><h3><span class="dot"><svg class="ic"><use href="#i-compass"/></svg></span>Enfoque</h3><p>Proyecto tecnológico. La recolección combina técnicas cualitativas con un cuestionario de valoración, una rúbrica de análisis de justificaciones y una lista de chequeo de criterios de éxito, de uso descriptivo (McKenney y Reeves, 2019; Hoadley y Campos, 2022). El proyecto no mide el efecto de la hipermedia en el desempeño.</p></div>
+      <div class="ctx" style="--dc:var(--orange)"><h3><span class="dot"><svg class="ic"><use href="#i-gear"/></svg></span>Metodología</h3><p>Investigación basada en diseño (DBR) en tres ciclos, uno por objetivo específico (McKenney y Reeves, 2019), con los cinco modos del Design Thinking (Hasso Plattner Institute of Design at Stanford, s. f.). Duración: Empatizar 2 semanas, Definir 2, Idear 2, Prototipar 8 y Evaluar 5 (19 en total). Al cierre del Ciclo 3 el prototipo alcanza el TRL 6 (Minciencias, s. f.). Criterios de calidad: relevancia, consistencia y factibilidad (Plomp y Nieveen, 2009, como se citó en Esteve Mon et al., 2019).</p></div>
+      <figure class="ctx ctx-pic"><img src="img/personaje-contexto.webp" alt="Ilustración de referencia: la niña protagonista de la hipermedia" width="900" height="746" loading="lazy"></figure>
+      <div class="ctx" style="--dc:var(--teal)"><h3><span class="dot"><svg class="ic"><use href="#i-people"/></svg></span>Participantes</h3><p>Sede A del Instituto de Promoción Social de Piedecuesta. Docentes de 4.º y 5.º (censal). Estudiantes: se sortean un grupo de 4.º y uno de 5.º, y dentro de cada uno 12 estudiantes cuyos datos se analizan (24 en total). Tres expertos externos para el juicio de expertos. De 4 a 6 estudiantes que no forman parte de la muestra para la prueba de usabilidad.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="flow" aria-labelledby="flowTitle">
+  <div class="wrap">
+    <div>
+      <h2 id="flowTitle">Recorrido de la información</h2>
+      <p class="lead">Cada instrumento usa lo que produjo el anterior. Toque un círculo para abrir la ficha.</p>
+      <div class="track" id="track"></div>
+      <div class="legend" style="margin-top:18px">
+        <span><i class="lg"></i>Cada círculo abre la ficha del instrumento: qué es, para qué sirve, a quién se aplica, qué recoge, qué evidencia genera y su estructura</span>
+      </div>
+    </div>
+    <div class="stack" id="stack"></div>
+  </div>
+</section>
+
+<main id="cycles"></main>
+
+<section class="refs" id="referencias">
+  <div class="wrap">
+    <h2>Referencias</h2>
+    <ol id="reflist"></ol>
+    <a class="btn refs-top" href="#inicio" id="btnTop"><svg class="ic" aria-hidden="true" style="transform:rotate(-90deg)"><use href="#i-arrow"/></svg><span>Volver al inicio</span></a>
+    <img class="refs-pic" src="img/cierre.webp" alt="Ilustración de cierre: la protagonista acompaña a un grupo de estudiantes en el aula" width="1200" height="800" loading="lazy">
+  </div>
+</section>
+
+<footer><div class="wrap">Elaboración propia a partir de la maqueta del proyecto y de la matriz de coherencia metodológica. Códigos de instrumento con el prefijo HYP-INS-.</div></footer>
+
+<dialog id="dlg" aria-labelledby="dlgTitle">
+  <div class="dl-head">
+    <div class="dl-top">
+      <span class="dlg-media"><span class="circ" id="dlgCirc" aria-hidden="true"><svg class="ic"><use id="dlgIcon" href="#i-doc"/></svg></span><img class="dlg-pic" id="dlgPic" alt="" width="256" height="330" hidden></span>
+      <div style="display:grid;gap:4px;min-width:0">
+        <span class="code" id="dlgCode"></span>
+        <h2 id="dlgTitle"></h2>
+        <p class="dl-sub" id="dlgSub"></p>
+      </div>
+      <button class="xbtn" id="dlgClose" aria-label="Cerrar ficha">×</button>
+    </div>
+    <div class="tabs" role="tablist" id="tabs">
+      <button class="tab" role="tab" id="tabFicha" aria-selected="true" aria-controls="panFicha">Ficha</button>
+      <button class="tab" role="tab" id="tabEst" aria-selected="false" aria-controls="panEst">Estructura</button>
+    </div>
+  </div>
+  <div class="dl-body" id="panFicha" role="tabpanel" aria-labelledby="tabFicha"></div>
+  <div class="dl-body" id="panEst" role="tabpanel" aria-labelledby="tabEst" hidden></div>
+</dialog>
+
+<script>
+const PAL = {
+  c1:{cc:"var(--teal)", ccd:"var(--teal)", con:"#fffaf0", cs:"var(--teal-s)"},
+  c2:{cc:"var(--orange)", ccd:"#9a5409", con:"var(--ink)", cs:"var(--orange-s)"},
+  c3:{cc:"var(--magenta)", ccd:"var(--magenta)", con:"#fffaf0", cs:"var(--magenta-s)"}
+};
+const PH = {
+  "Empatizar":{cc:"#e5485c", ccd:"#ad2236", con:"#ffffff", cs:"#fadde1", ic:"dt-emp"},
+  "Definir":{cc:"#f0641e", ccd:"#a8410a", con:"#ffffff", cs:"#fde1d0", ic:"dt-def"},
+  "Idear":{cc:"#f7b53d", ccd:"#855800", con:"#2a2340", cs:"#fdeeca", ic:"dt-ide"},
+  "Prototipar":{cc:"#2bbcae", ccd:"#0b6c63", con:"#2a2340", cs:"#d1f0ec", ic:"dt-pro"},
+  "Evaluar":{cc:"#4777bd", ccd:"#2a5394", con:"#ffffff", cs:"#dbe5f4", ic:"dt-eva"}
+};
+const pvars = ph => { const p = PH[ph]; return `--cc:${p.cc};--ccd:${p.ccd};--con:${p.con};--cs:${p.cs}`; };
+const TMAP = {
+  "Empatizar":[["ENT-01"],["GFE-01"],["OBS-01"],["DOC-01"]],
+  "Definir":[["SIN-01"],["REQ-01"]],
+  "Idear":[["IDE-01"],["MAP-01"]],
+  "Prototipar":[["STB-01"],["VAL-01"],["PWA-01"],["VAL-01"],["USA-01"]],
+  "Evaluar":[["DC-01"],["LOG-01"],["RUB-01"],["ENC-01"],["PRI-01"]]
+};
+const EMAP = {
+  "Empatizar":[["ENT-01","GFE-01","OBS-01"],["ENT-01","GFE-01","DOC-01"],["ENT-01","OBS-01"],["DOC-01"]],
+  "Definir":[["SIN-01"],["SIN-01"],["REQ-01"],["REQ-01"]],
+  "Idear":[["IDE-01"],["IDE-01"],["MAP-01"]],
+  "Prototipar":[["STB-01","PWA-01"],["VAL-01"],["PWA-01"],["VAL-01","USA-01"]],
+  "Evaluar":[["DC-01","LOG-01"],["RUB-01"],["DC-01","ENC-01"],["DC-01","LOG-01"],["ENC-01","PRI-01"]]
+};
+const vars = c => { const p = PAL[c]; return `--cc:${p.cc};--ccd:${p.ccd};--con:${p.con};--cs:${p.cs}`; };
+
+const CYCLES = [
+ {id:1, name:"Análisis y exploración", oe:"OE1", c:"c1", short:"Caracterizar las condiciones pedagógicas y establecer los requisitos de diseño.",
+  oeText:"Caracterizar las condiciones pedagógicas en las que se desarrolla el pensamiento ciudadano en 4.º y 5.º de básica primaria del Instituto de Promoción Social de Piedecuesta, para establecer los requisitos de diseño de la hipermedia.",
+  phases:[
+   {name:"Empatizar", dur:"2 semanas",
+    elem:["Prácticas de aula: oportunidades para ejercitar las cuatro competencias","Contenidos y materiales: representación de los pueblos originarios","Recursos del aula: dispositivos y conectividad","Marco institucional: PEI, plan de estudios y malla"],
+    tec:["Entrevista semiestructurada con docentes","Grupo focal con estudiantes, por grado","Observación no participante (clase y condiciones TIC)","Revisión documental"],
+    ins:["ENT-01","GFE-01","OBS-01","DOC-01"]},
+   {name:"Definir", dur:"2 semanas",
+    elem:["Síntesis de hallazgos por causa: pedagógica, cultural y tecnológica","Arquetipos de docentes y estudiantes","Requisitos pedagógicos, culturales y técnicos","Selección del mundo temático"],
+    tec:["Agrupación por afinidad y construcción de arquetipos (mapa de empatía y POV)","Definición de requerimientos y selección del mundo temático"],
+    ins:["SIN-01","REQ-01"]}
+  ],
+  bridge:"La matriz de requerimientos [REQ-01] es la entrada del Ciclo 2: Idear parte de esos requisitos."},
+ {id:2, name:"Diseño y construcción", oe:"OE2", c:"c2", short:"Construir un prototipo funcional de la hipermedia que pueda implementarse en el aula.",
+  oeText:"Construir un prototipo funcional de la hipermedia que permita a los estudiantes ejercitar las competencias del pensamiento ciudadano y que pueda implementarse en el aula.",
+  phases:[
+   {name:"Idear", dur:"2 semanas",
+    elem:["Alternativas para narrativas, episodios y mecánicas lúdicas","Priorización por impacto y esfuerzo","Arquitectura de contenidos alineada con las competencias"],
+    tec:["Ideación y priorización: preguntas HMW, lluvia de ideas, impacto y esfuerzo","Diseño de contenidos y revisión de la alineación con los docentes"],
+    ins:["IDE-01","MAP-01"]},
+   {name:"Prototipar", dur:"8 semanas",
+    elem:["Concreción del mundo en storyboards, mockup y PWA","Pertinencia cultural y pedagógica","Funcionamiento sin conexión, desempeño y accesibilidad","Calidad y facilidad de uso de la interfaz"],
+    tec:["Prototipado previo al código","Juicio de expertos, momento 1: validación cultural","Desarrollo y verificación técnica de la PWA","Juicio de expertos, momento 2: rúbrica completa y evaluación heurística","Prueba de usabilidad"],
+    ins:["STB-01","VAL-01","PWA-01","USA-01"]}
+  ],
+  bridge:"Los problemas graves que encuentran los expertos y la prueba de usabilidad se corrigen antes del Ciclo 3."},
+ {id:3, name:"Evaluación y reflexión", oe:"OE3", c:"c3", trl:"TRL 6", short:"Implementar el prototipo en el aula e identificar los ajustes necesarios.",
+  oeText:"Implementar el prototipo de la hipermedia con estudiantes y docentes de 4.º y 5.º de básica primaria, para identificar, a partir de la reflexión sobre su uso en el aula, los ajustes necesarios.",
+  phases:[
+   {name:"Evaluar", dur:"5 semanas",
+    elem:["Uso pedagógico: recorrido y competencias que se ejercitan","Nivel de las justificaciones según el Icfes","Uso cultural: recepción de las narrativas","Uso técnico y criterios de éxito en el aula","Valoración de docentes y estudiantes, y ajustes"],
+    tec:["Observación participante y verificación de criterios de éxito","Análisis de registros de uso","Análisis de justificaciones","Encuesta de valoración y conversación de cierre","Reflexión del equipo"],
+    ins:["DC-01","LOG-01","RUB-01","ENC-01","PRI-01"]}
+  ],
+  bridge:"Los hallazgos se comparan con los requisitos del Ciclo 1 y las diferencias quedan en la matriz de ajustes (Turpin et al., 2023)."}
+];
+
+const PIC = { has: c => true };
+const ICON = {"ENT-01":"chat","GFE-01":"group","OBS-01":"eye","DOC-01":"doc","SIN-01":"layers","REQ-01":"list","IDE-01":"bulb","MAP-01":"map","STB-01":"frames","VAL-01":"check","PWA-01":"phone","USA-01":"cursor","DC-01":"book","LOG-01":"db","RUB-01":"levels","ENC-01":"star","PRI-01":"gear"};
+
+const I = {
+"ENT-01":{cy:1, ph:"Empatizar", name:"Guía de entrevista semiestructurada - docentes",
+ elem:"Prácticas de aula, contenidos y materiales, recursos del aula", tec:"Entrevista semiestructurada",
+ que:"Guía de preguntas abiertas, organizadas por categorías, que permite conversar con cada docente sobre su práctica y repreguntar según sus respuestas.",
+ para:"Conocer cómo los docentes trabajan la formación ciudadana, qué materiales usan y con qué recursos tecnológicos cuentan.",
+ quien:"Todos los docentes de 4.º y 5.º de la sede A (muestra censal), en una entrevista individual con cada uno.",
+ recoge:"Prácticas de aula, materiales (incluidos los que se refieren a pueblos originarios), percepciones sobre esos materiales y recursos tecnológicos disponibles.",
+ cuando:"Ciclo 1, semanas 1 y 2 (Empatizar).",
+ porque:"Responde a la causa pedagógica del problema. El DBR exige que el diseño parta de las necesidades reales de los usuarios (McKenney y Reeves, 2019), y la entrevista individual permite que cada docente hable de su práctica sin la presión del grupo.",
+ ev:"Testimonios de los docentes sobre su práctica, transcritos y codificados por categoría.", evt:["Testimonios"],
+ est:[["Datos generales",["Código del docente, grado a cargo y años de experiencia","Fecha, duración y entrevistador"]],
+      ["Apertura",["Propósito de la entrevista","Confirmación del consentimiento y de la grabación en audio"]],
+      ["Categoría 1. Prácticas de aula",["Cómo trabaja la formación ciudadana en clase","Situaciones en que los estudiantes argumentan, comparan perspectivas o analizan problemas","Uso de situaciones, problemas o metodologías activas"]],
+      ["Categoría 2. Contenidos y materiales",["Textos, guías y materiales que usa","Cómo aparecen en ellos los pueblos originarios","Su percepción sobre esa representación"]],
+      ["Categoría 3. Recursos del aula",["Equipos y conectividad con que cuenta","Cómo y con qué frecuencia usa recursos digitales"]],
+      ["Cierre",["Necesidades y sugerencias para la hipermedia","Agradecimiento"]]]},
+"GFE-01":{cy:1, ph:"Empatizar", name:"Guía de grupo focal - estudiantes, protocolo visual",
+ elem:"Prácticas de aula y percepciones sobre los pueblos originarios", tec:"Grupo focal con estudiantes, por grado",
+ que:"Guía para una conversación en grupo que parte de imágenes y situaciones cotidianas, adaptada a niños de 9 a 11 años.",
+ para:"Conocer cómo razonan los estudiantes ante situaciones cotidianas y qué imaginarios tienen sobre los pueblos originarios.",
+ quien:"Los 12 estudiantes sorteados de cada grupo participante (24 en total), en un grupo focal por grado. Lo conducen los tres investigadores.",
+ recoge:"Razonamientos de los estudiantes asociados a las cuatro competencias del pensamiento ciudadano, y sus percepciones sobre los pueblos originarios.",
+ cuando:"Ciclo 1, semanas 1 y 2 (Empatizar).",
+ porque:"Da voz al usuario principal del prototipo, como pide el modo Empatizar (Hasso Plattner Institute of Design at Stanford, s. f.). El protocolo visual se ajusta a la edad de los participantes, y las situaciones se basan en las competencias que evalúa el Icfes (2024a).",
+ ev:"Intervenciones de los estudiantes registradas por código, agrupadas por competencia y por tema.", evt:["Testimonios","Observaciones"],
+ est:[["Datos generales",["Grado, código de la sesión, fecha y duración","Roles de los investigadores: moderación, registro y acompañamiento"]],
+      ["Apertura",["Presentación y reglas de la conversación","Recordatorio del asentimiento"]],
+      ["Situaciones ilustradas",["Una situación cotidiana por competencia: conocimientos, argumentación, multiperspectivismo y pensamiento sistémico","Preguntas guía para cada situación: qué pasa, qué harían, por qué, qué pensaría el otro"]],
+      ["Imágenes sobre pueblos originarios",["Qué saben y qué imaginan de ellos","De dónde lo aprendieron"]],
+      ["Cierre",["Qué les gustaría encontrar en un juego sobre estos temas"]],
+      ["Formato de registro",["Código del estudiante, intervención, situación y competencia asociada"]]]},
+"OBS-01":{cy:1, ph:"Empatizar", name:"Guía de observación de aula y registro de condiciones TIC",
+ elem:"Prácticas de aula y recursos del aula", tec:"Observación no participante",
+ que:"Guía en dos partes: la parte A registra lo que ocurre en clase y la parte B registra los equipos y la conectividad de las aulas.",
+ para:"Contrastar lo que dicen docentes y estudiantes con lo que ocurre en clase, y conocer las condiciones técnicas en que funcionará la PWA.",
+ quien:"Entre 2 y 3 clases de cada grupo participante, y los dispositivos y la conectividad de las aulas de la sede A.",
+ recoge:"Oportunidades para ejercitar las competencias, presencia de los pueblos originarios en clase, e inventario de equipos y conexión.",
+ cuando:"Ciclo 1, semanas 1 y 2 (Empatizar).",
+ porque:"Permite triangular con la entrevista y el grupo focal. La parte B responde a la causa tecnológica, porque de ella salen los umbrales de rendimiento y tamaño de la descarga (RNF-02 y RNF-03).",
+ ev:"Registros de observación de clase e inventario de dispositivos y conectividad.", evt:["Observaciones","Registros","Datos"],
+ est:[["Parte A. Contexto de la clase",["Grado, fecha, tema, duración y número de estudiantes"]],
+      ["Parte A. Aspectos a observar",["Tipo de actividad: transmisión de conceptos o trabajo con situaciones","Oportunidades para cada una de las cuatro competencias","Presencia y forma de representación de los pueblos originarios","Participación de los estudiantes"]],
+      ["Parte A. Registro",["Presencia o ausencia de cada aspecto","Descripción de los episodios observados"]],
+      ["Parte B. Inventario TIC",["Tipo y modelo de equipo, sistema operativo y navegador","Almacenamiento disponible","Tipo de conexión y estabilidad en el aula"]]]},
+"DOC-01":{cy:1, ph:"Empatizar", name:"Matriz de revisión documental",
+ elem:"Marco institucional de la formación ciudadana", tec:"Revisión documental",
+ que:"Matriz que registra, por documento, los fragmentos relacionados con las categorías del estudio.",
+ para:"Analizar cómo aparece la formación ciudadana en los documentos de la institución y cómo se representa a los pueblos originarios en los materiales.",
+ quien:"Documentos: PEI, plan de estudios, malla de Ciencias Sociales, textos y materiales de clase.",
+ recoge:"Lugar del pensamiento ciudadano en el currículo y representación de los pueblos originarios en textos y materiales.",
+ cuando:"Ciclo 1, semanas 1 y 2 (Empatizar).",
+ porque:"Es la única fuente institucional del Ciclo 1. Responde a la causa epistémica y cultural, que la literatura asocia con textos que estereotipan a los pueblos originarios (Rivera Reyes, 2012), y completa la triangulación.",
+ ev:"Fragmentos de documentos clasificados por categoría, con su análisis.", evt:["Información documental"],
+ est:[["Identificación del documento",["Tipo, título, año y responsable"]],
+      ["Categorías de análisis",["Lugar de la formación ciudadana","Referencia a las cuatro competencias del pensamiento ciudadano","Representación de los pueblos originarios","Recursos tecnológicos previstos"]],
+      ["Registro",["Fragmento y página","Categoría","Observación del equipo"]]]},
+"SIN-01":{cy:1, ph:"Definir", name:"Plantilla de síntesis: diagrama de afinidad y ficha de arquetipos",
+ elem:"Síntesis de hallazgos y arquetipos de usuario", tec:"Agrupación por afinidad y construcción de arquetipos",
+ que:"Plantilla en dos partes: un diagrama de afinidad que agrupa los hallazgos y una ficha que describe a los usuarios típicos.",
+ para:"Organizar lo recogido en Empatizar por temas comunes y describir a los usuarios del prototipo.",
+ quien:"La diligencia el equipo investigador con los datos de ENT-01, GFE-01, OBS-01 y DOC-01.",
+ recoge:"Hallazgos agrupados según las ramas del árbol de problemas y arquetipos de docentes y estudiantes, con su mapa de empatía y su declaración POV.",
+ cuando:"Ciclo 1, semanas 3 y 4 (Definir).",
+ porque:"Convierte los datos de las cuatro fuentes en la caracterización que pide el OE1. Corresponde al modo Definir del Design Thinking y cierra la triangulación del Ciclo 1. Atiende los criterios de relevancia y consistencia (Plomp y Nieveen, 2009, como se citó en Esteve Mon et al., 2019).",
+ ev:"Diagrama de afinidad y fichas de arquetipos de docentes y estudiantes.", evt:["Registros"],
+ est:[["Parte A. Diagrama de afinidad",["Hallazgo","Fuente: ENT, GFE, OBS o DOC","Tema que agrupa los hallazgos","Causa del problema: pedagógica, cultural o tecnológica"]],
+      ["Parte B. Ficha de arquetipo",["Perfil y contexto de uso","Mapa de empatía: qué dice, qué hace, qué piensa, qué siente","Necesidades y dificultades","Condiciones tecnológicas","Declaración POV: usuario, necesidad y hallazgo que la explica"]]]},
+"REQ-01":{cy:1, ph:"Definir", name:"Matriz de requerimientos de diseño y selección del mundo temático",
+ elem:"Requisitos de diseño y mundo temático", tec:"Definición de requerimientos y selección del mundo temático",
+ que:"Matriz que traduce la síntesis en requisitos verificables y registra la elección del mundo temático.",
+ para:"Establecer los requisitos pedagógicos, culturales y técnicos de la hipermedia y elegir el mundo temático que se desarrollará.",
+ quien:"La diligencia el equipo investigador a partir de SIN-01, los documentos, los materiales y el registro de condiciones TIC.",
+ recoge:"Requerimientos funcionales y no funcionales con sus criterios de cumplimiento, y el mundo temático elegido con la justificación de la elección.",
+ cuando:"Ciclo 1, semanas 3 y 4 (Definir). Es la entrada del Ciclo 2.",
+ porque:"Une el problema con el diseño, porque cada requisito responde a una causa. La selección del mundo temático considera la disponibilidad de un experto con trabajo documentado con el pueblo y de fuentes elaboradas por integrantes de ese pueblo, para que el desarrollo no dependa de un participante difícil de contactar.",
+ ev:"Lista de requerimientos con criterios de cumplimiento y mundo temático seleccionado.", evt:["Registros","Datos"],
+ est:[["Parte A. Requerimientos",["Código: RF o RNF","Descripción","Hallazgo de origen en SIN-01","Causa del problema a la que responde","Criterio de cumplimiento e instrumento que lo verifica"]],
+      ["Parte B. Selección del mundo temático",["Mundos candidatos","Valoración de cada uno frente a los criterios","Disponibilidad de un experto con el perfil requerido","Disponibilidad de fuentes elaboradas por integrantes del pueblo","Mundo elegido y justificación"]]]},
+"IDE-01":{cy:2, ph:"Idear", name:"Plantilla de ideación y priorización",
+ elem:"Alternativas para narrativas, episodios y mecánicas lúdicas, y su priorización", tec:"Ideación y priorización: preguntas HMW, lluvia de ideas, impacto y esfuerzo",
+ que:"Plantilla en tres partes: un banco de preguntas \"¿Cómo podríamos…?\" (HMW), una lluvia de ideas y una matriz que ubica cada idea según su impacto y su esfuerzo.",
+ para:"Convertir los requisitos del Ciclo 1 en preguntas de diseño, generar ideas para el mundo seleccionado y elegir las que se van a desarrollar.",
+ quien:"La diligencia el equipo investigador (líder y diseñador de interfaz, experta disciplinar y pedagogo) a partir de SIN-01 y REQ-01.",
+ recoge:"Preguntas HMW, ideas para las narrativas, los episodios y las mecánicas lúdicas, y la valoración de cada idea según su impacto y su esfuerzo.",
+ cuando:"Ciclo 2, semanas 5 y 6 (Idear), antes del mapa de contenidos.",
+ porque:"Idear parte de la síntesis y los requisitos del Ciclo 1, que se convierten en preguntas HMW. Calavia et al. (2023) usaron preguntas \"¿Cómo podríamos…?\" y lluvia de ideas en una secuencia similar (p. 7). Como el DBR trata cada decisión de diseño como una conjetura que debe documentarse (Hoadley y Campos, 2022), la plantilla deja registro de por qué se eligió cada idea.",
+ ev:"Banco de preguntas HMW e ideas priorizadas para el mundo seleccionado.", evt:["Registros"],
+ est:[["Parte A. Banco de preguntas HMW",["Requisito o hallazgo de origen (REQ-01, SIN-01)","Pregunta \"¿Cómo podríamos…?\""]],
+      ["Parte B. Lluvia de ideas",["Idea para una narrativa, un episodio o una mecánica lúdica","Pregunta HMW a la que responde"]],
+      ["Parte C. Matriz de impacto y esfuerzo",["Ubicación de cada idea: impacto alto o bajo, esfuerzo alto o bajo","Ideas elegidas y justificación"]]]},
+"MAP-01":{cy:2, ph:"Idear", name:"Mapa de contenidos y alineación con las competencias",
+ elem:"Arquitectura de contenidos alineada con las competencias", tec:"Diseño de contenidos y revisión de la alineación",
+ que:"Mapa que organiza el mundo temático en episodios y situaciones, y asocia cada situación con una competencia, una afirmación y una evidencia de la prueba de Pensamiento Ciudadano.",
+ para:"Garantizar que cada situación permita ejercitar una competencia, y que los docentes lo confirmen antes de hacer los storyboards.",
+ quien:"Lo elabora el equipo investigador y lo revisan los docentes de 4.º y 5.º de la sede A en una sesión breve.",
+ recoge:"Alineación de cada situación con el marco del Icfes y observaciones de los docentes sobre esa alineación.",
+ cuando:"Ciclo 2, semanas 5 y 6 (Idear), antes de los storyboards.",
+ porque:"Asegura lo que pide el OE2: que el prototipo permita ejercitar las cuatro competencias. Verifica el requerimiento RNF-11 y atiende los criterios de relevancia y consistencia.",
+ ev:"Mapa de contenidos revisado por los docentes, con las observaciones incorporadas.", evt:["Resultados de validación","Valoraciones"],
+ est:[["Jerarquía",["Mundo temático → episodios → situaciones (dilemas narrativos)"]],
+      ["Por situación",["Código y episodio al que pertenece","Dilema narrativo","Competencia, afirmación y evidencia del Icfes","Perspectivas de los personajes","Opciones de decisión y de justificación"]],
+      ["Revisión docente",["¿La situación corresponde a la competencia? Sí / No","Observación del docente","Ajuste realizado"]]]},
+"STB-01":{cy:2, ph:"Prototipar", name:"Storyboards, wireframes y mockup del mundo seleccionado",
+ elem:"Concreción del mundo seleccionado en storyboards, wireframes y mockup", tec:"Prototipado previo al código",
+ que:"Prototipos del mundo seleccionado en dos niveles de fidelidad: storyboards y wireframes (baja) y mockup interactivo de las pantallas clave (media).",
+ para:"Probar la narrativa y la navegación antes de programar, y darle al experto un material concreto para la validación cultural.",
+ quien:"Lo elabora el equipo investigador. Uno de los tres expertos externos lo revisa con la sección cultural de VAL-01 (momento 1).",
+ recoge:"Secuencia narrativa de cada episodio, distribución de las pantallas, recorrido de navegación y representación visual de personajes y escenarios.",
+ cuando:"Ciclo 2 (Prototipar), después del mapa de contenidos y antes de programar la PWA.",
+ porque:"Prototipar avanza por tres niveles de fidelidad: baja, media y alta. Revisar la representación de los pueblos originarios sobre storyboards y mockup permite corregirla antes de programar, cuando cuesta menos. Los storyboards son una de las técnicas de bajo costo que ofrece la guía del Hasso Plattner Institute of Design at Stanford (s. f.).",
+ ev:"Storyboards, wireframes y mockup interactivo, con las observaciones culturales incorporadas.", evt:["Registros","Resultados de validación"],
+ est:[["Storyboards",["Viñetas por episodio y situación","Personajes, escenario y diálogos","Decisión y consecuencias de cada rama"]],
+      ["Wireframes",["Distribución de cada pantalla","Navegación entre episodios, perspectivas y decisiones"]],
+      ["Mockup interactivo",["Pantallas clave con su diseño visual","Recorrido navegable de una situación"]],
+      ["Registro de revisión",["Observaciones del experto (VAL-01, momento 1)","Ajuste realizado antes de programar"]]]},
+"VAL-01":{cy:2, ph:"Prototipar", name:"Rúbrica de juicio de expertos",
+ elem:"Pertinencia cultural y pedagógica, calidad de la interfaz y diseño multimedia", tec:"Juicio de expertos en dos momentos, con evaluación heurística independiente",
+ que:"Rúbrica con cinco secciones: pedagógica, cultural, técnica, heurística y de diseño multimedia.",
+ para:"Validar el prototipo en dos momentos: la sección cultural sobre storyboards y mockup antes de programar, y la rúbrica completa sobre la PWA.",
+ quien:"Tres expertos externos en tecnología educativa y en saberes de pueblos originarios o educación intercultural. Uno de ellos, con trabajo documentado con el pueblo representado o en educación intercultural, aplica la sección cultural. Cuando es posible, también revisa un integrante o sabedor de ese pueblo.",
+ recoge:"Valoraciones por criterio, observaciones y problemas de usabilidad con su gravedad.",
+ cuando:"Momento 1: Ciclo 2, antes de programar. Momento 2: Ciclo 2, sobre la PWA funcional.",
+ porque:"Responde a la causa cultural, porque corrige la representación de los pueblos originarios cuando todavía cuesta poco hacerlo. En la sección heurística, varios evaluadores independientes encuentran más problemas que uno solo (Nielsen y Molich, 1990).",
+ ev:"Valoraciones de los expertos y lista de problemas por gravedad, que se corrigen antes del Ciclo 3.", evt:["Resultados de validación","Valoraciones"],
+ est:[["Datos del experto",["Código, perfil y área de experiencia","Momento de aplicación"]],
+      ["Sección cultural (momentos 1 y 2)",["Fidelidad con que se representa al pueblo","Ausencia de estereotipos","Uso adecuado de nombres, símbolos y relatos"]],
+      ["Sección pedagógica",["Correspondencia de las situaciones con las competencias","Claridad de los dilemas y de la retroalimentación"]],
+      ["Sección técnica",["Funcionamiento sin conexión, carga y estabilidad"]],
+      ["Sección heurística",["Problema encontrado, heurística afectada y gravedad","Evaluación independiente de cada experto"]],
+      ["Sección de diseño multimedia",["Integración de texto, imagen y audio","Legibilidad y carga visual"]],
+      ["Para cada criterio",["Valoración y observaciones"]]]},
+"PWA-01":{cy:2, ph:"Prototipar", name:"Prototipo PWA con lista de verificación técnica",
+ elem:"Funcionamiento sin conexión, desempeño y accesibilidad", tec:"Desarrollo y verificación técnica de la PWA",
+ que:"Lista de pruebas que verifica, requerimiento por requerimiento, el funcionamiento técnico del prototipo.",
+ para:"Comprobar que la PWA cumple los requerimientos técnicos antes de llevarla al aula.",
+ quien:"La aplica el equipo investigador en los equipos de menor capacidad de la sede A.",
+ recoge:"Cumplimiento de la instalación, el uso en modo avión, la retoma del avance, la exportación del registro, el tiempo de apertura, la publicación con HTTPS y los criterios de WCAG 2.2 AA.",
+ cuando:"Ciclo 2 (Prototipar), cuando la PWA está funcional.",
+ porque:"Responde a la causa tecnológica (conectividad limitada) y verifica que el prototipo pueda implementarse en el aula, como pide el OE2. Atiende el criterio de factibilidad. La accesibilidad se revisa con WCAG 2.2 (Campbell et al., 2024).",
+ ev:"Resultado de cada prueba técnica, con los fallos corregidos.", evt:["Resultados de pruebas"],
+ est:[["Pruebas",["Instalación desde el navegador en cada modelo de equipo","Uso completo en modo avión y retoma del avance","Tiempo de apertura y tamaño de la descarga frente a los umbrales del Ciclo 1","Registro y exportación: el registro coincide con el recorrido y solo contiene códigos anónimos","Publicación con HTTPS y ausencia de datos personales","Criterios aplicables de WCAG 2.2 AA"]],
+      ["Para cada prueba",["Requerimiento que verifica","Procedimiento","Criterio de cumplimiento","Cumple: Sí / No","Observación y corrección"]]]},
+"USA-01":{cy:2, ph:"Prototipar", name:"Guía de prueba de usabilidad",
+ elem:"Facilidad de uso de la interfaz para estudiantes de 4.º y 5.º", tec:"Prueba de usabilidad",
+ que:"Guía con tareas definidas que los estudiantes realizan con el prototipo mientras el equipo registra lo que ocurre.",
+ para:"Observar si los estudiantes usan la interfaz sin ayuda.",
+ quien:"Entre 4 y 6 estudiantes (2 o 3 por grado) sorteados entre los estudiantes de los dos grupos que no forman parte de la muestra.",
+ recoge:"Tareas completadas sin ayuda, errores y dudas.",
+ cuando:"Ciclo 2 (Prototipar), después del juicio de expertos.",
+ porque:"Complementa a los expertos con la mirada del usuario real. La guía del Hasso Plattner Institute of Design at Stanford (s. f.) considera prototipar y evaluar de manera conjunta. Usar estudiantes fuera de la muestra evita que esta conozca el prototipo antes del Ciclo 3.",
+ ev:"Registro de tareas por estudiante y lista de problemas de uso.", evt:["Evidencias de desempeño","Observaciones"],
+ est:[["Datos de la sesión",["Código del estudiante, grado y equipo usado"]],
+      ["Instrucciones al estudiante",["Qué va a hacer y que puede detenerse cuando quiera"]],
+      ["Tareas",["Recorrer una situación","Consultar las perspectivas de los personajes","Tomar una decisión","Elegir una justificación","Retomar el avance"]],
+      ["Para cada tarea",["Completada sin ayuda: Sí / No","Errores observados","Dudas expresadas"]]]},
+"DC-01":{cy:3, ph:"Evaluar", name:"Diario de campo con lista de chequeo de criterios de éxito",
+ elem:"Uso pedagógico, uso cultural, uso técnico y criterios de éxito", tec:"Observación participante y verificación de criterios de éxito",
+ que:"Diario para registrar cada sesión de implementación, con una lista de chequeo adaptada de PWA-01 que se aplica al inicio y al cierre de la sesión.",
+ para:"Registrar lo que ocurre en el aula y verificar los criterios de éxito con los equipos y la conectividad reales.",
+ quien:"Los dos grupos participantes completos, en 3 sesiones por grupo y 1 de reserva.",
+ recoge:"Argumentos orales, recepción de las narrativas, incidencias técnicas y cumplimiento de los criterios de éxito.",
+ cuando:"Ciclo 3 (Evaluar), en cada sesión: lista de chequeo al inicio y al cierre.",
+ porque:"La observación en el contexto real es propia de la fase de evaluación del DBR (McKenney y Reeves, 2019). La lista de chequeo sostiene el TRL 6: el prototipo se prueba en un entorno real controlado (Minciencias, s. f.).",
+ ev:"Registro descriptivo de cada sesión y lista de chequeo diligenciada.", evt:["Observaciones","Registros"],
+ est:[["Encabezado",["Grupo, número de sesión y fecha","Equipos disponibles y modalidad: individual o en parejas"]],
+      ["Lista de chequeo al inicio",["La aplicación abre en los equipos","Cada estudiante o pareja retoma su avance","La aplicación funciona sin conexión"]],
+      ["Registro de la sesión",["Uso pedagógico y argumentos orales","Recepción de las narrativas","Incidencias técnicas y fallas de conexión"]],
+      ["Lista de chequeo al cierre",["El avance quedó guardado","El docente exportó el registro","La aplicación siguió funcionando ante las fallas de conexión"]],
+      ["Reflexión del equipo",["Ajustes menores para la siguiente sesión"]]]},
+"LOG-01":{cy:3, ph:"Evaluar", name:"Registro de uso exportado (JSON/CSV)",
+ elem:"Uso pedagógico y uso técnico", tec:"Análisis de registros de uso",
+ que:"Archivo que la hipermedia genera con las acciones de cada estudiante o pareja y que el docente exporta en formato JSON o CSV.",
+ para:"Recuperar lo que los estudiantes hacen dentro de la hipermedia, sin depender de la memoria del observador.",
+ quien:"Los registros de los 24 estudiantes de la muestra (o de sus parejas), con código anónimo. Los del resto de estudiantes no se analizan.",
+ recoge:"Episodios completados, tiempos, perspectivas consultadas, decisiones, justificaciones, ramas exploradas, uso de ayudas, errores de navegación y fallas de conexión.",
+ cuando:"Ciclo 3 (Evaluar), al final de cada sesión.",
+ porque:"Aporta evidencia del uso real, que se compara con el diario de campo para comprobar que coinciden. No recoge datos personales (Ley 1581 de 2012).",
+ ev:"Base de datos de uso por estudiante o pareja.", evt:["Registros","Datos"],
+ est:[["Identificación",["Código anónimo: grupo + E (estudiante) o P (pareja) + número","Grupo de 4.º: 4A-E01 a 4A-E12, o 4A-P01 a 4A-P06 si trabajan en parejas","Grupo de 5.º: 5A-E01 a 5A-E12, o 5A-P01 a 5A-P06 si trabajan en parejas","Sesión y fecha"]],
+      ["Campos por situación",["Episodio y situación","Tiempo empleado","Perspectivas consultadas","Decisión y justificación elegida","Rama explorada","Uso de ayudas"]],
+      ["Campos técnicos",["Errores de navegación","Fallas de conexión"]],
+      ["Exportación",["Formato JSON o CSV, reservada al docente"]]]},
+"RUB-01":{cy:3, ph:"Evaluar", name:"Rúbrica de análisis de justificaciones",
+ elem:"Nivel de las justificaciones según los descriptores del Icfes", tec:"Análisis de justificaciones",
+ que:"Rúbrica basada en los descriptores de nivel de la prueba de Pensamiento Ciudadano. Como las justificaciones son opciones que el estudiante elige, cada opción se codifica por nivel desde el diseño.",
+ para:"Clasificar las justificaciones de los estudiantes según los niveles de desempeño del Icfes.",
+ quien:"Las justificaciones de los 24 estudiantes de la muestra (o de sus parejas).",
+ recoge:"Nivel de cada justificación y proporción de justificaciones en los niveles 3 y 4.",
+ cuando:"Ciclo 3 (Evaluar), sobre los registros exportados. No requiere actividades adicionales de los participantes.",
+ porque:"Es la evidencia más directa del pensamiento ciudadano, que es el centro del problema, y usa el mismo marco del Icfes (2024a) que describe el bajo desempeño. Describe el uso y no mide efectos.",
+ ev:"Distribución de las justificaciones por nivel y por competencia.", evt:["Evidencias de desempeño","Datos"],
+ est:[["Niveles",["Niveles 1 a 4, con los descriptores del Icfes (2024a)"]],
+      ["Por justificación",["Código del estudiante o pareja","Situación y competencia","Justificación elegida","Nivel asignado","Observación"]],
+      ["Resumen",["Proporción de justificaciones por nivel","Proporción en los niveles 3 y 4, por competencia"]]]},
+"ENC-01":{cy:3, ph:"Evaluar", name:"Cuestionario de valoración",
+ elem:"Valoración del prototipo por docentes y estudiantes", tec:"Encuesta de valoración y conversación de cierre con docentes",
+ que:"Cuestionario con dos versiones: la docente combina una escala Likert 1-5 con una guía de conversación de cierre; la de estudiantes es visual y corta.",
+ para:"Recoger la valoración que hacen del prototipo los docentes y los estudiantes de la muestra.",
+ quien:"Los docentes de los dos grupos, en un solo encuentro (primero la escala y luego la conversación), y los 24 estudiantes de la muestra.",
+ recoge:"Valoraciones en escala, opiniones de los docentes en la conversación y valoración visual de los estudiantes.",
+ cuando:"Ciclo 3 (Evaluar), al finalizar las sesiones de implementación.",
+ porque:"El modo Evaluar se basa en la retroalimentación de los usuarios (Hasso Plattner Institute of Design at Stanford, s. f.). La valoración alimenta la matriz de ajustes, que es el producto del OE3.",
+ ev:"Puntajes por ítem, testimonios de los docentes y valoraciones de los estudiantes.", evt:["Valoraciones","Testimonios"],
+ est:[["Versión docente. Parte 1: escala Likert 1-5",["Datos generales y grado","Ítems sobre pertinencia pedagógica, pertinencia cultural de las narrativas, facilidad de uso y funcionamiento en el aula"]],
+      ["Versión docente. Parte 2: conversación de cierre",["Preguntas abiertas sobre lo que funcionó, lo que no y lo que cambiarían"]],
+      ["Versión visual para estudiantes",["Pocos ítems con escala de imágenes","Preguntas sobre si les gustó, si fue fácil y si entendieron a los personajes"]]]},
+"PRI-01":{cy:3, ph:"Evaluar", name:"Matriz de ajustes del prototipo",
+ elem:"Ajustes necesarios al prototipo", tec:"Reflexión del equipo",
+ que:"Matriz que compara los hallazgos del Ciclo 3 con los requisitos del Ciclo 1 y registra los ajustes que necesita el prototipo.",
+ para:"Identificar y priorizar los ajustes del prototipo a partir de la reflexión sobre su uso en el aula.",
+ quien:"La diligencia el equipo investigador con la información de DC-01, LOG-01, RUB-01 y ENC-01, y con los requisitos de REQ-01.",
+ recoge:"Diferencias entre lo previsto en los requisitos y lo ocurrido en el aula, con la fuente que las evidencia y el ajuste propuesto.",
+ cuando:"Ciclo 3 (Evaluar): entre sesiones, para los ajustes menores, y al cierre del ciclo, para la lista final.",
+ porque:"Es el producto del OE3: los ajustes que necesita el prototipo. Como en la fase de evaluar descrita por Turpin et al. (2023), los hallazgos se comparan con los requisitos del Ciclo 1 y las diferencias se registran (p. 201).",
+ ev:"Lista priorizada de ajustes del prototipo, cada uno con su evidencia.", evt:["Registros"],
+ est:[["Por hallazgo",["Hallazgo","Fuente: DC, LOG, RUB o ENC","Requisito relacionado (REQ-01)"]],
+      ["Ajuste",["Ajuste propuesto","Tipo: pedagógico, cultural o técnico","Prioridad","Momento: entre sesiones o al cierre"]],
+      ["Seguimiento",["Ajuste realizado: Sí / No","Observación"]]]}
+};
+
+const REFS = [
+"Brown, T. (2008). Design thinking. <i>Harvard Business Review, 86</i>(6), 84–92.",
+"Calavia, M. B., Blanco, T., Casas, R., y Dieste, B. (2023). Making design thinking for education sustainable: Training preservice teachers to address practice challenges. <i>Thinking Skills and Creativity, 47</i>, Artículo 101199. https://doi.org/10.1016/j.tsc.2022.101199",
+"Campbell, A., Adams, C., Bradley Montgomery, R., Cooper, M. y Kirkpatrick, A. (Eds.). (2024). <i>Web Content Accessibility Guidelines (WCAG) 2.2</i> [Recomendación del W3C]. W3C. https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+"Esteve Mon, F. M., Cela-Ranilla, J. M., y De Benito Crosetti, B. (2019). DBR: una estrategia metodológica para investigar en tecnología educativa. En M. Gisbert Cervera, V. Esteve-González y J. L. Lázaro Cantabrana (Eds.), <i>¿Cómo abordar la educación del futuro? Conceptualización, desarrollo y evaluación desde la competencia digital docente</i> (pp. 79-92). Octaedro.",
+"Hasso Plattner Institute of Design at Stanford. (s. f.). <i>An introduction to design thinking: Process guide</i>. https://dschool.stanford.edu/resources/an-introduction-to-design-thinking-process-guide",
+"Hoadley, C., y Campos, F. C. (2022). Design-based research: What it is and why it matters to studying online learning. <i>Educational Psychologist, 57</i>(3), 207–220. https://doi.org/10.1080/00461520.2022.2079128",
+"Instituto Colombiano para la Evaluación de la Educación. (2024a). <i>Informe nacional de resultados de las pruebas Saber 3.º, 5.º, 7.º y 9.º: Aplicación 2023</i>. Icfes. https://www.icfes.gov.co/wp-content/uploads/2025/07/Informe-Nacional-de-Resultados-Saber-3-5-7-9.pdf",
+"Ley 1581 de 2012. Por la cual se dictan disposiciones generales para la protección de datos personales. 17 de octubre de 2012. D.O. No. 48.587. https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981",
+"McKenney, S., y Reeves, T. C. (2019). <i>Conducting educational design research</i> (2.ª ed.). Routledge. https://doi.org/10.4324/9781315105642",
+"Ministerio de Ciencia, Tecnología e Innovación. (s. f.). <i>Anexo 6. Technology Readiness Levels (TRL)</i>. https://www.minciencias.gov.co/sites/default/files/upload/convocatoria/anexo_6._descripcion_technology_readiness_levels_trl.pdf",
+"Nielsen, J. y Molich, R. (1990). Heuristic evaluation of user interfaces. En <i>Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '90)</i> (pp. 249-256). ACM. https://doi.org/10.1145/97243.97281",
+"Rivera Reyes, H. (2012). <i>\"Salvajes, maliciosos y melancólicos\". El afro y el indígena en los textos escolares de Ciencias Sociales antes y después de 1991</i> [Tesis de maestría, Universidad Pedagógica Nacional]. Repositorio institucional UPN. https://repositorio.upn.edu.co/items/4a1d4961-b5cd-4823-8fcb-0c866c81dd5e/full",
+"Turpin, M., Weilbach, L., y Kruger, S. (2023). Reaping research skills from the rigorous application of design thinking. En <i>Proceedings of the 22nd European Conference on Research Methodology in Business and Management Studies, ECRM 2023</i> (pp. 201-208). Academic Conferences International."
+];
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const cyOf = code => CYCLES.find(c => c.id === I[code].cy);
+const icon = (name, cls="ic") => `<svg class="${cls}" aria-hidden="true"><use href="#i-${name}"/></svg>`;
+const insOf = cy => cy.phases.flatMap(p => p.ins);
+const two = n => String(n).padStart(2,"0");
+
+// Bloques 01 02 03
+$("#trio").innerHTML = CYCLES.map(cy => {
+  const p = PAL[cy.c];
+  return `<a class="tb" href="#ciclo${cy.id}" style="--bk:${p.cc};--fg:${p.con}">
+    <span class="num">${two(cy.id)}</span>
+    <h2>${esc(cy.name)}</h2>
+    <p>${cy.oe}. ${esc(cy.short)}</p>
+    <span class="cnt">${cy.phases.map(f=>f.name).join(" · ")} · ${insOf(cy).length} instrumentos</span>
+  </a>`;
+}).join("");
+
+// Recorrido
+$("#track").innerHTML = CYCLES.map(cy => {
+  const codes = insOf(cy);
+  return `<div class="lane" style="${vars(cy.c)}">
+    <span class="lane-lbl">Ciclo ${cy.id} · ${cy.phases.map(f=>f.name).join(" y ")}</span>
+    ${codes.map((c,i) => `<button class="node${I[c].brief?" brief":""}" style="${pvars(I[c].ph)}" data-code="${c}" aria-label="${c}: ${esc(I[c].name)}"><span class="circ">${icon(ICON[c])}</span><span class="code">${c}</span></button>${i<codes.length-1?'<span class="dash" aria-hidden="true"></span>':""}`).join("")}${'<span class="dash ghost" aria-hidden="true"></span><span class="node ghost" aria-hidden="true"></span>'.repeat(Math.max(0, 6 - codes.length))}
+  </div>`;
+}).join("");
+$("#track").addEventListener("click", e => { const n = e.target.closest(".node"); if (n) openFicha(n.dataset.code); });
+
+// Columna apilada: instrumentos por ciclo
+const total = CYCLES.reduce((a,cy)=>a+insOf(cy).length,0);
+$("#stack").innerHTML = `<img class="hero-img" src="img/personaje.webp" alt="Ilustración de referencia: niña protagonista de la hipermedia" width="536" height="1496" loading="lazy">`;
+
+// Ciclos
+const main = $("#cycles");
+CYCLES.forEach(cy => {
+  const sec = document.createElement("section");
+  sec.className = "cycle"; sec.id = "ciclo" + cy.id;
+  let html = `<div class="wrap"><article class="cyc" style="${vars(cy.c)}">
+    <div class="cyc-side">
+      <span class="big">${two(cy.id)}</span>
+      <span class="tag">Ciclo ${cy.id} DBR${cy.trl ? " · " + cy.trl : ""}</span>
+      <h2>${esc(cy.name)}</h2>
+      <p class="oe"><b>${cy.oe}.</b> ${esc(cy.oeText)}</p>
+      <i class="ring" aria-hidden="true"></i><img class="cyc-img" src="img/ciclo${cy.id}.webp" alt="Ilustración del Ciclo ${cy.id}: ${esc(cy.name)}" width="512" height="1024" loading="lazy">
+    </div><div class="cyc-main">`;
+  cy.phases.forEach(ph => {
+    html += `<div class="phase" style="${pvars(ph.name)}">
+      <div class="phase-h"><span class="pbadge" aria-hidden="true">${icon(PH[ph.name].ic)}</span><div class="pt"><h3>${ph.name}</h3><span class="dur">Design Thinking · ${ph.dur}</span><span class="thint">Toque un elemento, una técnica o un instrumento para ver con qué se relaciona</span></div></div>
+      <div class="chain">
+        <div class="link"><h4>Elemento</h4><ul class="tlist">${ph.elem.map((e,i)=>`<li><button class="elm" aria-pressed="false" data-codes="${EMAP[ph.name][i].join(" ")}">${esc(e)}</button></li>`).join("")}</ul></div>
+        <span class="ac" aria-hidden="true">${icon("arrow")}</span>
+        <div class="link"><h4>Técnica</h4><ul class="tlist">${ph.tec.map((e,i)=>`<li><button class="tec" aria-pressed="false" data-codes="${TMAP[ph.name][i].join(" ")}">${esc(e)}</button></li>`).join("")}</ul></div>
+        <span class="ac ac2" aria-hidden="true">${icon("arrow")}</span>
+        <div class="link ins"><div class="tiles">${ph.ins.map(code=>{
+          const d = I[code];
+          return `<button class="tile${d.brief?" brief":""}${PIC.has(code)?" has-pic":""}" data-code="${code}">${PIC.has(code)?`<img class="pic" src="img/${code}.webp" alt="" width="256" height="330" loading="lazy">`:`<span class="circ">${icon(ICON[code])}</span>`}<span class="code">${code}</span><span class="nm">${esc(d.name)}</span><span class="hint">${d.brief?"Ficha breve":"Ver ficha y estructura"}</span></button>`;
+        }).join("")}</div></div>
+      </div>
+    </div>`;
+  });
+  html += `<p class="bridge"><span class="ac" aria-hidden="true">${icon("arrow")}</span><span>${esc(cy.bridge)}</span></p></div></article></div>`;
+  sec.innerHTML = html;
+  main.appendChild(sec);
+});
+main.addEventListener("click", e => { const t = e.target.closest(".tile"); if (t) openFicha(t.dataset.code); });
+
+// Resaltado técnica ↔ instrumento
+let pinned = null;
+function clearHL(){ document.querySelectorAll(".phase.has-hl").forEach(p => { p.classList.remove("has-hl"); p.querySelectorAll(".hl").forEach(x => x.classList.remove("hl")); }); }
+function applyHL(el){
+  const ph = el.closest(".phase"); if (!ph) return;
+  clearHL();
+  const kind = el.classList.contains("tile") ? "tile" : el.classList.contains("tec") ? "tec" : "elm";
+  const codes = kind === "tile" ? [el.dataset.code] : el.dataset.codes.split(" ");
+  ph.classList.add("has-hl");
+  ph.querySelectorAll(".tile").forEach(t => t.classList.toggle("hl", kind === "tile" ? t === el : codes.includes(t.dataset.code)));
+  ["tec","elm"].forEach(k => ph.querySelectorAll("." + k).forEach(t => t.classList.toggle("hl", kind === k ? t === el : t.dataset.codes.split(" ").some(c => codes.includes(c)))));
+}
+function restoreHL(){ clearHL(); if (pinned) applyHL(pinned); }
+const hlTarget = e => e.target.closest && e.target.closest(".tec, .elm, .tile");
+main.addEventListener("mouseover", e => { const el = hlTarget(e); if (el) applyHL(el); });
+main.addEventListener("mouseout", e => { const el = hlTarget(e); if (el && !el.contains(e.relatedTarget)) restoreHL(); });
+main.addEventListener("focusin", e => { const el = hlTarget(e); if (el) applyHL(el); });
+main.addEventListener("focusout", e => { const el = hlTarget(e); if (el) restoreHL(); });
+main.addEventListener("click", e => {
+  const t = e.target.closest(".tec, .elm"); if (!t) return;
+  if (pinned) pinned.setAttribute("aria-pressed", "false");
+  pinned = (pinned === t) ? null : t;
+  if (pinned) pinned.setAttribute("aria-pressed", "true");
+  restoreHL();
+});
+
+$("#btnTop").addEventListener("click", e => { e.preventDefault(); window.scrollTo({top:0, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"}); });
+$("#reflist").innerHTML = REFS.map(r => `<li>${r}</li>`).join("");
+
+// Contexto
+const btnCtx = $("#btnCtx"), ctx = $("#contexto");
+btnCtx.addEventListener("click", () => {
+  const open = ctx.hidden; ctx.hidden = !open;
+  btnCtx.setAttribute("aria-expanded", String(open));
+  btnCtx.querySelector("span").textContent = open ? "Ocultar contexto" : "Ver contexto del proyecto";
+  if (open) ctx.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"start"});
+});
+
+// Ficha
+const dlg = $("#dlg"), tabF = $("#tabFicha"), tabE = $("#tabEst"), panF = $("#panFicha"), panE = $("#panEst");
+function setTab(which){
+  const f = which === "f";
+  tabF.setAttribute("aria-selected", String(f)); tabE.setAttribute("aria-selected", String(!f));
+  panF.hidden = !f; panE.hidden = f;
+}
+tabF.addEventListener("click", () => setTab("f"));
+tabE.addEventListener("click", () => setTab("e"));
+$("#dlgClose").addEventListener("click", () => dlg.close());
+dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+dlg.addEventListener("close", () => { if (location.hash) history.replaceState(null, "", location.pathname + location.search); });
+
+const q = (title, body, full) => `<div class="q${full?" full":""}"><h4>${title}</h4>${body}</div>`;
+function openFicha(code){
+  const d = I[code]; if (!d) return;
+  const cy = cyOf(code);
+  dlg.style.cssText = pvars(d.ph);
+  const hasPic = PIC.has(code);
+  $("#dlgCirc").hidden = hasPic; $("#dlgPic").hidden = !hasPic;
+  if (hasPic) $("#dlgPic").src = "img/" + code + ".webp";
+  $("#dlgIcon").setAttribute("href", "#i-" + ICON[code]);
+  $("#dlgCode").textContent = "HYP-INS-" + code;
+  $("#dlgTitle").textContent = d.name;
+  $("#dlgSub").textContent = `Ciclo ${cy.id} · ${d.ph} · ${cy.oe}`;
+  if (d.brief){
+    $("#tabs").hidden = true;
+    panF.innerHTML = `<div class="qa">
+      ${q("¿Qué es?", `<p>${esc(d.que)}</p>`, true)}
+      ${q("¿De dónde toma la información?", `<p>${esc(d.insumos)}</p>`)}
+      ${q("¿Qué produce?", `<p>${esc(d.produce)}</p>`)}
+      ${q("¿Quién lo elabora?", `<p>${esc(d.quien)}</p>`, true)}
+    </div><p class="snote">Herramienta de diseño: organiza y transforma la información que recogen otros instrumentos.</p>`;
+  } else {
+    $("#tabs").hidden = false;
+    panF.innerHTML = `
+      <div class="chainmini" aria-label="Cadena de coherencia">
+        <span class="pill"><b>${cy.oe}</b></span><span class="a">→</span>
+        <span class="pill">${esc(d.elem)}</span><span class="a">→</span>
+        <span class="pill">${esc(d.tec)}</span><span class="a">→</span>
+        <span class="pill"><b>${code}</b></span>
+      </div>
+      <div class="qa">
+        ${q("¿Qué es?", `<p>${esc(d.que)}</p>`)}
+        ${q("¿Para qué se utiliza?", `<p>${esc(d.para)}</p>`)}
+        ${q("¿A qué objetivo responde?", `<p><b>${cy.oe}.</b> ${esc(cy.oeText)}</p>`, true)}
+        ${q("¿A quién se aplica?", `<p>${esc(d.quien)}</p>`)}
+        ${q("¿Qué información recoge?", `<p>${esc(d.recoge)}</p>`)}
+        ${q("¿Cuándo se aplica?", `<p>${esc(d.cuando)}</p>`)}
+        ${q("¿Qué evidencia genera?", `<p>${esc(d.ev)}</p><div class="evtags">${d.evt.map(t=>`<span>${t}</span>`).join("")}</div>`)}
+        ${q("¿Por qué se seleccionó?", `<p>${esc(d.porque)}</p>`, true)}
+      </div>`;
+    panE.innerHTML = `<div class="struct">${d.est.map(([h, items], i) =>
+      `<div class="sblock"><h4><span class="n">${i+1}</span>${esc(h)}</h4><ul>${items.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`).join("")}</div>`;
+  }
+  setTab("f");
+  if (!dlg.open) dlg.showModal();
+  dlg.scrollTop = 0;
+  history.replaceState(null, "", "#" + code);
+}
+if (location.hash && I[location.hash.slice(1)]) openFicha(location.hash.slice(1));
+</script>
+
+</body>
+</html>
