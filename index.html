@@ -46,7 +46,7 @@ a{color:inherit}
 .top-title{padding:28px;display:grid;gap:14px;position:relative;z-index:1}
 .top-course{font-family:var(--display);font-weight:600;font-size:clamp(1rem,1.4vw,1.3rem);letter-spacing:.06em;text-transform:uppercase;color:var(--onink-m);border-top:2px solid var(--onink-m);padding-top:12px;line-height:1.35}
 .top-pic{align-self:stretch;width:100%;height:100%;min-height:340px;object-fit:cover;object-position:50% 12%;display:block}
-.top-r h1{position:relative;z-index:1;font-size:clamp(1.9rem,3.4vw,3.6rem);font-weight:800;text-transform:uppercase;letter-spacing:.01em}
+.top-r h1{position:relative;z-index:1;font-size:clamp(1.7rem,2.9vw,3.1rem);font-weight:800;text-transform:uppercase;letter-spacing:.01em}
 .top-r h1 span{display:block;font-weight:500;font-size:.5em;letter-spacing:.04em;margin-top:.35em;color:var(--onink)}
 .hbtns{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
 .btn{border:0;background:var(--ink);color:var(--onink);padding:13px 24px;border-radius:999px;font-family:var(--display);font-weight:700;font-size:clamp(1.05rem,1.3vw,1.3rem);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
@@ -204,6 +204,27 @@ dialog::backdrop{background:rgba(42,35,64,.72)}
 .sblock{background:var(--cream);border-radius:14px;padding:12px 16px;display:grid;gap:6px;align-content:start}
 .sblock h4{font-size:1.1rem;text-transform:uppercase;letter-spacing:.05em;display:flex;gap:10px;align-items:center}
 .sblock h4 .n{width:26px;height:26px;border-radius:50%;background:var(--cc);color:var(--con);display:grid;place-items:center;font-size:.9rem;flex:none}
+.muestra{background:var(--cream);border-radius:18px;padding:18px;display:grid;gap:14px;margin-bottom:18px;justify-items:start}
+.mu-head h3,.mu-sub{font-family:var(--display);font-size:1.35rem;text-transform:uppercase;letter-spacing:.05em;margin:0}
+.mu-sub{margin:0 0 10px}
+.mu-head p{margin:4px 0 0;font-size:.95rem;color:var(--muted)}
+.mu-viewer{width:100%;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:12px;align-items:center;border-radius:14px}
+.mu-stage{margin:0;display:grid;gap:8px;justify-items:center;min-width:0}
+.mu-stage a{display:block;line-height:0}
+.mu-stage img{display:block;width:auto;max-width:100%;height:auto;max-height:min(72vh,980px);border-radius:6px;background:#fff;box-shadow:0 0 0 2px var(--ink),6px 6px 0 2px var(--cc)}
+.mu-stage figcaption{font-family:var(--display);font-weight:700;letter-spacing:.05em;text-transform:uppercase;font-size:1rem;text-align:center}
+.mu-nav{border:0;width:52px;height:52px;border-radius:50%;background:var(--ink);color:var(--onink);display:grid;place-items:center;flex:none}
+.mu-nav:hover:not(:disabled){background:var(--cc);color:var(--con)}
+.mu-nav:disabled{opacity:.3;cursor:default}
+.mu-thumbs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;width:100%}
+.mu-th{border:0;padding:0;background:none;display:grid;gap:4px;justify-items:center;font-family:var(--display);font-weight:700;font-size:.9rem}
+.mu-th img{width:62px;height:auto;border-radius:3px;background:#fff;box-shadow:0 0 0 2px var(--cream2);opacity:.65;transition:opacity .15s ease,box-shadow .15s ease}
+.mu-th:hover img{opacity:1}
+.mu-th[aria-current="true"] img{opacity:1;box-shadow:0 0 0 3px var(--cc)}
+.mu-th[aria-current="true"] span{color:var(--ccd)}
+.muestra{justify-items:center}
+.muestra .mu-head{justify-self:stretch}
+@media (max-width:600px){.mu-viewer{grid-template-columns:1fr 1fr;}.mu-stage{grid-column:1/-1;grid-row:1}.mu-nav{justify-self:center}.mu-th img{width:46px}}
 .sblock ul{margin:0;padding-left:18px;font-size:.92rem;display:grid;gap:3px}
 .snote{font-size:.88rem;color:var(--muted)}
 
@@ -277,7 +298,7 @@ dialog::backdrop{background:rgba(42,35,64,.72)}
     </div>
     <div class="top-r">
       <div class="top-title">
-        <h1>Infografía de instrumentos <span>Aspectos Formales de la Investigación</span></h1>
+        <h1>Instrumentos de investigación del proyecto <span>Aspectos Formales de la Investigación</span></h1>
         <p class="top-course">Opción de Grado II<br>Docente: Lina María Preciado Restrepo</p>
       </div>
       <img class="top-pic" src="img/personaje-titulo.webp" alt="Ilustración de referencia: la protagonista como investigadora, con libros y bata" width="700" height="1050">
@@ -430,12 +451,16 @@ const I = {
  cuando:"Ciclo 1, semanas 1 y 2 (Empatizar).",
  porque:"Responde a la causa pedagógica del problema. El DBR exige que el diseño parta de las necesidades reales de los usuarios (McKenney y Reeves, 2019), y la entrevista individual permite que cada docente hable de su práctica sin la presión del grupo.",
  ev:"Testimonios de los docentes sobre su práctica, transcritos y codificados por categoría.", evt:["Testimonios"],
- est:[["Datos generales",["Código del docente, grado a cargo y años de experiencia","Fecha, duración y entrevistador"]],
-      ["Apertura",["Propósito de la entrevista","Confirmación del consentimiento y de la grabación en audio"]],
-      ["Categoría 1. Prácticas de aula",["Cómo trabaja la formación ciudadana en clase","Situaciones en que los estudiantes argumentan, comparan perspectivas o analizan problemas","Uso de situaciones, problemas o metodologías activas"]],
-      ["Categoría 2. Contenidos y materiales",["Textos, guías y materiales que usa","Cómo aparecen en ellos los pueblos originarios","Su percepción sobre esa representación"]],
-      ["Categoría 3. Recursos del aula",["Equipos y conectividad con que cuenta","Cómo y con qué frecuencia usa recursos digitales"]],
-      ["Cierre",["Necesidades y sugerencias para la hipermedia","Agradecimiento"]]]},
+ est:[["Identificación",["Código, ciclo, fase y objetivo específico","Técnica, participantes, duración (60 minutos) y forma de registro"]],
+      ["Matriz de categorías",["Cuatro categorías con sus subcategorías","Causa del problema a la que responde cada una"]],
+      ["Protocolo",["Lista de chequeo previa y guion de apertura","Hoja de datos del docente"]],
+      ["C1. Formación ciudadana en el aula",["Cómo la trabaja y en qué espacios","Situaciones en que los estudiantes argumentan, comparan perspectivas, analizan problemas o trabajan derechos y normas","Estrategias que funcionaron y dificultades"]],
+      ["C2. Pueblos originarios en los contenidos",["Materiales que usa y cómo aparecen en ellos los pueblos originarios","Relatos o saberes trabajados en clase y respuesta de los estudiantes","Lo que cree que saben sus estudiantes"]],
+      ["C3. Recursos tecnológicos",["Equipos y conexión disponibles","Recursos digitales usados, frecuencia y dificultades"]],
+      ["C4. Expectativas sobre la hipermedia",["Recursos o materiales que conoce","Lo que debería tener la hipermedia y lo que le preocuparía"]],
+      ["Cierre y registro",["Guion de cierre","Tabla de notas por categoría y pasos para transcribir y codificar"]]],
+ muestra:{pdf:"docs/HYP-INS-ENT-01_Guia_entrevista_docentes_v1.1.pdf", ver:"versión 1.1", pags:5,
+  pages:[[1,"Identificación y objetivo"],[2,"Matriz de categorías y protocolo"],[3,"Hoja de datos y preguntas de C1"],[4,"Preguntas de C1 a C4"],[5,"Cierre, notas y procesamiento"]]}},
 "GFE-01":{cy:1, ph:"Empatizar", name:"Guía de grupo focal - estudiantes, protocolo visual",
  elem:"Prácticas de aula y percepciones sobre los pueblos originarios", tec:"Grupo focal con estudiantes, por grado",
  que:"Guía para una conversación en grupo que parte de imágenes y situaciones cotidianas, adaptada a niños de 9 a 11 años.",
@@ -711,7 +736,7 @@ CYCLES.forEach(cy => {
         <span class="ac ac2" aria-hidden="true">${icon("arrow")}</span>
         <div class="link ins"><div class="tiles">${ph.ins.map(code=>{
           const d = I[code];
-          return `<button class="tile${d.brief?" brief":""}${PIC.has(code)?" has-pic":""}" data-code="${code}">${PIC.has(code)?`<img class="pic" src="img/${code}.webp" alt="" width="256" height="330" loading="lazy">`:`<span class="circ">${icon(ICON[code])}</span>`}<span class="code">${code}</span><span class="nm">${esc(d.name)}</span><span class="hint">${d.brief?"Ficha breve":"Ver ficha y estructura"}</span></button>`;
+          return `<button class="tile${d.brief?" brief":""}${PIC.has(code)?" has-pic":""}" data-code="${code}">${PIC.has(code)?`<img class="pic" src="img/${code}.webp" alt="" width="256" height="330" loading="lazy">`:`<span class="circ">${icon(ICON[code])}</span>`}<span class="code">${code}</span><span class="nm">${esc(d.name)}</span><span class="hint">${d.brief?"Ficha breve":d.muestra?"Ver ficha, estructura y muestra":"Ver ficha y estructura"}</span></button>`;
         }).join("")}</div></div>
       </div>
     </div>`;
@@ -774,7 +799,34 @@ dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
 dlg.addEventListener("close", () => { if (location.hash) history.replaceState(null, "", location.pathname + location.search); });
 
 const q = (title, body, full) => `<div class="q${full?" full":""}"><h4>${title}</h4>${body}</div>`;
+let MU = null;
+function muGo(i){
+  if (!MU) return;
+  const n = MU.m.pages.length; i = Math.max(0, Math.min(n - 1, i)); MU.i = i;
+  const [pg, t] = MU.m.pages[i];
+  $("#muImg").src = `img/${MU.code}-p${pg}.webp`;
+  $("#muImg").alt = `Página ${pg} del instrumento: ${t}`;
+  $("#muLink").href = `${MU.m.pdf}#page=${pg}`;
+  $("#muCap").textContent = `Página ${pg} de ${MU.m.pags} · ${t}`;
+  $("#muPrev").disabled = i === 0; $("#muNext").disabled = i === n - 1;
+  panE.querySelectorAll(".mu-th").forEach((b, k) => b.setAttribute("aria-current", k === i ? "true" : "false"));
+}
+function muInit(code, m){
+  MU = {code, m, i:0};
+  $("#muPrev").onclick = () => muGo(MU.i - 1);
+  $("#muNext").onclick = () => muGo(MU.i + 1);
+  panE.querySelectorAll(".mu-th").forEach(b => b.onclick = () => muGo(+b.dataset.i));
+  $("#muViewer").onkeydown = e => {
+    if (e.key === "ArrowLeft"){ e.preventDefault(); muGo(MU.i - 1); }
+    if (e.key === "ArrowRight"){ e.preventDefault(); muGo(MU.i + 1); }
+  };
+  let x0 = null;
+  $("#muViewer").addEventListener("touchstart", e => { x0 = e.touches[0].clientX; }, {passive:true});
+  $("#muViewer").addEventListener("touchend", e => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) muGo(MU.i + (dx < 0 ? 1 : -1)); x0 = null; });
+  muGo(0);
+}
 function openFicha(code){
+  MU = null;
   const d = I[code]; if (!d) return;
   const cy = cyOf(code);
   dlg.style.cssText = pvars(d.ph);
@@ -812,9 +864,22 @@ function openFicha(code){
         ${q("¿Qué evidencia genera?", `<p>${esc(d.ev)}</p><div class="evtags">${d.evt.map(t=>`<span>${t}</span>`).join("")}</div>`)}
         ${q("¿Por qué se seleccionó?", `<p>${esc(d.porque)}</p>`, true)}
       </div>`;
-    panE.innerHTML = `<div class="struct">${d.est.map(([h, items], i) =>
+    const m = d.muestra;
+    $("#tabEst").textContent = m ? "Estructura y muestra" : "Estructura";
+    panE.innerHTML = (m ? `<section class="muestra" aria-label="Muestra del instrumento">
+        <div class="mu-head"><h3>Muestra del instrumento</h3><p>Así se materializa el instrumento en el proyecto (${esc(m.ver)}, ${m.pags} páginas). Use las flechas o las miniaturas para pasar de página.</p></div>
+        <div class="mu-viewer" id="muViewer" tabindex="0" aria-roledescription="visor de páginas" aria-label="Visor del instrumento. Use las flechas izquierda y derecha para cambiar de página.">
+          <button class="mu-nav" id="muPrev" aria-label="Página anterior"><svg class="ic" aria-hidden="true" style="transform:rotate(180deg)"><use href="#i-arrow"/></svg></button>
+          <figure class="mu-stage"><a id="muLink" href="${m.pdf}#page=1" target="_blank" rel="noopener" title="Abrir esta página en el PDF"><img id="muImg" src="img/${code}-p1.webp" alt="" width="910" height="1287"></a>
+            <figcaption id="muCap" aria-live="polite"></figcaption></figure>
+          <button class="mu-nav" id="muNext" aria-label="Página siguiente"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+        <div class="mu-thumbs" role="group" aria-label="Páginas del instrumento">${m.pages.map(([n,t],i)=>`<button class="mu-th" data-i="${i}" aria-label="Ver página ${n}: ${esc(t)}"><img src="img/${code}-p${n}.webp" alt="" width="910" height="1287" loading="lazy"><span>${n}</span></button>`).join("")}</div>
+        <a class="btn" href="${m.pdf}" target="_blank" rel="noopener"><svg class="ic"><use href="#i-doc"/></svg><span>Abrir instrumento completo (PDF)</span></a>
+      </section><h3 class="mu-sub">Estructura</h3>` : "") + `<div class="struct">${d.est.map(([h, items], i) =>
       `<div class="sblock"><h4><span class="n">${i+1}</span>${esc(h)}</h4><ul>${items.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`).join("")}</div>`;
   }
+  if (d.muestra) muInit(code, d.muestra);
   setTab("f");
   if (!dlg.open) dlg.showModal();
   dlg.scrollTop = 0;
@@ -822,6 +887,5 @@ function openFicha(code){
 }
 if (location.hash && I[location.hash.slice(1)]) openFicha(location.hash.slice(1));
 </script>
-
 </body>
 </html>
