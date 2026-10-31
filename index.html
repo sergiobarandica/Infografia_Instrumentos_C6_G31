@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
-<title>Infografía Instrumentos</title>
+<title>Instrumentos de investigación Muysabue</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -328,9 +328,9 @@ dialog::backdrop{background:rgba(42,35,64,.72)}
       <div class="ctx" style="--dc:var(--teal)"><h3><span class="dot"><svg class="ic"><use href="#i-check"/></svg></span>Objetivo general</h3><p>Desarrollar una hipermedia lúdica con narrativas inspiradas en cosmovisiones de pueblos originarios para contribuir al fortalecimiento del pensamiento ciudadano de los estudiantes de 4.º y 5.º de básica primaria del Instituto de Promoción Social de Piedecuesta (Santander).</p></div>
       <div class="ctx" style="--dc:var(--ink)"><h3><span class="dot"><svg class="ic"><use href="#i-globe"/></svg></span>Línea</h3><p>Tecnología Educativa. Modalidad: proyecto tecnológico (recurso educativo digital en formato de aplicación web progresiva, PWA).</p></div>
       <div class="ctx" style="--dc:var(--magenta)"><h3><span class="dot"><svg class="ic"><use href="#i-compass"/></svg></span>Enfoque</h3><p>Proyecto tecnológico. La recolección combina técnicas cualitativas con un cuestionario de valoración, una rúbrica de análisis de justificaciones y una lista de chequeo de criterios de éxito, de uso descriptivo (McKenney y Reeves, 2019; Hoadley y Campos, 2022). El proyecto no mide el efecto de la hipermedia en el desempeño.</p></div>
-      <div class="ctx" style="--dc:var(--orange)"><h3><span class="dot"><svg class="ic"><use href="#i-gear"/></svg></span>Metodología</h3><p>Investigación basada en diseño (DBR) en tres ciclos, uno por objetivo específico (McKenney y Reeves, 2019), con los cinco modos del Design Thinking (Hasso Plattner Institute of Design at Stanford, s. f.). Duración: del 1 de febrero al 31 de mayo de 2027. Empatizar 2 semanas, Definir 2, Idear 1, Prototipar 7 y Evaluar 4 (16 semanas de trabajo, sin contar la Semana Santa). Al cierre del Ciclo 3 el prototipo alcanza el TRL 6 (Minciencias, s. f.). Criterios de calidad: relevancia, consistencia y factibilidad (Plomp y Nieveen, 2009, como se citó en Esteve Mon et al., 2019).</p></div>
+      <div class="ctx" style="--dc:var(--orange)"><h3><span class="dot"><svg class="ic"><use href="#i-gear"/></svg></span>Metodología</h3><p>Investigación basada en diseño (DBR) en tres ciclos, uno por objetivo específico (McKenney y Reeves, 2019), con los cinco modos del Design Thinking (Hasso Plattner Institute of Design at Stanford, s. f.). Duración: del 1 de febrero al 30 de abril de 2027. Empatizar 2 semanas, Definir 1, Idear 1, Prototipar 6 y Evaluar 2 (12 semanas de trabajo, sin contar la Semana Santa). Al cierre del Ciclo 3 el prototipo alcanza el TRL 6 (Minciencias, s. f.). Criterios de calidad: relevancia, consistencia y factibilidad (Plomp y Nieveen, 2009, como se citó en Esteve Mon et al., 2019).</p></div>
       <figure class="ctx ctx-pic"><img src="img/personaje-contexto.webp" alt="Ilustración de referencia: la niña protagonista de la hipermedia" width="900" height="746" loading="lazy"></figure>
-      <div class="ctx" style="--dc:var(--teal)"><h3><span class="dot"><svg class="ic"><use href="#i-people"/></svg></span>Participantes</h3><p>Sede A del Instituto de Promoción Social de Piedecuesta. Docentes de 4.º y 5.º (censal). Estudiantes: se sortean un grupo de 4.º y uno de 5.º, y dentro de cada uno 12 estudiantes cuyos datos se analizan (24 en total). Tres expertos externos para el juicio de expertos. De 4 a 6 estudiantes que no forman parte de la muestra para la prueba de usabilidad.</p></div>
+      <div class="ctx" style="--dc:var(--teal)"><h3><span class="dot"><svg class="ic"><use href="#i-people"/></svg></span>Participantes</h3><p>Sede A del Instituto de Promoción Social de Piedecuesta. Los 2 docentes de 4.º y 5.º, uno por grado (censal). Estudiantes: se sortean un grupo de 4.º y uno de 5.º, y dentro de cada uno 12 estudiantes cuyos datos se analizan (24 en total). Tres expertos externos para el juicio de expertos y, cuando sea posible, un integrante o sabedor del pueblo representado.</p></div>
     </div>
   </div>
 </section>
@@ -385,313 +385,2292 @@ dialog::backdrop{background:rgba(42,35,64,.72)}
 
 <script>
 const PAL = {
-  c1:{cc:"var(--teal)", ccd:"var(--teal)", con:"#fffaf0", cs:"var(--teal-s)"},
-  c2:{cc:"var(--orange)", ccd:"#9a5409", con:"var(--ink)", cs:"var(--orange-s)"},
-  c3:{cc:"var(--magenta)", ccd:"var(--magenta)", con:"#fffaf0", cs:"var(--magenta-s)"}
+ "c1": {
+  "cc": "var(--teal)",
+  "ccd": "var(--teal)",
+  "con": "#fffaf0",
+  "cs": "var(--teal-s)"
+ },
+ "c2": {
+  "cc": "var(--orange)",
+  "ccd": "#9a5409",
+  "con": "var(--ink)",
+  "cs": "var(--orange-s)"
+ },
+ "c3": {
+  "cc": "var(--magenta)",
+  "ccd": "var(--magenta)",
+  "con": "#fffaf0",
+  "cs": "var(--magenta-s)"
+ }
 };
 const PH = {
-  "Empatizar":{cc:"#e5485c", ccd:"#ad2236", con:"#ffffff", cs:"#fadde1", ic:"dt-emp"},
-  "Definir":{cc:"#f0641e", ccd:"#a8410a", con:"#ffffff", cs:"#fde1d0", ic:"dt-def"},
-  "Idear":{cc:"#f7b53d", ccd:"#855800", con:"#2a2340", cs:"#fdeeca", ic:"dt-ide"},
-  "Prototipar":{cc:"#2bbcae", ccd:"#0b6c63", con:"#2a2340", cs:"#d1f0ec", ic:"dt-pro"},
-  "Evaluar":{cc:"#4777bd", ccd:"#2a5394", con:"#ffffff", cs:"#dbe5f4", ic:"dt-eva"}
+ "Empatizar": {
+  "cc": "#e5485c",
+  "ccd": "#ad2236",
+  "con": "#ffffff",
+  "cs": "#fadde1",
+  "ic": "dt-emp"
+ },
+ "Definir": {
+  "cc": "#f0641e",
+  "ccd": "#a8410a",
+  "con": "#ffffff",
+  "cs": "#fde1d0",
+  "ic": "dt-def"
+ },
+ "Idear": {
+  "cc": "#f7b53d",
+  "ccd": "#855800",
+  "con": "#2a2340",
+  "cs": "#fdeeca",
+  "ic": "dt-ide"
+ },
+ "Prototipar": {
+  "cc": "#2bbcae",
+  "ccd": "#0b6c63",
+  "con": "#2a2340",
+  "cs": "#d1f0ec",
+  "ic": "dt-pro"
+ },
+ "Evaluar": {
+  "cc": "#4777bd",
+  "ccd": "#2a5394",
+  "con": "#ffffff",
+  "cs": "#dbe5f4",
+  "ic": "dt-eva"
+ }
 };
 const pvars = ph => { const p = PH[ph]; return `--cc:${p.cc};--ccd:${p.ccd};--con:${p.con};--cs:${p.cs}`; };
 const TMAP = {
-  "Empatizar":[["ENT-01"],["GFE-01"],["OBS-01"],["DOC-01"]],
-  "Definir":[["SIN-01"],["REQ-01"]],
-  "Idear":[["IDE-01"],["MAP-01"]],
-  "Prototipar":[["STB-01"],["VAL-01"],["PWA-01"],["VAL-01"],["USA-01"]],
-  "Evaluar":[["DC-01"],["LOG-01"],["RUB-01"],["ENC-01"],["PRI-01"]]
+ "Empatizar": [
+  [
+   "ENT-01"
+  ],
+  [
+   "GFE-01"
+  ],
+  [
+   "OBS-01"
+  ],
+  [
+   "DOC-01"
+  ]
+ ],
+ "Definir": [
+  [
+   "SIN-01"
+  ],
+  [
+   "REQ-01"
+  ]
+ ],
+ "Idear": [
+  [
+   "IDE-01"
+  ],
+  [
+   "MAP-01"
+  ]
+ ],
+ "Prototipar": [
+  [
+   "STB-01"
+  ],
+  [
+   "VAL-01"
+  ],
+  [
+   "PWA-01"
+  ],
+  [
+   "VAL-01"
+  ]
+ ],
+ "Evaluar": [
+  [
+   "DC-01"
+  ],
+  [
+   "LOG-01"
+  ],
+  [
+   "RUB-01"
+  ],
+  [
+   "ENC-01"
+  ],
+  [
+   "PRI-01"
+  ]
+ ]
 };
 const EMAP = {
-  "Empatizar":[["ENT-01","GFE-01","OBS-01"],["ENT-01","GFE-01","DOC-01"],["ENT-01","OBS-01"],["DOC-01"]],
-  "Definir":[["SIN-01"],["SIN-01"],["REQ-01"],["REQ-01"]],
-  "Idear":[["IDE-01"],["IDE-01"],["MAP-01"]],
-  "Prototipar":[["STB-01","PWA-01"],["VAL-01"],["PWA-01"],["VAL-01","USA-01"]],
-  "Evaluar":[["DC-01","LOG-01"],["RUB-01"],["DC-01","ENC-01"],["DC-01","LOG-01"],["ENC-01","PRI-01"]]
+ "Empatizar": [
+  [
+   "ENT-01",
+   "GFE-01",
+   "OBS-01"
+  ],
+  [
+   "ENT-01",
+   "GFE-01",
+   "DOC-01"
+  ],
+  [
+   "ENT-01",
+   "OBS-01"
+  ],
+  [
+   "DOC-01"
+  ]
+ ],
+ "Definir": [
+  [
+   "SIN-01"
+  ],
+  [
+   "SIN-01"
+  ],
+  [
+   "REQ-01"
+  ],
+  [
+   "REQ-01"
+  ]
+ ],
+ "Idear": [
+  [
+   "IDE-01"
+  ],
+  [
+   "IDE-01"
+  ],
+  [
+   "MAP-01"
+  ]
+ ],
+ "Prototipar": [
+  [
+   "STB-01",
+   "PWA-01"
+  ],
+  [
+   "VAL-01"
+  ],
+  [
+   "PWA-01"
+  ],
+  [
+   "VAL-01"
+  ]
+ ],
+ "Evaluar": [
+  [
+   "DC-01",
+   "LOG-01"
+  ],
+  [
+   "RUB-01"
+  ],
+  [
+   "DC-01",
+   "ENC-01"
+  ],
+  [
+   "DC-01",
+   "LOG-01"
+  ],
+  [
+   "ENC-01",
+   "PRI-01"
+  ]
+ ]
 };
 const vars = c => { const p = PAL[c]; return `--cc:${p.cc};--ccd:${p.ccd};--con:${p.con};--cs:${p.cs}`; };
 
 const CYCLES = [
- {id:1, name:"Análisis y exploración", oe:"OE1", c:"c1", short:"Caracterizar las condiciones pedagógicas y establecer los requisitos de diseño.",
-  oeText:"Caracterizar las condiciones pedagógicas en las que se desarrolla el pensamiento ciudadano en 4.º y 5.º de básica primaria del Instituto de Promoción Social de Piedecuesta, para establecer los requisitos de diseño de la hipermedia.",
-  phases:[
-   {name:"Empatizar", dur:"2 semanas",
-    elem:["Prácticas de aula: oportunidades para ejercitar las cuatro competencias","Contenidos y materiales: representación de los pueblos originarios","Recursos del aula: dispositivos y conectividad","Marco institucional: PEI, plan de estudios y malla"],
-    tec:["Entrevista semiestructurada con docentes","Grupo focal con estudiantes, por grado","Observación no participante (clase y condiciones TIC)","Revisión documental"],
-    ins:["ENT-01","GFE-01","OBS-01","DOC-01"]},
-   {name:"Definir", dur:"2 semanas",
-    elem:["Síntesis de hallazgos por causa: pedagógica, cultural y tecnológica","Arquetipos de docentes y estudiantes","Requisitos pedagógicos, culturales y técnicos","Selección del mundo temático"],
-    tec:["Agrupación por afinidad y construcción de arquetipos (mapa de empatía y POV)","Definición de requerimientos y selección del mundo temático"],
-    ins:["SIN-01","REQ-01"]}
+ {
+  "id": 1,
+  "name": "Análisis y exploración",
+  "oe": "OE1",
+  "c": "c1",
+  "short": "Caracterizar las condiciones pedagógicas y establecer los requisitos de diseño.",
+  "oeText": "Caracterizar las condiciones pedagógicas en las que se desarrolla el pensamiento ciudadano en 4.º y 5.º de básica primaria del Instituto de Promoción Social de Piedecuesta, para establecer los requisitos de diseño de la hipermedia.",
+  "phases": [
+   {
+    "name": "Empatizar",
+    "dur": "2 semanas",
+    "elem": [
+     "Prácticas de aula: oportunidades para ejercitar las cuatro competencias",
+     "Contenidos y materiales: representación de los pueblos originarios",
+     "Recursos del aula: dispositivos y conectividad",
+     "Marco institucional: PEI, plan de estudios y malla"
+    ],
+    "tec": [
+     "Entrevista semiestructurada con docentes",
+     "Grupo focal con estudiantes, por grado",
+     "Observación no participante (clase y condiciones TIC)",
+     "Revisión documental"
+    ],
+    "ins": [
+     "ENT-01",
+     "GFE-01",
+     "OBS-01",
+     "DOC-01"
+    ]
+   },
+   {
+    "name": "Definir",
+    "dur": "1 semana",
+    "elem": [
+     "Síntesis de hallazgos por causa: pedagógica, cultural y tecnológica",
+     "Arquetipos de docentes y estudiantes",
+     "Requisitos pedagógicos, culturales y técnicos",
+     "Selección del mundo temático"
+    ],
+    "tec": [
+     "Agrupación por afinidad y construcción de arquetipos (mapa de empatía y POV)",
+     "Definición de requerimientos y selección del mundo temático"
+    ],
+    "ins": [
+     "SIN-01",
+     "REQ-01"
+    ]
+   }
   ],
-  bridge:"La matriz de requerimientos [REQ-01] es la entrada del Ciclo 2: Idear parte de esos requisitos."},
- {id:2, name:"Diseño y construcción", oe:"OE2", c:"c2", short:"Construir un prototipo funcional de la hipermedia que pueda implementarse en el aula.",
-  oeText:"Construir un prototipo funcional de la hipermedia que permita a los estudiantes ejercitar las competencias del pensamiento ciudadano y que pueda implementarse en el aula.",
-  phases:[
-   {name:"Idear", dur:"1 semana",
-    elem:["Alternativas para narrativas, episodios y mecánicas lúdicas","Priorización por impacto y esfuerzo","Arquitectura de contenidos alineada con las competencias"],
-    tec:["Ideación y priorización: preguntas HMW, lluvia de ideas, impacto y esfuerzo","Diseño de contenidos y revisión de la alineación con los docentes"],
-    ins:["IDE-01","MAP-01"]},
-   {name:"Prototipar", dur:"7 semanas",
-    elem:["Concreción del mundo en storyboards, mockup y PWA","Pertinencia cultural y pedagógica","Funcionamiento sin conexión, desempeño y accesibilidad","Calidad y facilidad de uso de la interfaz"],
-    tec:["Prototipado previo al código","Juicio de expertos, momento 1: validación cultural","Desarrollo y verificación técnica de la PWA","Juicio de expertos, momento 2: rúbrica completa y evaluación heurística","Prueba de usabilidad"],
-    ins:["STB-01","VAL-01","PWA-01","USA-01"]}
+  "bridge": "La matriz de requerimientos [REQ-01] es la entrada del Ciclo 2: Idear parte de esos requisitos."
+ },
+ {
+  "id": 2,
+  "name": "Diseño y construcción",
+  "oe": "OE2",
+  "c": "c2",
+  "short": "Construir un prototipo funcional de la hipermedia que pueda implementarse en el aula.",
+  "oeText": "Construir un prototipo funcional de la hipermedia que permita a los estudiantes ejercitar las competencias del pensamiento ciudadano y que pueda implementarse en el aula.",
+  "phases": [
+   {
+    "name": "Idear",
+    "dur": "1 semana",
+    "elem": [
+     "Alternativas para narrativas, episodios y mecánicas lúdicas",
+     "Priorización por impacto y esfuerzo",
+     "Arquitectura de contenidos alineada con las competencias"
+    ],
+    "tec": [
+     "Ideación y priorización: preguntas HMW, lluvia de ideas, impacto y esfuerzo",
+     "Diseño de contenidos y revisión de la alineación con los docentes"
+    ],
+    "ins": [
+     "IDE-01",
+     "MAP-01"
+    ]
+   },
+   {
+    "name": "Prototipar",
+    "dur": "6 semanas",
+    "elem": [
+     "Concreción del mundo en storyboards, mockup y PWA",
+     "Pertinencia cultural y pedagógica",
+     "Funcionamiento sin conexión, desempeño y accesibilidad",
+     "Calidad de la interfaz: evaluación heurística de los expertos"
+    ],
+    "tec": [
+     "Prototipado previo al código",
+     "Juicio de expertos, momento 1: validación cultural",
+     "Desarrollo y verificación técnica de la PWA",
+     "Juicio de expertos, momento 2: rúbrica completa y evaluación heurística"
+    ],
+    "ins": [
+     "STB-01",
+     "VAL-01",
+     "PWA-01"
+    ]
+   }
   ],
-  bridge:"Los problemas graves que encuentran los expertos y la prueba de usabilidad se corrigen antes del Ciclo 3."},
- {id:3, name:"Evaluación y reflexión", oe:"OE3", c:"c3", trl:"TRL 6", short:"Implementar el prototipo en el aula e identificar los ajustes necesarios.",
-  oeText:"Implementar el prototipo de la hipermedia con estudiantes y docentes de 4.º y 5.º de básica primaria, para identificar, a partir de la reflexión sobre su uso en el aula, los ajustes necesarios.",
-  phases:[
-   {name:"Evaluar", dur:"4 semanas",
-    elem:["Uso pedagógico: recorrido y competencias que se ejercitan","Nivel de las justificaciones según el Icfes","Uso cultural: recepción de las narrativas","Uso técnico y criterios de éxito en el aula","Valoración de docentes y estudiantes, y ajustes"],
-    tec:["Observación participante y verificación de criterios de éxito","Análisis de registros de uso","Análisis de justificaciones","Encuesta de valoración y conversación de cierre","Reflexión del equipo"],
-    ins:["DC-01","LOG-01","RUB-01","ENC-01","PRI-01"]}
+  "bridge": "Los problemas graves que encuentran los expertos y la verificación técnica se corrigen antes del Ciclo 3."
+ },
+ {
+  "id": 3,
+  "name": "Evaluación y reflexión",
+  "oe": "OE3",
+  "c": "c3",
+  "trl": "TRL 6",
+  "short": "Implementar el prototipo en el aula e identificar los ajustes necesarios.",
+  "oeText": "Implementar el prototipo de la hipermedia con estudiantes y docentes de 4.º y 5.º de básica primaria, para identificar, a partir de la reflexión sobre su uso en el aula, los ajustes necesarios.",
+  "phases": [
+   {
+    "name": "Evaluar",
+    "dur": "2 semanas",
+    "elem": [
+     "Uso pedagógico: recorrido y competencias que se ejercitan",
+     "Nivel de las justificaciones según el Icfes",
+     "Uso cultural: recepción de las narrativas",
+     "Uso técnico y criterios de éxito en el aula",
+     "Valoración de docentes y estudiantes, y ajustes"
+    ],
+    "tec": [
+     "Observación participante y verificación de criterios de éxito",
+     "Análisis de registros de uso",
+     "Análisis de justificaciones",
+     "Encuesta de valoración y conversación de cierre",
+     "Reflexión del equipo"
+    ],
+    "ins": [
+     "DC-01",
+     "LOG-01",
+     "RUB-01",
+     "ENC-01",
+     "PRI-01"
+    ]
+   }
   ],
-  bridge:"Los hallazgos se comparan con los requisitos del Ciclo 1 y las diferencias quedan en la matriz de ajustes (Turpin et al., 2023)."}
+  "bridge": "Los hallazgos se comparan con los requisitos del Ciclo 1 y las diferencias quedan en la matriz de ajustes (Turpin et al., 2023). Los ajustes priorizados se incorporan en la versión final antes de la socialización."
+ }
 ];
 
 const PIC = { has: c => true };
-const ICON = {"ENT-01":"chat","GFE-01":"group","OBS-01":"eye","DOC-01":"doc","SIN-01":"layers","REQ-01":"list","IDE-01":"bulb","MAP-01":"map","STB-01":"frames","VAL-01":"check","PWA-01":"phone","USA-01":"cursor","DC-01":"book","LOG-01":"db","RUB-01":"levels","ENC-01":"star","PRI-01":"gear"};
+const ICON = {
+ "ENT-01": "chat",
+ "GFE-01": "group",
+ "OBS-01": "eye",
+ "DOC-01": "doc",
+ "SIN-01": "layers",
+ "REQ-01": "list",
+ "IDE-01": "bulb",
+ "MAP-01": "map",
+ "STB-01": "frames",
+ "VAL-01": "check",
+ "PWA-01": "phone",
+ "DC-01": "book",
+ "LOG-01": "db",
+ "RUB-01": "levels",
+ "ENC-01": "star",
+ "PRI-01": "gear"
+};
 
 const I = {
-"ENT-01":{cy:1, ph:"Empatizar", name:"Guía de entrevista semiestructurada - docentes",
- elem:"Prácticas de aula, contenidos y materiales, recursos del aula", tec:"Entrevista semiestructurada",
- que:"Guía de preguntas abiertas, organizadas por categorías, que permite conversar con cada docente sobre su práctica y repreguntar según sus respuestas.",
- para:"Conocer cómo los docentes trabajan la formación ciudadana, qué materiales usan y con qué recursos tecnológicos cuentan.",
- quien:"Todos los docentes de 4.º y 5.º de la sede A (muestra censal), en una entrevista individual con cada uno.",
- recoge:"Prácticas de aula, materiales (incluidos los que se refieren a pueblos originarios), percepciones sobre esos materiales y recursos tecnológicos disponibles.",
- cuando:"Ciclo 1, semanas 1 y 2 (Empatizar).",
- porque:"Responde a la causa pedagógica del problema. El DBR exige que el diseño parta de las necesidades reales de los usuarios (McKenney y Reeves, 2019), y la entrevista individual permite que cada docente hable de su práctica sin la presión del grupo.",
- ev:"Testimonios de los docentes sobre su práctica, transcritos y codificados por categoría.", evt:["Testimonios"],
- est:[["Identificación",["Código, ciclo, fase y objetivo específico","Técnica, participantes, duración (60 minutos) y forma de registro"]],
-      ["Matriz de categorías",["Cuatro categorías con sus subcategorías","Causa del problema a la que responde cada una"]],
-      ["Protocolo",["Lista de chequeo previa y guion de apertura","Hoja de datos del docente"]],
-      ["C1. Formación ciudadana en el aula",["Cómo la trabaja y en qué espacios","Situaciones en que los estudiantes argumentan, comparan perspectivas, analizan problemas o trabajan derechos y normas","Estrategias que funcionaron y dificultades"]],
-      ["C2. Pueblos originarios en los contenidos",["Materiales que usa y cómo aparecen en ellos los pueblos originarios","Relatos o saberes trabajados en clase y respuesta de los estudiantes","Lo que cree que saben sus estudiantes"]],
-      ["C3. Recursos tecnológicos",["Equipos y conexión disponibles","Recursos digitales usados, frecuencia y dificultades"]],
-      ["C4. Expectativas sobre la hipermedia",["Recursos o materiales que conoce","Lo que debería tener la hipermedia y lo que le preocuparía"]],
-      ["Cierre y registro",["Guion de cierre","Tabla de notas por categoría y pasos para transcribir y codificar"]]],
- muestra:{pdf:"docs/HYP-INS-ENT-01_Guia_entrevista_docentes_v1.1.pdf", ver:"versión 1.1", pags:5,
-  pages:[[1,"Identificación y objetivo"],[2,"Matriz de categorías y protocolo"],[3,"Hoja de datos y preguntas de C1"],[4,"Preguntas de C1 a C4"],[5,"Cierre, notas y procesamiento"]]}},
-"GFE-01":{cy:1, ph:"Empatizar", name:"Guía de grupo focal - estudiantes, protocolo visual",
- elem:"Prácticas de aula y percepciones sobre los pueblos originarios", tec:"Grupo focal con estudiantes, por grado",
- que:"Guía para una conversación en grupo que parte de imágenes y situaciones cotidianas, adaptada a niños de 9 a 11 años.",
- para:"Conocer cómo razonan los estudiantes ante situaciones cotidianas y qué imaginarios tienen sobre los pueblos originarios.",
- quien:"Los 12 estudiantes sorteados de cada grupo participante (24 en total), en un grupo focal por grado. Lo conducen los tres investigadores.",
- recoge:"Razonamientos de los estudiantes asociados a las cuatro competencias del pensamiento ciudadano, y sus percepciones sobre los pueblos originarios.",
- cuando:"Ciclo 1, semanas 1 y 2 (Empatizar).",
- porque:"Da voz al usuario principal del prototipo, como pide el modo Empatizar (Hasso Plattner Institute of Design at Stanford, s. f.). El protocolo visual se ajusta a la edad de los participantes, y las situaciones se basan en las competencias que evalúa el Icfes (2024a).",
- ev:"Intervenciones de los estudiantes registradas por código, agrupadas por competencia y por tema.", evt:["Testimonios","Observaciones"],
- est:[["Datos generales",["Grado, código de la sesión, fecha y duración","Roles de los investigadores: moderación, registro y acompañamiento"]],
-      ["Apertura",["Presentación y reglas de la conversación","Recordatorio del asentimiento"]],
-      ["Situaciones ilustradas",["Una situación cotidiana por competencia: conocimientos, argumentación, multiperspectivismo y pensamiento sistémico","Preguntas guía para cada situación: qué pasa, qué harían, por qué, qué pensaría el otro"]],
-      ["Imágenes sobre pueblos originarios",["Qué saben y qué imaginan de ellos","De dónde lo aprendieron"]],
-      ["Cierre",["Qué les gustaría encontrar en un juego sobre estos temas"]],
-      ["Formato de registro",["Código del estudiante, intervención, situación y competencia asociada"]]]},
-"OBS-01":{cy:1, ph:"Empatizar", name:"Guía de observación de aula y registro de condiciones TIC",
- elem:"Prácticas de aula y recursos del aula", tec:"Observación no participante",
- que:"Guía en dos partes: la parte A registra lo que ocurre en clase y la parte B registra los equipos y la conectividad de las aulas.",
- para:"Contrastar lo que dicen docentes y estudiantes con lo que ocurre en clase, y conocer las condiciones técnicas en que funcionará la PWA.",
- quien:"Entre 2 y 3 clases de cada grupo participante, y los dispositivos y la conectividad de las aulas de la sede A.",
- recoge:"Oportunidades para ejercitar las competencias, presencia de los pueblos originarios en clase, e inventario de equipos y conexión.",
- cuando:"Ciclo 1, semanas 1 y 2 (Empatizar).",
- porque:"Permite triangular con la entrevista y el grupo focal. La parte B responde a la causa tecnológica, porque de ella salen los umbrales de rendimiento y tamaño de la descarga (RNF-02 y RNF-03).",
- ev:"Registros de observación de clase e inventario de dispositivos y conectividad.", evt:["Observaciones","Registros","Datos"],
- est:[["Parte A. Contexto de la clase",["Grado, fecha, tema, duración y número de estudiantes"]],
-      ["Parte A. Aspectos a observar",["Tipo de actividad: transmisión de conceptos o trabajo con situaciones","Oportunidades para cada una de las cuatro competencias","Presencia y forma de representación de los pueblos originarios","Participación de los estudiantes"]],
-      ["Parte A. Registro",["Presencia o ausencia de cada aspecto","Descripción de los episodios observados"]],
-      ["Parte B. Inventario TIC",["Tipo y modelo de equipo, sistema operativo y navegador","Almacenamiento disponible","Tipo de conexión y estabilidad en el aula"]]]},
-"DOC-01":{cy:1, ph:"Empatizar", name:"Matriz de revisión documental",
- elem:"Marco institucional de la formación ciudadana", tec:"Revisión documental",
- que:"Matriz que registra, por documento, los fragmentos relacionados con las categorías del estudio.",
- para:"Analizar cómo aparece la formación ciudadana en los documentos de la institución y cómo se representa a los pueblos originarios en los materiales.",
- quien:"Documentos: PEI, plan de estudios, malla de Ciencias Sociales, textos y materiales de clase.",
- recoge:"Lugar del pensamiento ciudadano en el currículo y representación de los pueblos originarios en textos y materiales.",
- cuando:"Ciclo 1, semanas 1 y 2 (Empatizar).",
- porque:"Es la única fuente institucional del Ciclo 1. Responde a la causa epistémica y cultural, que la literatura asocia con textos que estereotipan a los pueblos originarios (Rivera Reyes, 2012), y completa la triangulación.",
- ev:"Fragmentos de documentos clasificados por categoría, con su análisis.", evt:["Información documental"],
- est:[["Identificación del documento",["Tipo, título, año y responsable"]],
-      ["Categorías de análisis",["Lugar de la formación ciudadana","Referencia a las cuatro competencias del pensamiento ciudadano","Representación de los pueblos originarios","Recursos tecnológicos previstos"]],
-      ["Registro",["Fragmento y página","Categoría","Observación del equipo"]]]},
-"SIN-01":{cy:1, ph:"Definir", name:"Plantilla de síntesis: diagrama de afinidad y ficha de arquetipos",
- elem:"Síntesis de hallazgos y arquetipos de usuario", tec:"Agrupación por afinidad y construcción de arquetipos",
- que:"Plantilla en dos partes: un diagrama de afinidad que agrupa los hallazgos y una ficha que describe a los usuarios típicos.",
- para:"Organizar lo recogido en Empatizar por temas comunes y describir a los usuarios del prototipo.",
- quien:"La diligencia el equipo investigador con los datos de ENT-01, GFE-01, OBS-01 y DOC-01.",
- recoge:"Hallazgos agrupados según las ramas del árbol de problemas y arquetipos de docentes y estudiantes, con su mapa de empatía y su declaración POV.",
- cuando:"Ciclo 1, semanas 3 y 4 (Definir).",
- porque:"Convierte los datos de las cuatro fuentes en la caracterización que pide el OE1. Corresponde al modo Definir del Design Thinking y cierra la triangulación del Ciclo 1. Atiende los criterios de relevancia y consistencia (Plomp y Nieveen, 2009, como se citó en Esteve Mon et al., 2019).",
- ev:"Diagrama de afinidad y fichas de arquetipos de docentes y estudiantes.", evt:["Registros"],
- est:[["Parte A. Diagrama de afinidad",["Hallazgo","Fuente: ENT, GFE, OBS o DOC","Tema que agrupa los hallazgos","Causa del problema: pedagógica, cultural o tecnológica"]],
-      ["Parte B. Ficha de arquetipo",["Perfil y contexto de uso","Mapa de empatía: qué dice, qué hace, qué piensa, qué siente","Necesidades y dificultades","Condiciones tecnológicas","Declaración POV: usuario, necesidad y hallazgo que la explica"]]]},
-"REQ-01":{cy:1, ph:"Definir", name:"Matriz de requerimientos de diseño y selección del mundo temático",
- elem:"Requisitos de diseño y mundo temático", tec:"Definición de requerimientos y selección del mundo temático",
- que:"Matriz que traduce la síntesis en requisitos verificables y registra la elección del mundo temático.",
- para:"Establecer los requisitos pedagógicos, culturales y técnicos de la hipermedia y elegir el mundo temático que se desarrollará.",
- quien:"La diligencia el equipo investigador a partir de SIN-01, los documentos, los materiales y el registro de condiciones TIC.",
- recoge:"Requerimientos funcionales y no funcionales con sus criterios de cumplimiento, y el mundo temático elegido con la justificación de la elección.",
- cuando:"Ciclo 1, semanas 3 y 4 (Definir). Es la entrada del Ciclo 2.",
- porque:"Une el problema con el diseño, porque cada requisito responde a una causa. La selección del mundo temático considera la disponibilidad de un experto con trabajo documentado con el pueblo y de fuentes elaboradas por integrantes de ese pueblo, para que el desarrollo no dependa de un participante difícil de contactar.",
- ev:"Lista de requerimientos con criterios de cumplimiento y mundo temático seleccionado.", evt:["Registros","Datos"],
- est:[["Parte A. Requerimientos",["Código: RF o RNF","Descripción","Hallazgo de origen en SIN-01","Causa del problema a la que responde","Criterio de cumplimiento e instrumento que lo verifica"]],
-      ["Parte B. Selección del mundo temático",["Mundos candidatos","Valoración de cada uno frente a los criterios","Disponibilidad de un experto con el perfil requerido","Disponibilidad de fuentes elaboradas por integrantes del pueblo","Mundo elegido y justificación"]]]},
-"IDE-01":{cy:2, ph:"Idear", name:"Plantilla de ideación y priorización",
- elem:"Alternativas para narrativas, episodios y mecánicas lúdicas, y su priorización", tec:"Ideación y priorización: preguntas HMW, lluvia de ideas, impacto y esfuerzo",
- que:"Plantilla en tres partes: un banco de preguntas \"¿Cómo podríamos…?\" (HMW), una lluvia de ideas y una matriz que ubica cada idea según su impacto y su esfuerzo.",
- para:"Convertir los requisitos del Ciclo 1 en preguntas de diseño, generar ideas para el mundo seleccionado y elegir las que se van a desarrollar.",
- quien:"La diligencia el equipo investigador (líder y diseñador de interfaz, experta disciplinar y pedagogo) a partir de SIN-01 y REQ-01.",
- recoge:"Preguntas HMW, ideas para las narrativas, los episodios y las mecánicas lúdicas, y la valoración de cada idea según su impacto y su esfuerzo.",
- cuando:"Ciclo 2, semana 5 (Idear), antes del mapa de contenidos.",
- porque:"Idear parte de la síntesis y los requisitos del Ciclo 1, que se convierten en preguntas HMW. Calavia et al. (2023) usaron preguntas \"¿Cómo podríamos…?\" y lluvia de ideas en una secuencia similar (p. 7). Como el DBR trata cada decisión de diseño como una conjetura que debe documentarse (Hoadley y Campos, 2022), la plantilla deja registro de por qué se eligió cada idea.",
- ev:"Banco de preguntas HMW e ideas priorizadas para el mundo seleccionado.", evt:["Registros"],
- est:[["Parte A. Banco de preguntas HMW",["Requisito o hallazgo de origen (REQ-01, SIN-01)","Pregunta \"¿Cómo podríamos…?\""]],
-      ["Parte B. Lluvia de ideas",["Idea para una narrativa, un episodio o una mecánica lúdica","Pregunta HMW a la que responde"]],
-      ["Parte C. Matriz de impacto y esfuerzo",["Ubicación de cada idea: impacto alto o bajo, esfuerzo alto o bajo","Ideas elegidas y justificación"]]]},
-"MAP-01":{cy:2, ph:"Idear", name:"Mapa de contenidos y alineación con las competencias",
- elem:"Arquitectura de contenidos alineada con las competencias", tec:"Diseño de contenidos y revisión de la alineación",
- que:"Mapa que organiza el mundo temático en episodios y situaciones, y asocia cada situación con una competencia, una afirmación y una evidencia de la prueba de Pensamiento Ciudadano.",
- para:"Garantizar que cada situación permita ejercitar una competencia, y que los docentes lo confirmen antes de hacer los storyboards.",
- quien:"Lo elabora el equipo investigador y lo revisan los docentes de 4.º y 5.º de la sede A en una sesión breve.",
- recoge:"Alineación de cada situación con el marco del Icfes y observaciones de los docentes sobre esa alineación.",
- cuando:"Ciclo 2, semana 5 (Idear), antes de los storyboards.",
- porque:"Asegura lo que pide el OE2: que el prototipo permita ejercitar las cuatro competencias. Verifica el requerimiento RNF-11 y atiende los criterios de relevancia y consistencia.",
- ev:"Mapa de contenidos revisado por los docentes, con las observaciones incorporadas.", evt:["Resultados de validación","Valoraciones"],
- est:[["Jerarquía",["Mundo temático → episodios → situaciones (dilemas narrativos)"]],
-      ["Por situación",["Código y episodio al que pertenece","Dilema narrativo","Competencia, afirmación y evidencia del Icfes","Perspectivas de los personajes","Opciones de decisión y de justificación"]],
-      ["Revisión docente",["¿La situación corresponde a la competencia? Sí / No","Observación del docente","Ajuste realizado"]]]},
-"STB-01":{cy:2, ph:"Prototipar", name:"Storyboards, wireframes y mockup del mundo seleccionado",
- elem:"Concreción del mundo seleccionado en storyboards, wireframes y mockup", tec:"Prototipado previo al código",
- que:"Prototipos del mundo seleccionado en dos niveles de fidelidad: storyboards y wireframes (baja) y mockup interactivo de las pantallas clave (media).",
- para:"Probar la narrativa y la navegación antes de programar, y darle al experto un material concreto para la validación cultural.",
- quien:"Lo elabora el equipo investigador. Uno de los tres expertos externos lo revisa con la sección cultural de VAL-01 (momento 1).",
- recoge:"Secuencia narrativa de cada episodio, distribución de las pantallas, recorrido de navegación y representación visual de personajes y escenarios.",
- cuando:"Ciclo 2 (Prototipar), después del mapa de contenidos y antes de programar la PWA.",
- porque:"Prototipar avanza por tres niveles de fidelidad: baja, media y alta. Revisar la representación de los pueblos originarios sobre storyboards y mockup permite corregirla antes de programar, cuando cuesta menos. Los storyboards son una de las técnicas de bajo costo que ofrece la guía del Hasso Plattner Institute of Design at Stanford (s. f.).",
- ev:"Storyboards, wireframes y mockup interactivo, con las observaciones culturales incorporadas.", evt:["Registros","Resultados de validación"],
- est:[["Storyboards",["Viñetas por episodio y situación","Personajes, escenario y diálogos","Decisión y consecuencias de cada rama"]],
-      ["Wireframes",["Distribución de cada pantalla","Navegación entre episodios, perspectivas y decisiones"]],
-      ["Mockup interactivo",["Pantallas clave con su diseño visual","Recorrido navegable de una situación"]],
-      ["Registro de revisión",["Observaciones del experto (VAL-01, momento 1)","Ajuste realizado antes de programar"]]]},
-"VAL-01":{cy:2, ph:"Prototipar", name:"Rúbrica de juicio de expertos",
- elem:"Pertinencia cultural y pedagógica, calidad de la interfaz y diseño multimedia", tec:"Juicio de expertos en dos momentos, con evaluación heurística independiente",
- que:"Rúbrica con cinco secciones: pedagógica, cultural, técnica, heurística y de diseño multimedia.",
- para:"Validar el prototipo en dos momentos: la sección cultural sobre storyboards y mockup antes de programar, y la rúbrica completa sobre la PWA.",
- quien:"Tres expertos externos en tecnología educativa y en saberes de pueblos originarios o educación intercultural. Uno de ellos, con trabajo documentado con el pueblo representado o en educación intercultural, aplica la sección cultural. Cuando es posible, también revisa un integrante o sabedor de ese pueblo.",
- recoge:"Valoraciones por criterio, observaciones y problemas de usabilidad con su gravedad.",
- cuando:"Momento 1: Ciclo 2, antes de programar. Momento 2: Ciclo 2, sobre la PWA funcional.",
- porque:"Responde a la causa cultural, porque corrige la representación de los pueblos originarios cuando todavía cuesta poco hacerlo. En la sección heurística, varios evaluadores independientes encuentran más problemas que uno solo (Nielsen y Molich, 1990).",
- ev:"Valoraciones de los expertos y lista de problemas por gravedad, que se corrigen antes del Ciclo 3.", evt:["Resultados de validación","Valoraciones"],
- est:[["Datos del experto",["Código, perfil y área de experiencia","Momento de aplicación"]],
-      ["Sección cultural (momentos 1 y 2)",["Fidelidad con que se representa al pueblo","Ausencia de estereotipos","Uso adecuado de nombres, símbolos y relatos"]],
-      ["Sección pedagógica",["Correspondencia de las situaciones con las competencias","Claridad de los dilemas y de la retroalimentación"]],
-      ["Sección técnica",["Funcionamiento sin conexión, carga y estabilidad"]],
-      ["Sección heurística",["Problema encontrado, heurística afectada y gravedad","Evaluación independiente de cada experto"]],
-      ["Sección de diseño multimedia",["Integración de texto, imagen y audio","Legibilidad y carga visual"]],
-      ["Para cada criterio",["Valoración y observaciones"]]]},
-"PWA-01":{cy:2, ph:"Prototipar", name:"Prototipo PWA con lista de verificación técnica",
- elem:"Funcionamiento sin conexión, desempeño y accesibilidad", tec:"Desarrollo y verificación técnica de la PWA",
- que:"Lista de pruebas que verifica, requerimiento por requerimiento, el funcionamiento técnico del prototipo.",
- para:"Comprobar que la PWA cumple los requerimientos técnicos antes de llevarla al aula.",
- quien:"La aplica el equipo investigador en los equipos de menor capacidad de la sede A.",
- recoge:"Cumplimiento de la instalación, el uso en modo avión, la retoma del avance, la exportación del registro, el tiempo de apertura, la publicación con HTTPS y los criterios de WCAG 2.2 AA.",
- cuando:"Ciclo 2 (Prototipar), cuando la PWA está funcional.",
- porque:"Responde a la causa tecnológica (conectividad limitada) y verifica que el prototipo pueda implementarse en el aula, como pide el OE2. Atiende el criterio de factibilidad. La accesibilidad se revisa con WCAG 2.2 (Campbell et al., 2024).",
- ev:"Resultado de cada prueba técnica, con los fallos corregidos.", evt:["Resultados de pruebas"],
- est:[["Pruebas",["Instalación desde el navegador en cada modelo de equipo","Uso completo en modo avión y retoma del avance","Tiempo de apertura y tamaño de la descarga frente a los umbrales del Ciclo 1","Registro y exportación: el registro coincide con el recorrido y solo contiene códigos anónimos","Publicación con HTTPS y ausencia de datos personales","Criterios aplicables de WCAG 2.2 AA"]],
-      ["Para cada prueba",["Requerimiento que verifica","Procedimiento","Criterio de cumplimiento","Cumple: Sí / No","Observación y corrección"]]]},
-"USA-01":{cy:2, ph:"Prototipar", name:"Guía de prueba de usabilidad",
- elem:"Facilidad de uso de la interfaz para estudiantes de 4.º y 5.º", tec:"Prueba de usabilidad",
- que:"Guía con tareas definidas que los estudiantes realizan con el prototipo mientras el equipo registra lo que ocurre.",
- para:"Observar si los estudiantes usan la interfaz sin ayuda.",
- quien:"Entre 4 y 6 estudiantes (2 o 3 por grado) sorteados entre los estudiantes de los dos grupos que no forman parte de la muestra.",
- recoge:"Tareas completadas sin ayuda, errores y dudas.",
- cuando:"Ciclo 2 (Prototipar), después del juicio de expertos.",
- porque:"Complementa a los expertos con la mirada del usuario real. La guía del Hasso Plattner Institute of Design at Stanford (s. f.) considera prototipar y evaluar de manera conjunta. Usar estudiantes fuera de la muestra evita que esta conozca el prototipo antes del Ciclo 3.",
- ev:"Registro de tareas por estudiante y lista de problemas de uso.", evt:["Evidencias de desempeño","Observaciones"],
- est:[["Datos de la sesión",["Código del estudiante, grado y equipo usado"]],
-      ["Instrucciones al estudiante",["Qué va a hacer y que puede detenerse cuando quiera"]],
-      ["Tareas",["Recorrer una situación","Consultar las perspectivas de los personajes","Tomar una decisión","Elegir una justificación","Retomar el avance"]],
-      ["Para cada tarea",["Completada sin ayuda: Sí / No","Errores observados","Dudas expresadas"]]]},
-"DC-01":{cy:3, ph:"Evaluar", name:"Diario de campo con lista de chequeo de criterios de éxito",
- elem:"Uso pedagógico, uso cultural, uso técnico y criterios de éxito", tec:"Observación participante y verificación de criterios de éxito",
- que:"Diario para registrar cada sesión de implementación, con una lista de chequeo adaptada de PWA-01 que se aplica al inicio y al cierre de la sesión.",
- para:"Registrar lo que ocurre en el aula y verificar los criterios de éxito con los equipos y la conectividad reales.",
- quien:"Los dos grupos participantes completos, en 3 sesiones por grupo y 1 de reserva.",
- recoge:"Argumentos orales, recepción de las narrativas, incidencias técnicas y cumplimiento de los criterios de éxito.",
- cuando:"Ciclo 3 (Evaluar), en cada sesión: lista de chequeo al inicio y al cierre.",
- porque:"La observación en el contexto real es propia de la fase de evaluación del DBR (McKenney y Reeves, 2019). La lista de chequeo sostiene el TRL 6: el prototipo se prueba en un entorno real controlado (Minciencias, s. f.).",
- ev:"Registro descriptivo de cada sesión y lista de chequeo diligenciada.", evt:["Observaciones","Registros"],
- est:[["Encabezado",["Grupo, número de sesión y fecha","Equipos disponibles y modalidad: individual o en parejas"]],
-      ["Lista de chequeo al inicio",["La aplicación abre en los equipos","Cada estudiante o pareja retoma su avance","La aplicación funciona sin conexión"]],
-      ["Registro de la sesión",["Uso pedagógico y argumentos orales","Recepción de las narrativas","Incidencias técnicas y fallas de conexión"]],
-      ["Lista de chequeo al cierre",["El avance quedó guardado","El docente exportó el registro","La aplicación siguió funcionando ante las fallas de conexión"]],
-      ["Reflexión del equipo",["Ajustes menores para la siguiente sesión"]]]},
-"LOG-01":{cy:3, ph:"Evaluar", name:"Registro de uso exportado (JSON/CSV)",
- elem:"Uso pedagógico y uso técnico", tec:"Análisis de registros de uso",
- que:"Archivo que la hipermedia genera con las acciones de cada estudiante o pareja y que el docente exporta en formato JSON o CSV.",
- para:"Recuperar lo que los estudiantes hacen dentro de la hipermedia, sin depender de la memoria del observador.",
- quien:"Los registros de los 24 estudiantes de la muestra (o de sus parejas), con código anónimo. Los del resto de estudiantes no se analizan.",
- recoge:"Episodios completados, tiempos, perspectivas consultadas, decisiones, justificaciones, ramas exploradas, uso de ayudas, errores de navegación y fallas de conexión.",
- cuando:"Ciclo 3 (Evaluar), al final de cada sesión.",
- porque:"Aporta evidencia del uso real, que se compara con el diario de campo para comprobar que coinciden. No recoge datos personales (Ley 1581 de 2012).",
- ev:"Base de datos de uso por estudiante o pareja.", evt:["Registros","Datos"],
- est:[["Identificación",["Código anónimo: grupo + E (estudiante) o P (pareja) + número","Grupo de 4.º: 4A-E01 a 4A-E12, o 4A-P01 a 4A-P06 si trabajan en parejas","Grupo de 5.º: 5A-E01 a 5A-E12, o 5A-P01 a 5A-P06 si trabajan en parejas","Sesión y fecha"]],
-      ["Campos por situación",["Episodio y situación","Tiempo empleado","Perspectivas consultadas","Decisión y justificación elegida","Rama explorada","Uso de ayudas"]],
-      ["Campos técnicos",["Errores de navegación","Fallas de conexión"]],
-      ["Exportación",["Formato JSON o CSV, reservada al docente"]]]},
-"RUB-01":{cy:3, ph:"Evaluar", name:"Rúbrica de análisis de justificaciones",
- elem:"Nivel de las justificaciones según los descriptores del Icfes", tec:"Análisis de justificaciones",
- que:"Rúbrica basada en los descriptores de nivel de la prueba de Pensamiento Ciudadano. Como las justificaciones son opciones que el estudiante elige, cada opción se codifica por nivel desde el diseño.",
- para:"Clasificar las justificaciones de los estudiantes según los niveles de desempeño del Icfes.",
- quien:"Las justificaciones de los 24 estudiantes de la muestra (o de sus parejas).",
- recoge:"Nivel de cada justificación y proporción de justificaciones en los niveles 3 y 4.",
- cuando:"Ciclo 3 (Evaluar), sobre los registros exportados. No requiere actividades adicionales de los participantes.",
- porque:"Es la evidencia más directa del pensamiento ciudadano, que es el centro del problema, y usa el mismo marco del Icfes (2024a) que describe el bajo desempeño. Describe el uso y no mide efectos.",
- ev:"Distribución de las justificaciones por nivel y por competencia.", evt:["Evidencias de desempeño","Datos"],
- est:[["Niveles",["Niveles 1 a 4, con los descriptores del Icfes (2024a)"]],
-      ["Por justificación",["Código del estudiante o pareja","Situación y competencia","Justificación elegida","Nivel asignado","Observación"]],
-      ["Resumen",["Proporción de justificaciones por nivel","Proporción en los niveles 3 y 4, por competencia"]]]},
-"ENC-01":{cy:3, ph:"Evaluar", name:"Cuestionario de valoración",
- elem:"Valoración del prototipo por docentes y estudiantes", tec:"Encuesta de valoración y conversación de cierre con docentes",
- que:"Cuestionario con dos versiones: la docente combina una escala Likert 1-5 con una guía de conversación de cierre; la de estudiantes es visual y corta.",
- para:"Recoger la valoración que hacen del prototipo los docentes y los estudiantes de la muestra.",
- quien:"Los docentes de los dos grupos, en un solo encuentro (primero la escala y luego la conversación), y los 24 estudiantes de la muestra.",
- recoge:"Valoraciones en escala, opiniones de los docentes en la conversación y valoración visual de los estudiantes.",
- cuando:"Ciclo 3 (Evaluar), al finalizar las sesiones de implementación.",
- porque:"El modo Evaluar se basa en la retroalimentación de los usuarios (Hasso Plattner Institute of Design at Stanford, s. f.). La valoración alimenta la matriz de ajustes, que es el producto del OE3.",
- ev:"Puntajes por ítem, testimonios de los docentes y valoraciones de los estudiantes.", evt:["Valoraciones","Testimonios"],
- est:[["Versión docente. Parte 1: escala Likert 1-5",["Datos generales y grado","Ítems sobre pertinencia pedagógica, pertinencia cultural de las narrativas, facilidad de uso y funcionamiento en el aula"]],
-      ["Versión docente. Parte 2: conversación de cierre",["Preguntas abiertas sobre lo que funcionó, lo que no y lo que cambiarían"]],
-      ["Versión visual para estudiantes",["Pocos ítems con escala de imágenes","Preguntas sobre si les gustó, si fue fácil y si entendieron a los personajes"]]]},
-"PRI-01":{cy:3, ph:"Evaluar", name:"Matriz de ajustes del prototipo",
- elem:"Ajustes necesarios al prototipo", tec:"Reflexión del equipo",
- que:"Matriz que compara los hallazgos del Ciclo 3 con los requisitos del Ciclo 1 y registra los ajustes que necesita el prototipo.",
- para:"Identificar y priorizar los ajustes del prototipo a partir de la reflexión sobre su uso en el aula.",
- quien:"La diligencia el equipo investigador con la información de DC-01, LOG-01, RUB-01 y ENC-01, y con los requisitos de REQ-01.",
- recoge:"Diferencias entre lo previsto en los requisitos y lo ocurrido en el aula, con la fuente que las evidencia y el ajuste propuesto.",
- cuando:"Ciclo 3 (Evaluar): entre sesiones, para los ajustes menores, y al cierre del ciclo, para la lista final.",
- porque:"Es el producto del OE3: los ajustes que necesita el prototipo. Como en la fase de evaluar descrita por Turpin et al. (2023), los hallazgos se comparan con los requisitos del Ciclo 1 y las diferencias se registran (p. 201).",
- ev:"Lista priorizada de ajustes del prototipo, cada uno con su evidencia.", evt:["Registros"],
- est:[["Por hallazgo",["Hallazgo","Fuente: DC, LOG, RUB o ENC","Requisito relacionado (REQ-01)"]],
-      ["Ajuste",["Ajuste propuesto","Tipo: pedagógico, cultural o técnico","Prioridad","Momento: entre sesiones o al cierre"]],
-      ["Seguimiento",["Ajuste realizado: Sí / No","Observación"]]]}
+ "ENT-01": {
+  "cy": 1,
+  "ph": "Empatizar",
+  "name": "Guía de entrevista semiestructurada - docentes",
+  "elem": "Prácticas de aula, contenidos y materiales, recursos del aula",
+  "tec": "Entrevista semiestructurada",
+  "que": "Guía de preguntas abiertas, organizadas por categorías, que permite conversar con cada docente sobre su práctica y repreguntar según sus respuestas.",
+  "para": "Conocer cómo los docentes trabajan el pensamiento ciudadano, qué materiales usan, con qué equipos y conectividad cuentan y qué esperan de una hipermedia lúdica.",
+  "quien": "Los 2 docentes de 4.º y 5.º de la sede A, uno por grado (muestra censal), en una entrevista individual con cada uno.",
+  "recoge": "Prácticas de aula, materiales (incluidos los que se refieren a pueblos originarios), equipos y conectividad disponibles, recursos digitales que usan y expectativas sobre la hipermedia lúdica.",
+  "cuando": "Ciclo 1, semanas 1 y 2 (Empatizar).",
+  "porque": "Responde a la causa pedagógica del problema. El DBR exige que el diseño parta de las necesidades reales de los usuarios (McKenney y Reeves, 2019), y la entrevista individual permite que cada docente hable de su práctica sin la presión del grupo.",
+  "ev": "Testimonios de los docentes sobre su práctica, transcritos y codificados por categoría.",
+  "evt": [
+   "Testimonios"
+  ],
+  "est": [
+   [
+    "Matriz de categorías",
+    [
+     "C1. Pensamiento ciudadano",
+     "C2. Pueblos originarios",
+     "C3. Aplicación web progresiva (PWA)",
+     "C4. Hipermedia lúdica"
+    ]
+   ],
+   [
+    "Protocolo",
+    [
+     "Antes de la entrevista",
+     "Apertura (guion)",
+     "Hoja de datos del docente"
+    ]
+   ],
+   [
+    "Preguntas",
+    [
+     "C1. Pensamiento ciudadano",
+     "C2. Pueblos originarios",
+     "C3. Aplicación web progresiva (PWA)",
+     "C4. Hipermedia lúdica",
+     "Cierre (guion)"
+    ]
+   ],
+   [
+    "Registro y procesamiento",
+    [
+     "Notas del entrevistador",
+     "Después de la entrevista"
+    ]
+   ]
+  ],
+  "muestra": {
+   "pdf": "docs/HYP-INS-ENT-01_Guia_entrevista_docentes_v1.1.pdf",
+   "ver": "versión 1.1",
+   "pags": 7,
+   "pages": [
+    [
+     1,
+     "Identificación y objetivo del instrumento"
+    ],
+    [
+     2,
+     "Matriz de categorías"
+    ],
+    [
+     3,
+     "Protocolo"
+    ],
+    [
+     4,
+     "Preguntas"
+    ],
+    [
+     5,
+     "C2. Pueblos originarios y C3. Aplicación web progresiva (PWA)"
+    ],
+    [
+     6,
+     "C4. Hipermedia lúdica y Cierre (guion)"
+    ],
+    [
+     7,
+     "Registro y procesamiento"
+    ]
+   ]
+  }
+ },
+ "GFE-01": {
+  "cy": 1,
+  "ph": "Empatizar",
+  "name": "Guía de grupo focal - estudiantes, protocolo visual",
+  "elem": "Prácticas de aula y percepciones sobre los pueblos originarios",
+  "tec": "Grupo focal con estudiantes, por grado",
+  "que": "Guía para una conversación en grupo que parte de imágenes y situaciones cotidianas, adaptada a niños de 9 a 11 años.",
+  "para": "Conocer cómo razonan los estudiantes ante situaciones cotidianas y qué imaginarios tienen sobre los pueblos originarios.",
+  "quien": "Los 12 estudiantes sorteados de cada grupo participante (24 en total), en un grupo focal por grado. Lo conducen los tres investigadores.",
+  "recoge": "Razonamientos de los estudiantes asociados a las cuatro competencias del pensamiento ciudadano, sus percepciones sobre los pueblos originarios y sus ideas sobre la tecnología y el juego del proyecto.",
+  "cuando": "Ciclo 1, semana 2 (Empatizar), cuando ya se cuenta con las autorizaciones de los acudientes.",
+  "porque": "Da voz al usuario principal del prototipo, como pide el modo Empatizar (Hasso Plattner Institute of Design at Stanford, s. f.). El protocolo visual se ajusta a la edad de los participantes, y las situaciones se basan en las competencias que evalúa el Icfes (2024a).",
+  "ev": "Intervenciones de los estudiantes registradas por código, agrupadas por competencia y por tema.",
+  "evt": [
+   "Testimonios",
+   "Observaciones"
+  ],
+  "est": [
+   [
+    "Matriz de categorías",
+    [
+     "C1. Pensamiento ciudadano",
+     "C2. Pueblos originarios",
+     "C3. Aplicación web progresiva (PWA)",
+     "C4. Hipermedia lúdica"
+    ]
+   ],
+   [
+    "Organización de la sesión",
+    [
+     "Roles del equipo",
+     "Materiales",
+     "Distribución del tiempo",
+     "Plan B"
+    ]
+   ],
+   [
+    "Protocolo",
+    [
+     "Antes de la sesión",
+     "Apertura (guion)"
+    ]
+   ],
+   [
+    "Situaciones y preguntas",
+    [
+     "S1. La elección del personero",
+     "S2. El premio del curso",
+     "S3. La cancha del recreo",
+     "S4. La basura en la quebrada",
+     "S5. Los pueblos originarios",
+     "S6. Tecnología y el juego del proyecto",
+     "Cierre (guion)"
+    ]
+   ],
+   [
+    "Registro y procesamiento",
+    [
+     "Datos de la sesión",
+     "Registro de tarjetas",
+     "Notas del registrador",
+     "Después de la sesión"
+    ]
+   ],
+   [
+    "Anexo A. Láminas",
+    [
+     "Láminas L1 a L4, elaboradas con inteligencia artificial en el estilo del proyecto y sin texto"
+    ]
+   ],
+   [
+    "Anexo B. Tarjetas de decisión",
+    [
+     "12 juegos de 3 tarjetas, de media carta, en cartulina"
+    ]
+   ]
+  ],
+  "muestra": {
+   "pdf": "docs/HYP-INS-GFE-01_Guia_grupo_focal_estudiantes_v1.1.pdf",
+   "ver": "versión 1.1",
+   "pags": 16,
+   "pages": [
+    [
+     1,
+     "Identificación"
+    ],
+    [
+     2,
+     "Objetivo del instrumento y matriz de categorías"
+    ],
+    [
+     3,
+     "Matriz de categorías (continuación)"
+    ],
+    [
+     4,
+     "Organización de la sesión"
+    ],
+    [
+     5,
+     "Protocolo"
+    ],
+    [
+     6,
+     "Situaciones y preguntas"
+    ],
+    [
+     7,
+     "S1. La elección del personero y S2. El premio del curso"
+    ],
+    [
+     8,
+     "S3. La cancha del recreo"
+    ],
+    [
+     9,
+     "S4. La basura en la quebrada y S5. Los pueblos originarios"
+    ],
+    [
+     10,
+     "S6. Tecnología y el juego del proyecto"
+    ],
+    [
+     11,
+     "Registro y procesamiento"
+    ],
+    [
+     12,
+     "Registro de tarjetas y Notas del registrador"
+    ],
+    [
+     13,
+     "Anexo A. Láminas"
+    ],
+    [
+     14,
+     "Anexo A. Láminas (continuación)"
+    ],
+    [
+     15,
+     "Anexo A. Láminas (continuación)"
+    ],
+    [
+     16,
+     "Anexo B. Tarjetas de decisión y referencias"
+    ]
+   ]
+  }
+ },
+ "OBS-01": {
+  "cy": 1,
+  "ph": "Empatizar",
+  "name": "Guía de observación de aula y registro de condiciones TIC",
+  "elem": "Prácticas de aula y recursos del aula",
+  "tec": "Observación no participante",
+  "que": "Guía en dos partes: la parte A registra lo que ocurre en clase y la parte B registra los equipos y la conectividad de las aulas.",
+  "para": "Contrastar lo que dicen docentes y estudiantes con lo que ocurre en clase, y conocer las condiciones técnicas en que funcionará la PWA.",
+  "quien": "Entre 2 y 3 clases de cada grupo participante, y los dispositivos y la conectividad de las aulas de la sede A.",
+  "recoge": "Oportunidades para ejercitar las competencias, presencia de los pueblos originarios en clase, e inventario de equipos y conexión.",
+  "cuando": "Ciclo 1, semanas 1 y 2 (Empatizar).",
+  "porque": "Permite triangular con la entrevista y el grupo focal. La parte B responde a la causa tecnológica, porque de ella salen los umbrales de rendimiento y tamaño de la descarga (RNF-02 y RNF-03).",
+  "ev": "Registros de observación de clase e inventario de dispositivos y conectividad.",
+  "evt": [
+   "Observaciones",
+   "Registros",
+   "Datos"
+  ],
+  "est": [
+   [
+    "Matriz de categorías",
+    [
+     "C1. Pensamiento ciudadano",
+     "C2. Pueblos originarios",
+     "C3. Aplicación web progresiva (PWA)",
+     "C4. Hipermedia lúdica"
+    ]
+   ],
+   [
+    "Protocolo de la parte A",
+    [
+     "Antes de la observación",
+     "Presentación ante el grupo (guion)",
+     "Durante la observación",
+     "Después de la observación"
+    ]
+   ],
+   [
+    "Formatos de la parte A: observación de clase",
+    [
+     "A1. Datos de la clase",
+     "A2. Aspectos que se observan",
+     "A3. Registro por momentos",
+     "A4. Episodios significativos",
+     "A5. Resumen de aspectos"
+    ]
+   ],
+   [
+    "Protocolo de la parte B",
+    [
+     "Una visita a cada espacio donde podría usarse la hipermedia"
+    ]
+   ],
+   [
+    "Formatos de la parte B: condiciones TIC",
+    [
+     "B1. Datos del espacio",
+     "B2. Inventario de equipos",
+     "B3. Conectividad",
+     "B4. Condiciones de uso"
+    ]
+   ],
+   [
+    "Registro y procesamiento",
+    [
+     "Parte A",
+     "Parte B"
+    ]
+   ]
+  ],
+  "muestra": {
+   "pdf": "docs/HYP-INS-OBS-01_Guia_observacion_aula_condiciones_TIC_v1.1.pdf",
+   "ver": "versión 1.1",
+   "pags": 14,
+   "pages": [
+    [
+     1,
+     "Identificación y objetivo del instrumento"
+    ],
+    [
+     2,
+     "Matriz de categorías"
+    ],
+    [
+     3,
+     "Protocolo de la parte A"
+    ],
+    [
+     4,
+     "Presentación ante el grupo (guion) y Durante la observación"
+    ],
+    [
+     5,
+     "Formatos de la parte A: observación de clase"
+    ],
+    [
+     6,
+     "A3. Registro por momentos"
+    ],
+    [
+     7,
+     "A4. Episodios significativos"
+    ],
+    [
+     8,
+     "A4. Episodios significativos (continuación)"
+    ],
+    [
+     9,
+     "A5. Resumen de aspectos"
+    ],
+    [
+     10,
+     "A5. Resumen de aspectos (continuación)"
+    ],
+    [
+     11,
+     "Protocolo de la parte B y formatos de la parte B: condiciones TIC"
+    ],
+    [
+     12,
+     "B2. Inventario de equipos y B3. Conectividad"
+    ],
+    [
+     13,
+     "Registro y procesamiento"
+    ],
+    [
+     14,
+     "Referencias"
+    ]
+   ]
+  }
+ },
+ "DOC-01": {
+  "cy": 1,
+  "ph": "Empatizar",
+  "name": "Matriz de revisión documental",
+  "elem": "Marco institucional de la formación ciudadana",
+  "tec": "Revisión documental",
+  "que": "Matriz que registra, por documento, los fragmentos relacionados con las categorías del estudio.",
+  "para": "Analizar cómo aparece la formación ciudadana en los documentos de la institución y cómo se representa a los pueblos originarios en los materiales.",
+  "quien": "Documentos: PEI, plan de estudios, malla de Ciencias Sociales, manual de convivencia (gobierno escolar, derechos y deberes, y diversidad), textos y materiales de clase.",
+  "recoge": "Lugar del pensamiento ciudadano en el currículo y representación de los pueblos originarios en textos y materiales.",
+  "cuando": "Ciclo 1, semanas 1 y 2 (Empatizar).",
+  "porque": "Es la única fuente institucional del Ciclo 1. Responde a la causa epistémica y cultural, que la literatura asocia con textos que estereotipan a los pueblos originarios (Rivera Reyes, 2012), y completa la triangulación.",
+  "ev": "Fragmentos de documentos clasificados por categoría, con su análisis.",
+  "evt": [
+   "Información documental"
+  ],
+  "est": [
+   [
+    "Matriz de categorías",
+    [
+     "C1. Pensamiento ciudadano",
+     "C2. Pueblos originarios",
+     "C3. Aplicación web progresiva (PWA)",
+     "C4. Hipermedia lúdica"
+    ]
+   ],
+   [
+    "Libro de códigos",
+    [
+     "Códigos para clasificar cada fragmento",
+     "Palabras clave para la búsqueda"
+    ]
+   ],
+   [
+    "Protocolo",
+    [
+     "Antes de la revisión",
+     "Durante la revisión",
+     "Después de la revisión"
+    ]
+   ],
+   [
+    "Formatos",
+    [
+     "E1. Ficha de identificación del documento",
+     "E2. Matriz de fragmentos",
+     "E3. Lista de verificación por documento"
+    ]
+   ],
+   [
+    "Otras secciones",
+    [
+     "Procesamiento"
+    ]
+   ]
+  ],
+  "muestra": {
+   "pdf": "docs/HYP-INS-DOC-01_Matriz_revision_documental_v1.1.pdf",
+   "ver": "versión 1.1",
+   "pags": 10,
+   "pages": [
+    [
+     1,
+     "Identificación y objetivo del instrumento"
+    ],
+    [
+     2,
+     "Matriz de categorías"
+    ],
+    [
+     3,
+     "Libro de códigos"
+    ],
+    [
+     4,
+     "Libro de códigos (continuación)"
+    ],
+    [
+     5,
+     "Protocolo"
+    ],
+    [
+     6,
+     "Después de la revisión"
+    ],
+    [
+     7,
+     "Formatos"
+    ],
+    [
+     8,
+     "E2. Matriz de fragmentos (continuación)"
+    ],
+    [
+     9,
+     "Procesamiento"
+    ],
+    [
+     10,
+     "Referencias"
+    ]
+   ]
+  }
+ },
+ "SIN-01": {
+  "cy": 1,
+  "ph": "Definir",
+  "name": "Plantilla de síntesis: diagrama de afinidad y ficha de arquetipos",
+  "elem": "Síntesis de hallazgos y arquetipos de usuario",
+  "tec": "Agrupación por afinidad y construcción de arquetipos",
+  "que": "Plantilla en dos partes: un diagrama de afinidad que agrupa los hallazgos y una ficha que describe a los usuarios típicos.",
+  "para": "Organizar lo recogido en Empatizar por temas comunes y describir a los usuarios del prototipo.",
+  "quien": "La diligencia el equipo investigador con los datos de ENT-01, GFE-01, OBS-01 y DOC-01.",
+  "recoge": "Hallazgos agrupados según las ramas del árbol de problemas y arquetipos de docentes y estudiantes, con su mapa de empatía y su declaración POV.",
+  "cuando": "Ciclo 1, semana 3 (Definir).",
+  "porque": "Convierte los datos de las cuatro fuentes en la caracterización que pide el OE1. Corresponde al modo Definir del Design Thinking y cierra la triangulación del Ciclo 1. Atiende los criterios de relevancia y consistencia (Plomp y Nieveen, 2009, como se citó en Esteve Mon et al., 2019).",
+  "ev": "Diagrama de afinidad y fichas de arquetipos de docentes y estudiantes.",
+  "evt": [
+   "Registros"
+  ],
+  "est": [
+   [
+    "Categorías y fuentes",
+    [
+     "C1. Pensamiento ciudadano",
+     "C2. Pueblos originarios",
+     "C3. Aplicación web progresiva (PWA)",
+     "C4. Hipermedia lúdica"
+    ]
+   ],
+   [
+    "Procedimiento",
+    [
+     "Criterios de calidad"
+    ]
+   ],
+   [
+    "Formatos",
+    [
+     "S1. Registro de hallazgos",
+     "S2. Diagrama de afinidad",
+     "S3. Matriz de triangulación",
+     "S4. Ausencias y conceptos no reconocidos",
+     "S5. Ficha de arquetipo: docente",
+     "S6. Ficha de arquetipo: estudiante",
+     "S7. Implicaciones de diseño"
+    ]
+   ],
+   [
+    "Otras secciones",
+    [
+     "Uso de los resultados"
+    ]
+   ]
+  ],
+  "muestra": {
+   "pdf": "docs/HYP-INS-SIN-01_Plantilla_sintesis_v1.0.pdf",
+   "ver": "versión 1.0",
+   "pags": 11,
+   "pages": [
+    [
+     1,
+     "Identificación y objetivo del instrumento"
+    ],
+    [
+     2,
+     "Categorías y fuentes"
+    ],
+    [
+     3,
+     "Procedimiento"
+    ],
+    [
+     4,
+     "Formatos"
+    ],
+    [
+     5,
+     "S2. Diagrama de afinidad"
+    ],
+    [
+     6,
+     "S3. Matriz de triangulación y S4. Ausencias y conceptos no reconocidos"
+    ],
+    [
+     7,
+     "S4. Ausencias y conceptos no reconocidos (continuación)"
+    ],
+    [
+     8,
+     "S5. Ficha de arquetipo: docente"
+    ],
+    [
+     9,
+     "S6. Ficha de arquetipo: estudiante"
+    ],
+    [
+     10,
+     "Uso de los resultados y referencias"
+    ],
+    [
+     11,
+     "Referencias (continuación)"
+    ]
+   ]
+  }
+ },
+ "REQ-01": {
+  "cy": 1,
+  "ph": "Definir",
+  "name": "Matriz de requerimientos de diseño y selección del mundo temático",
+  "elem": "Requisitos de diseño y mundo temático",
+  "tec": "Definición de requerimientos y selección del mundo temático",
+  "que": "Matriz que traduce la síntesis en requisitos verificables y registra la elección del mundo temático.",
+  "para": "Establecer los requisitos pedagógicos, culturales y técnicos de la hipermedia y elegir el mundo temático que se desarrollará.",
+  "quien": "La diligencia el equipo investigador a partir de SIN-01, los documentos, los materiales y el registro de condiciones TIC.",
+  "recoge": "Requerimientos funcionales y no funcionales con sus criterios de cumplimiento, y el mundo temático elegido con la justificación de la elección.",
+  "cuando": "Ciclo 1, semana 3 (Definir). Es la entrada del Ciclo 2.",
+  "porque": "Une el problema con el diseño, porque cada requisito responde a una causa. La selección del mundo temático considera la disponibilidad de un experto con trabajo documentado con el pueblo y de fuentes elaboradas por integrantes de ese pueblo, para que el desarrollo no dependa de un participante difícil de contactar.",
+  "ev": "Lista de requerimientos con criterios de cumplimiento y mundo temático seleccionado.",
+  "evt": [
+   "Registros",
+   "Datos"
+  ],
+  "est": [
+   [
+    "Procedimiento",
+    [
+     "Prioridad de los requisitos"
+    ]
+   ],
+   [
+    "Parte A. Requisitos de diseño",
+    [
+     "R1. Requisitos desde la síntesis",
+     "R2. Umbrales técnicos",
+     "R3. Contraste con los requerimientos de la maqueta"
+    ]
+   ],
+   [
+    "Parte B. Selección del mundo temático",
+    [
+     "M1. Mundos candidatos",
+     "M2. Condiciones excluyentes",
+     "M3. Valoración de los candidatos",
+     "M4. Decisión"
+    ]
+   ],
+   [
+    "Otras secciones",
+    [
+     "Criterios de calidad",
+     "Uso de los resultados"
+    ]
+   ]
+  ],
+  "muestra": {
+   "pdf": "docs/HYP-INS-REQ-01_Matriz_requerimientos_mundo_tematico_v1.0.pdf",
+   "ver": "versión 1.0",
+   "pags": 10,
+   "pages": [
+    [
+     1,
+     "Identificación y objetivo del instrumento"
+    ],
+    [
+     2,
+     "Procedimiento y parte A. Requisitos de diseño"
+    ],
+    [
+     3,
+     "R2. Umbrales técnicos"
+    ],
+    [
+     4,
+     "R2. Umbrales técnicos (continuación)"
+    ],
+    [
+     5,
+     "R3. Contraste con los requerimientos de la maqueta"
+    ],
+    [
+     6,
+     "R3. Contraste con los requerimientos de la maqueta (continuación)"
+    ],
+    [
+     7,
+     "Parte B. Selección del mundo temático"
+    ],
+    [
+     8,
+     "M2. Condiciones excluyentes y M3. Valoración de los candidatos"
+    ],
+    [
+     9,
+     "Criterios de calidad"
+    ],
+    [
+     10,
+     "Uso de los resultados"
+    ]
+   ]
+  }
+ },
+ "IDE-01": {
+  "cy": 2,
+  "ph": "Idear",
+  "name": "Plantilla de ideación y priorización",
+  "elem": "Alternativas para narrativas, episodios y mecánicas lúdicas, y su priorización",
+  "tec": "Ideación y priorización: preguntas HMW, lluvia de ideas, impacto y esfuerzo",
+  "que": "Plantilla en tres partes: un banco de preguntas \"¿Cómo podríamos…?\" (HMW), una lluvia de ideas y una matriz que ubica cada idea según su impacto y su esfuerzo.",
+  "para": "Convertir los requisitos del Ciclo 1 en preguntas de diseño, generar ideas para el mundo seleccionado y elegir las que se van a desarrollar.",
+  "quien": "La diligencia el equipo investigador (líder y diseñador de interfaz, experta disciplinar y pedagogo) a partir de SIN-01 y REQ-01.",
+  "recoge": "Preguntas HMW, ideas para las narrativas, los episodios y las mecánicas lúdicas, y la valoración de cada idea según su impacto y su esfuerzo.",
+  "cuando": "Ciclo 2, semana 4 (Idear), antes del mapa de contenidos.",
+  "porque": "Idear parte de la síntesis y los requisitos del Ciclo 1, que se convierten en preguntas HMW. Calavia et al. (2023) usaron preguntas \"¿Cómo podríamos…?\" y lluvia de ideas en una secuencia similar (p. 7). Como el DBR trata cada decisión de diseño como una conjetura que debe documentarse (Hoadley y Campos, 2022), la plantilla deja registro de por qué se eligió cada idea.",
+  "ev": "Banco de preguntas HMW e ideas priorizadas para el mundo seleccionado.",
+  "evt": [
+   "Registros"
+  ],
+  "est": [
+   [
+    "Ámbitos de ideación",
+    [
+     "Cinco ámbitos que corresponden a las partes del prototipo"
+    ]
+   ],
+   [
+    "Procedimiento",
+    [
+     "Escalas de impacto y esfuerzo",
+     "Cuadrantes de la matriz",
+     "Restricciones que toda idea debe respetar"
+    ]
+   ],
+   [
+    "Formatos",
+    [
+     "I1. Banco de preguntas HMW",
+     "I2. Lluvia de ideas",
+     "I3. Filtro de requisitos",
+     "I4. Matriz de impacto y esfuerzo",
+     "I5. Ficha de concepto del mundo temático"
+    ]
+   ],
+   [
+    "Otras secciones",
+    [
+     "Criterios de calidad",
+     "Uso de los resultados"
+    ]
+   ]
+  ],
+  "muestra": {
+   "pdf": "docs/HYP-INS-IDE-01_Plantilla_ideacion_priorizacion_v1.0.pdf",
+   "ver": "versión 1.0",
+   "pags": 10,
+   "pages": [
+    [
+     1,
+     "Identificación, Objetivo del instrumento y más"
+    ],
+    [
+     2,
+     "Procedimiento"
+    ],
+    [
+     3,
+     "Escalas de impacto y esfuerzo y Cuadrantes de la matriz"
+    ],
+    [
+     4,
+     "Formatos"
+    ],
+    [
+     5,
+     "I2. Lluvia de ideas (continuación)"
+    ],
+    [
+     6,
+     "I3. Filtro de requisitos y I4. Matriz de impacto y esfuerzo"
+    ],
+    [
+     7,
+     "I4. Matriz de impacto y esfuerzo (continuación)"
+    ],
+    [
+     8,
+     "I5. Ficha de concepto del mundo temático"
+    ],
+    [
+     9,
+     "Criterios de calidad y uso de los resultados"
+    ],
+    [
+     10,
+     "Referencias"
+    ]
+   ]
+  }
+ },
+ "MAP-01": {
+  "cy": 2,
+  "ph": "Idear",
+  "name": "Mapa de contenidos y alineación con las competencias",
+  "elem": "Arquitectura de contenidos alineada con las competencias",
+  "tec": "Diseño de contenidos y revisión de la alineación",
+  "que": "Mapa que organiza el mundo temático en episodios y situaciones, y asocia cada situación con una competencia, una afirmación y una evidencia de la prueba de Pensamiento Ciudadano.",
+  "para": "Garantizar que cada situación permita ejercitar una competencia, y que los docentes lo confirmen antes de hacer los storyboards.",
+  "quien": "Lo elabora el equipo investigador y lo revisan los 2 docentes de 4.º y 5.º de la sede A en una sesión breve.",
+  "recoge": "Alineación de cada situación con el marco del Icfes, códigos de perspectivas, alternativas y justificaciones, y observaciones de los docentes sobre esa alineación.",
+  "cuando": "Ciclo 2, semana 4 (Idear), antes de los storyboards.",
+  "porque": "Asegura lo que pide el OE2: que el prototipo permita ejercitar las cuatro competencias. Verifica el requerimiento RNF-11 y atiende los criterios de relevancia y consistencia.",
+  "ev": "Mapa de contenidos revisado por los docentes, con las observaciones incorporadas.",
+  "evt": [
+   "Resultados de validación",
+   "Valoraciones"
+  ],
+  "est": [
+   [
+    "Referente: afirmaciones y evidencias para 5.º",
+    [
+     "Afirmaciones y evidencias de las cuatro competencias del pensamiento ciudadano (Mejía Delgadillo y Valencia Vargas, 2019)"
+    ]
+   ],
+   [
+    "Estructura del mapa",
+    [
+     "Mundo temático → episodios → situaciones (dilemas narrativos)"
+    ]
+   ],
+   [
+    "Formatos",
+    [
+     "M1. Estructura del mundo temático",
+     "M2. Matriz de alineación",
+     "M3. Cobertura de competencias y evidencias",
+     "M4. Sesión de alineación con los docentes",
+     "M5. Registro de ajustes"
+    ]
+   ],
+   [
+    "Otras secciones",
+    [
+     "Procedimiento",
+     "Criterios de calidad",
+     "Uso de los resultados"
+    ]
+   ]
+  ],
+  "muestra": {
+   "pdf": "docs/HYP-INS-MAP-01_Mapa_contenidos_alineacion_v1.1.pdf",
+   "ver": "versión 1.1",
+   "pags": 10,
+   "pages": [
+    [
+     1,
+     "Identificación y objetivo del instrumento"
+    ],
+    [
+     2,
+     "Referente: afirmaciones y evidencias para 5.º"
+    ],
+    [
+     3,
+     "Referente: afirmaciones y evidencias para 5.º (continuación)"
+    ],
+    [
+     4,
+     "Estructura del mapa y procedimiento"
+    ],
+    [
+     5,
+     "Procedimiento (continuación)"
+    ],
+    [
+     6,
+     "Formatos"
+    ],
+    [
+     7,
+     "M2. Matriz de alineación (continuación)"
+    ],
+    [
+     8,
+     "M3. Cobertura de competencias y evidencias y M4. Sesión de alineación con los docentes"
+    ],
+    [
+     9,
+     "Criterios de calidad"
+    ],
+    [
+     10,
+     "Uso de los resultados y referencias"
+    ]
+   ]
+  }
+ },
+ "STB-01": {
+  "cy": 2,
+  "ph": "Prototipar",
+  "name": "Storyboards, wireframes y mockup del mundo seleccionado",
+  "elem": "Concreción del mundo seleccionado en storyboards, wireframes y mockup",
+  "tec": "Prototipado previo al código",
+  "que": "Prototipos del mundo seleccionado en dos niveles de fidelidad: storyboards y wireframes (baja) y mockup interactivo de las pantallas clave (media).",
+  "para": "Probar la narrativa y la navegación antes de programar, y darle al experto un material concreto para la validación cultural.",
+  "quien": "Lo elabora el equipo investigador. Uno de los tres expertos externos lo revisa con la sección cultural de VAL-01 (momento 1).",
+  "recoge": "Secuencia narrativa de cada episodio, distribución de las pantallas, recorrido de navegación y representación visual de personajes y escenarios.",
+  "cuando": "Ciclo 2 (Prototipar), después del mapa de contenidos. El experto lo revisa en la validación cultural de la semana 7, antes de incorporar los contenidos en la PWA.",
+  "porque": "Prototipar avanza por tres niveles de fidelidad: baja, media y alta. Revisar la representación de los pueblos originarios sobre storyboards y mockup permite corregirla antes de programar, cuando cuesta menos. Los storyboards son una de las técnicas de bajo costo que ofrece la guía del Hasso Plattner Institute of Design at Stanford (s. f.).",
+  "ev": "Storyboards, wireframes y mockup interactivo, con las observaciones culturales incorporadas.",
+  "evt": [
+   "Registros",
+   "Resultados de validación"
+  ],
+  "est": [
+   [
+    "Niveles de fidelidad",
+    [
+     "Fidelidad baja: storyboards y wireframes",
+     "Fidelidad media: mockup interactivo"
+    ]
+   ],
+   [
+    "Pantallas de la hipermedia",
+    [
+     "Pantallas derivadas de los cinco pasos de cada situación y de los requerimientos funcionales"
+    ]
+   ],
+   [
+    "Criterios de diseño",
+    [
+     "Narrativa y pedagogía",
+     "Aprendizaje multimedia",
+     "Accesibilidad (WCAG 2.2, nivel AA)",
+     "Representación cultural",
+     "Viabilidad técnica"
+    ]
+   ],
+   [
+    "Formatos",
+    [
+     "S1. Storyboard de una situación",
+     "S2. Flujo de navegación",
+     "S3. Inventario de wireframes",
+     "S4. Ficha del mockup",
+     "S5. Lista de verificación por nivel",
+     "S6. Paquete para la validación cultural",
+     "Registro de cambios"
+    ]
+   ],
+   [
+    "Otras secciones",
+    [
+     "Procedimiento",
+     "Criterios de calidad",
+     "Uso de los resultados"
+    ]
+   ]
+  ],
+  "muestra": {
+   "pdf": "docs/HYP-INS-STB-01_Storyboards_wireframes_mockup_v1.0.pdf",
+   "ver": "versión 1.0",
+   "pags": 10,
+   "pages": [
+    [
+     1,
+     "Identificación y objetivo del instrumento"
+    ],
+    [
+     2,
+     "Niveles de fidelidad y pantallas de la hipermedia"
+    ],
+    [
+     3,
+     "Criterios de diseño"
+    ],
+    [
+     4,
+     "Aprendizaje multimedia y Accesibilidad (WCAG 2.2, nivel AA)"
+    ],
+    [
+     5,
+     "Procedimiento"
+    ],
+    [
+     6,
+     "Formatos"
+    ],
+    [
+     7,
+     "S3. Inventario de wireframes"
+    ],
+    [
+     8,
+     "S4. Ficha del mockup y S5. Lista de verificación por nivel"
+    ],
+    [
+     9,
+     "Criterios de calidad"
+    ],
+    [
+     10,
+     "Uso de los resultados y referencias"
+    ]
+   ]
+  }
+ },
+ "VAL-01": {
+  "cy": 2,
+  "ph": "Prototipar",
+  "name": "Rúbrica de juicio de expertos",
+  "elem": "Pertinencia cultural y pedagógica, calidad de la interfaz y diseño multimedia",
+  "tec": "Juicio de expertos en dos momentos, con evaluación heurística independiente",
+  "que": "Rúbrica con cinco secciones (pedagógica, cultural, técnica, de diseño multimedia y evaluación heurística), una escala de valoración de 3, 2, 1 y NV, y una escala de gravedad de 0 a 4 para los problemas de usabilidad.",
+  "para": "Validar el prototipo en dos momentos: la sección cultural sobre storyboards y mockup antes de programar, y la rúbrica completa sobre la PWA.",
+  "quien": "Tres expertos externos en tecnología educativa y en saberes de pueblos originarios o educación intercultural. Uno de ellos, con trabajo documentado con el pueblo representado o en educación intercultural, aplica la sección cultural. Cuando es posible, también revisa un integrante o sabedor de ese pueblo.",
+  "recoge": "Valoraciones por criterio, observaciones y problemas de usabilidad con su gravedad.",
+  "cuando": "Momento 1: Ciclo 2, semana 7, sobre storyboards y mockup (partes A, C, G y H). Momento 2: Ciclo 2, semanas 10 y 11, sobre la PWA funcional (partes A a G).",
+  "porque": "Responde a la causa cultural, porque corrige la representación de los pueblos originarios cuando todavía cuesta poco hacerlo. En la evaluación heurística, un solo evaluador encuentra cerca de un tercio de los problemas, por eso conviene que varios expertos evalúen de forma independiente (Nielsen y Landauer, 1993, p. 207).",
+  "ev": "Valoraciones de los expertos y lista de problemas por gravedad, que se corrigen antes del Ciclo 3.",
+  "evt": [
+   "Resultados de validación",
+   "Valoraciones"
+  ],
+  "est": [
+   [
+    "Presentación para el experto",
+    [
+     "Presentación del instrumento al experto",
+     "Escala de valoración: 3, 2, 1 y NV (partes B a E)"
+    ]
+   ],
+   [
+    "Categorías de investigación",
+    [
+     "C1. Pensamiento ciudadano",
+     "C2. Pueblos originarios",
+     "C3. Aplicación web progresiva (PWA)",
+     "C4. Hipermedia lúdica"
+    ]
+   ],
+   [
+    "Parte A. Datos del evaluador",
+    [
+     "Perfil, formación y relación con el pueblo representado"
+    ]
+   ],
+   [
+    "Parte B. Sección pedagógica",
+    [
+     "Criterios PE1 a PE11 sobre las cuatro competencias del pensamiento ciudadano"
+    ]
+   ],
+   [
+    "Parte C. Sección cultural",
+    [
+     "Criterios CU1 a CU16 sobre la representación del pueblo originario"
+    ]
+   ],
+   [
+    "Parte D. Sección técnica",
+    [
+     "Criterios TE1 a TE9 sobre el funcionamiento de la PWA en el equipo del experto"
+    ]
+   ],
+   [
+    "Parte E. Sección de diseño multimedia",
+    [
+     "Criterios DM1 a DM10 según principios del aprendizaje multimedia (Mayer y Fiorella, 2022)"
+    ]
+   ],
+   [
+    "Parte F. Evaluación heurística",
+    [
+     "Diez heurísticas (H1 a H10) y escala de gravedad de 0 a 4",
+     "Recorrido independiente de la interfaz, al menos dos veces"
+    ]
+   ],
+   [
+    "Parte G. Concepto general y reconocimiento",
+    [
+     "Concepto general del experto y opciones de reconocimiento"
+    ]
+   ],
+   [
+    "Parte H. Formatos del momento 1 (validación cultural)",
+    [
+     "H1. Observaciones por situación",
+     "H2. Preguntas del equipo",
+     "H3. Concepto de la validación cultural"
+    ]
+   ],
+   [
+    "Consolidado del momento 2",
+    [
+     "Valoraciones por criterio",
+     "Problemas de usabilidad consolidados"
+    ]
+   ],
+   [
+    "Registro de incorporación del momento 1",
+    [
+     "Decisión del equipo sobre cada observación de las partes C y H"
+    ]
+   ],
+   [
+    "Anexo A. Revisión conversada con un integrante o sabedor del pueblo",
+    [
+     "Se usa cuando un integrante o sabedor del pueblo acepta revisar el mockup"
+    ]
+   ],
+   [
+    "Otras secciones",
+    [
+     "Criterios de calidad",
+     "Uso de los resultados"
+    ]
+   ]
+  ],
+  "muestra": {
+   "pdf": "docs/HYP-INS-VAL-01_Rubrica_juicio_expertos_v1.1.pdf",
+   "ver": "versión 1.1",
+   "pags": 24,
+   "pages": [
+    [
+     1,
+     "Identificación"
+    ],
+    [
+     2,
+     "Presentación para el experto"
+    ],
+    [
+     3,
+     "Categorías de investigación y parte A. Datos del evaluador"
+    ],
+    [
+     4,
+     "Parte B. Sección pedagógica"
+    ],
+    [
+     5,
+     "Parte B. Sección pedagógica (continuación)"
+    ],
+    [
+     6,
+     "Parte C. Sección cultural"
+    ],
+    [
+     7,
+     "Parte C. Sección cultural (continuación)"
+    ],
+    [
+     8,
+     "Parte C. Sección cultural (continuación)"
+    ],
+    [
+     9,
+     "Parte D. Sección técnica"
+    ],
+    [
+     10,
+     "Parte E. Sección de diseño multimedia"
+    ],
+    [
+     11,
+     "Parte E. Sección de diseño multimedia (continuación)"
+    ],
+    [
+     12,
+     "Parte F. Evaluación heurística"
+    ],
+    [
+     13,
+     "Parte F. Evaluación heurística (continuación)"
+    ],
+    [
+     14,
+     "Parte F. Evaluación heurística (continuación)"
+    ],
+    [
+     15,
+     "Parte G. Concepto general y reconocimiento"
+    ],
+    [
+     16,
+     "Parte G. Concepto general y reconocimiento (continuación)"
+    ],
+    [
+     17,
+     "Parte H. Formatos del momento 1 (validación cultural)"
+    ],
+    [
+     18,
+     "H3. Concepto de la validación cultural"
+    ],
+    [
+     19,
+     "Consolidado del momento 2 (lo completa el equipo)"
+    ],
+    [
+     20,
+     "Registro de incorporación del momento 1 (lo completa el equipo)"
+    ],
+    [
+     21,
+     "Registro de incorporación del momento 1 (lo completa el equipo) (continuación)"
+    ],
+    [
+     22,
+     "Criterios de calidad y uso de los resultados"
+    ],
+    [
+     23,
+     "Anexo A. Revisión conversada con un integrante o sabedor del pueblo y referencias"
+    ],
+    [
+     24,
+     "Referencias (continuación)"
+    ]
+   ]
+  }
+ },
+ "PWA-01": {
+  "cy": 2,
+  "ph": "Prototipar",
+  "name": "Prototipo PWA con lista de verificación técnica",
+  "elem": "Funcionamiento sin conexión, desempeño y accesibilidad",
+  "tec": "Desarrollo y verificación técnica de la PWA",
+  "que": "Lista de pruebas que verifica, requerimiento por requerimiento, el funcionamiento técnico del prototipo.",
+  "para": "Comprobar que la PWA cumple los requerimientos técnicos antes de llevarla al aula.",
+  "quien": "La aplica el equipo investigador en los equipos de menor capacidad de la sede A.",
+  "recoge": "Cumplimiento de la instalación, el uso en modo avión, la retoma del avance, la exportación del registro, el tiempo de apertura, la publicación con HTTPS y los criterios de WCAG 2.2 AA.",
+  "cuando": "Ciclo 2 (Prototipar): durante el desarrollo y en la verificación técnica de las semanas 10 y 11.",
+  "porque": "Responde a la causa tecnológica (conectividad limitada) y verifica que el prototipo pueda implementarse en el aula, como pide el OE2. Atiende el criterio de factibilidad. La accesibilidad se revisa con WCAG 2.2 (Campbell et al., 2024).",
+  "ev": "Resultado de cada prueba técnica, con los fallos corregidos.",
+  "evt": [
+   "Resultados de pruebas"
+  ],
+  "est": [
+   [
+    "Categorías de investigación",
+    [
+     "C1. Pensamiento ciudadano",
+     "C2. Pueblos originarios",
+     "C3. Aplicación web progresiva (PWA)",
+     "C4. Hipermedia lúdica"
+    ]
+   ],
+   [
+    "Componentes del prototipo",
+    [
+     "Los siete componentes de la arquitectura de la maqueta"
+    ]
+   ],
+   [
+    "Preparación de las pruebas",
+    [
+     "Equipos de prueba",
+     "Recorrido guiado"
+    ]
+   ],
+   [
+    "Lista de verificación técnica",
+    [
+     "Una copia por equipo de prueba"
+    ]
+   ],
+   [
+    "Lista de chequeo de accesibilidad (WCAG 2.2, nivel AA)",
+    [
+     "Criterios de nivel A y AA de WCAG 2.2 (Campbell et al., 2024)"
+    ]
+   ],
+   [
+    "Registro de fallas",
+    [
+     "Una falla es grave si impide recorrer los episodios, hace perder datos o avance, expone datos personales o incumple un requisito crítico"
+    ]
+   ],
+   [
+    "Otras secciones",
+    [
+     "Hitos de desarrollo",
+     "Resumen de cumplimiento",
+     "Criterios de calidad",
+     "Uso de los resultados"
+    ]
+   ]
+  ],
+  "muestra": {
+   "pdf": "docs/HYP-INS-PWA-01_Prototipo_PWA_lista_verificacion_tecnica_v1.0.pdf",
+   "ver": "versión 1.0",
+   "pags": 17,
+   "pages": [
+    [
+     1,
+     "Identificación"
+    ],
+    [
+     2,
+     "Objetivo del instrumento y categorías de investigación"
+    ],
+    [
+     3,
+     "Componentes del prototipo y hitos de desarrollo"
+    ],
+    [
+     4,
+     "Preparación de las pruebas"
+    ],
+    [
+     5,
+     "Recorrido guiado"
+    ],
+    [
+     6,
+     "Lista de verificación técnica"
+    ],
+    [
+     7,
+     "Lista de verificación técnica (continuación)"
+    ],
+    [
+     8,
+     "Lista de verificación técnica (continuación)"
+    ],
+    [
+     9,
+     "Lista de verificación técnica (continuación)"
+    ],
+    [
+     10,
+     "Lista de chequeo de accesibilidad (WCAG 2.2, nivel AA)"
+    ],
+    [
+     11,
+     "Lista de chequeo de accesibilidad (WCAG 2.2, nivel AA) (continuación)"
+    ],
+    [
+     12,
+     "Lista de chequeo de accesibilidad (WCAG 2.2, nivel AA) (continuación)"
+    ],
+    [
+     13,
+     "Lista de chequeo de accesibilidad (WCAG 2.2, nivel AA) (continuación)"
+    ],
+    [
+     14,
+     "Lista de chequeo de accesibilidad (WCAG 2.2, nivel AA) (continuación)"
+    ],
+    [
+     15,
+     "Registro de fallas y resumen de cumplimiento"
+    ],
+    [
+     16,
+     "Criterios de calidad y uso de los resultados"
+    ],
+    [
+     17,
+     "Referencias"
+    ]
+   ]
+  }
+ },
+ "DC-01": {
+  "cy": 3,
+  "ph": "Evaluar",
+  "name": "Diario de campo con lista de chequeo de criterios de éxito",
+  "elem": "Uso pedagógico, uso cultural, uso técnico y criterios de éxito",
+  "tec": "Observación participante y verificación de criterios de éxito",
+  "que": "Diario para registrar cada sesión de implementación, con una lista de chequeo adaptada de PWA-01 que se aplica al inicio y al cierre de la sesión.",
+  "para": "Registrar lo que ocurre en el aula y verificar los criterios de éxito con los equipos y la conectividad reales.",
+  "quien": "Los dos grupos participantes completos, en una sola implementación de 2 sesiones por grupo y 1 de reserva. En cada sesión, un facilitador y dos observadores del equipo investigador.",
+  "recoge": "Argumentos orales, recepción de las narrativas, incidencias técnicas y cumplimiento de los criterios de éxito.",
+  "cuando": "Ciclo 3: semana 12 (dos sesiones por grupo) y semana 13 (sesión de reserva). La lista de chequeo se aplica al inicio y al cierre de cada sesión.",
+  "porque": "La observación en el contexto real es propia de la fase de evaluación del DBR (McKenney y Reeves, 2019). La lista de chequeo sostiene el TRL 6: el prototipo se prueba en un entorno real controlado (Minciencias, s. f.).",
+  "ev": "Registro descriptivo de cada sesión y lista de chequeo diligenciada.",
+  "evt": [
+   "Observaciones",
+   "Registros"
+  ],
+  "est": [
+   [
+    "Categorías de investigación",
+    [
+     "C1. Pensamiento ciudadano",
+     "C2. Pueblos originarios",
+     "C3. Aplicación web progresiva (PWA)",
+     "C4. Hipermedia lúdica"
+    ]
+   ],
+   [
+    "Organización de la sesión y roles",
+    [
+     "Un facilitador y dos observadores por sesión",
+     "Cada observador registra a sus estudiantes y diligencia su propio diario"
+    ]
+   ],
+   [
+    "Procedimiento",
+    [
+     "Antes de cada sesión",
+     "Durante la sesión",
+     "Al cerrar la sesión",
+     "El mismo día"
+    ]
+   ],
+   [
+    "Formatos",
+    [
+     "DC-A. Datos de la sesión",
+     "DC-B. Lista de chequeo de inicio",
+     "DC-C. Lista de chequeo de criterios de éxito",
+     "DC-D. Registro por estudiante o pareja de la muestra",
+     "DC-E. Episodios significativos",
+     "DC-F. Problemas de usabilidad observados",
+     "DC-G. Incidentes y ruta de atención",
+     "DC-H. Reflexión del observador",
+     "DC-I. Cruce entre el diario y el registro exportado"
+    ]
+   ],
+   [
+    "Otras secciones",
+    [
+     "Criterios de calidad",
+     "Uso de los resultados"
+    ]
+   ]
+  ],
+  "muestra": {
+   "pdf": "docs/HYP-INS-DC-01_Diario_campo_criterios_exito_v1.0.pdf",
+   "ver": "versión 1.0",
+   "pags": 12,
+   "pages": [
+    [
+     1,
+     "Identificación y objetivo del instrumento"
+    ],
+    [
+     2,
+     "Categorías de investigación"
+    ],
+    [
+     3,
+     "Organización de la sesión y roles y procedimiento"
+    ],
+    [
+     4,
+     "Formatos"
+    ],
+    [
+     5,
+     "DC-B. Lista de chequeo de inicio (la diligencia el facilitador) y DC-C. Lista de chequeo de criterios de éxito (al cierre de la sesión)"
+    ],
+    [
+     6,
+     "DC-C. Lista de chequeo de criterios de éxito (al cierre de la sesión) (continuación)"
+    ],
+    [
+     7,
+     "DC-D. Registro por estudiante o pareja de la muestra"
+    ],
+    [
+     8,
+     "DC-E. Episodios significativos"
+    ],
+    [
+     9,
+     "DC-F. Problemas de usabilidad observados y DC-G. Incidentes y ruta de atención"
+    ],
+    [
+     10,
+     "DC-H. Reflexión del observador (el mismo día)"
+    ],
+    [
+     11,
+     "DC-I. Cruce entre el diario y el registro exportado (después de la sesión)"
+    ],
+    [
+     12,
+     "Criterios de calidad, Uso de los resultados y más"
+    ]
+   ]
+  }
+ },
+ "LOG-01": {
+  "cy": 3,
+  "ph": "Evaluar",
+  "name": "Registro de uso exportado (JSON/CSV)",
+  "elem": "Uso pedagógico y uso técnico",
+  "tec": "Análisis de registros de uso",
+  "que": "Archivo que la hipermedia genera con las acciones de cada estudiante o pareja y que el docente exporta en formato JSON o CSV.",
+  "para": "Recuperar lo que los estudiantes hacen dentro de la hipermedia, sin depender de la memoria del observador.",
+  "quien": "Los registros de los 24 estudiantes de la muestra (o de sus parejas), con código anónimo. Los registros de los demás estudiantes no se exportan ni se analizan.",
+  "recoge": "Episodios completados, tiempos, perspectivas consultadas, decisiones, justificaciones, ramas exploradas, uso de ayudas, errores de navegación y fallas de conexión.",
+  "cuando": "Ciclo 3: se exporta al final de cada sesión de la semana 12 y se analiza al terminar la implementación.",
+  "porque": "Aporta evidencia del uso real, que se compara con el diario de campo para comprobar que coinciden. No recoge datos personales (Ley 1581 de 2012).",
+  "ev": "Base de datos de uso por estudiante o pareja.",
+  "evt": [
+   "Registros",
+   "Datos"
+  ],
+  "est": [
+   [
+    "Categorías de investigación",
+    [
+     "C1. Pensamiento ciudadano",
+     "C2. Pueblos originarios",
+     "C3. Aplicación web progresiva (PWA)",
+     "C4. Hipermedia lúdica"
+    ]
+   ],
+   [
+    "Estructura del registro",
+    [
+     "Campos de cada evento",
+     "Tipos de evento"
+    ]
+   ],
+   [
+    "Exportación",
+    [
+     "Formato JSON o CSV, a cargo del docente o del investigador",
+     "Solo se exportan los códigos de la muestra",
+     "Nombre del archivo: LOG_[sesión]_[equipo]_[AAAAMMDD]"
+    ]
+   ],
+   [
+    "Formatos",
+    [
+     "L1. Control de exportaciones",
+     "L2. Verificación de integridad (por archivo)",
+     "L3. Matriz de indicadores por código",
+     "L4. Resumen por grupo",
+     "L5. Hallazgos y relación con otras fuentes"
+    ]
+   ],
+   [
+    "Otras secciones",
+    [
+     "Procedimiento de análisis",
+     "Criterios de calidad",
+     "Uso de los resultados"
+    ]
+   ]
+  ],
+  "muestra": {
+   "pdf": "docs/HYP-INS-LOG-01_Registro_uso_exportado_v1.0.pdf",
+   "ver": "versión 1.0",
+   "pags": 10,
+   "pages": [
+    [
+     1,
+     "Identificación y objetivo del instrumento"
+    ],
+    [
+     2,
+     "Categorías de investigación y estructura del registro"
+    ],
+    [
+     3,
+     "Campos de cada evento"
+    ],
+    [
+     4,
+     "Tipos de evento"
+    ],
+    [
+     5,
+     "Exportación"
+    ],
+    [
+     6,
+     "Formatos"
+    ],
+    [
+     7,
+     "L3. Matriz de indicadores por código"
+    ],
+    [
+     8,
+     "L4. Resumen por grupo"
+    ],
+    [
+     9,
+     "Procedimiento de análisis"
+    ],
+    [
+     10,
+     "Criterios de calidad, Uso de los resultados y más"
+    ]
+   ]
+  }
+ },
+ "RUB-01": {
+  "cy": 3,
+  "ph": "Evaluar",
+  "name": "Rúbrica de análisis de justificaciones",
+  "elem": "Nivel de las justificaciones según los descriptores del Icfes",
+  "tec": "Análisis de justificaciones",
+  "que": "Rúbrica con niveles J0 a J4, que el equipo adaptó de los descriptores de nivel del Icfes para 5.º, y una marca PO para las justificaciones que retoman la perspectiva del pueblo originario.",
+  "para": "Clasificar las justificaciones de los estudiantes según los niveles de desempeño del Icfes.",
+  "quien": "Las justificaciones de los 24 estudiantes de la muestra (o de sus parejas).",
+  "recoge": "Nivel de cada justificación ofrecida y de cada justificación elegida, por código, por grupo y por situación.",
+  "cuando": "Momento A: Ciclo 2, al clasificar las justificaciones de cada situación del mapa de contenidos. Momento B: Ciclo 3, al terminar la implementación, sobre los registros exportados.",
+  "porque": "Es la evidencia más directa del pensamiento ciudadano, que es el centro del problema, y usa el mismo marco del Icfes (2024a, Tabla A25, p. 241) que describe el bajo desempeño. Describe qué razones prefieren los estudiantes entre las ofrecidas y no mide efectos.",
+  "ev": "Distribución de las justificaciones por nivel y por competencia.",
+  "evt": [
+   "Evidencias de desempeño",
+   "Datos"
+  ],
+  "est": [
+   [
+    "Alcance y límites",
+    [
+     "Las justificaciones son opciones que el estudiante elige (RF-05)",
+     "Los niveles J0 a J4 son una adaptación del equipo y no ubican a los estudiantes en niveles de la prueba Saber"
+    ]
+   ],
+   [
+    "Categorías de investigación",
+    [
+     "C1. Pensamiento ciudadano",
+     "C2. Pueblos originarios",
+     "C3. Aplicación web progresiva (PWA)",
+     "C4. Hipermedia lúdica"
+    ]
+   ],
+   [
+    "Referente: descriptores del Icfes",
+    [
+     "Descriptores de nivel de Pensamiento Ciudadano para 5.º (Icfes, 2024a, Tabla A25, p. 241)"
+    ]
+   ],
+   [
+    "Rúbrica",
+    [
+     "Niveles J0 a J4: cada justificación se clasifica en el nivel más alto cuyo descriptor cumple",
+     "Marca PO (perspectiva originaria)",
+     "Reglas de clasificación"
+    ]
+   ],
+   [
+    "Formatos",
+    [
+     "R1. Clasificación de las justificaciones de cada situación (momento A)",
+     "R2. Matriz por código (momento B)",
+     "R3. Resumen por grupo y por situación (momento B)",
+     "R4. Codificación de frases del diario de campo (complementaria)"
+    ]
+   ],
+   [
+    "Otras secciones",
+    [
+     "Procedimiento",
+     "Criterios de calidad",
+     "Uso de los resultados"
+    ]
+   ]
+  ],
+  "muestra": {
+   "pdf": "docs/HYP-INS-RUB-01_Rubrica_analisis_justificaciones_v1.0.pdf",
+   "ver": "versión 1.0",
+   "pags": 10,
+   "pages": [
+    [
+     1,
+     "Identificación y objetivo del instrumento"
+    ],
+    [
+     2,
+     "Alcance y límites y categorías de investigación"
+    ],
+    [
+     3,
+     "Referente: descriptores del Icfes"
+    ],
+    [
+     4,
+     "Rúbrica"
+    ],
+    [
+     5,
+     "Reglas de clasificación"
+    ],
+    [
+     6,
+     "Formatos"
+    ],
+    [
+     7,
+     "R2. Matriz por código (momento B) y R3. Resumen por grupo y por situación (momento B)"
+    ],
+    [
+     8,
+     "R3. Resumen por grupo y por situación (momento B) (continuación)"
+    ],
+    [
+     9,
+     "Procedimiento"
+    ],
+    [
+     10,
+     "Criterios de calidad, Uso de los resultados y más"
+    ]
+   ]
+  }
+ },
+ "ENC-01": {
+  "cy": 3,
+  "ph": "Evaluar",
+  "name": "Cuestionario de valoración",
+  "elem": "Valoración del prototipo por docentes y estudiantes",
+  "tec": "Encuesta de valoración y conversación de cierre con docentes",
+  "que": "Cuestionario con dos versiones: la docente combina una escala Likert 1-5 con una guía de conversación de cierre; la de estudiantes es visual y corta.",
+  "para": "Recoger la valoración que hacen del prototipo los docentes y los estudiantes de la muestra.",
+  "quien": "Los 2 docentes de los grupos (uno de 4.º y uno de 5.º), en un solo encuentro (primero la escala y luego la conversación), y los 24 estudiantes de la muestra.",
+  "recoge": "Valoraciones en escala, opiniones de los docentes en la conversación y valoración visual de los estudiantes.",
+  "cuando": "Ciclo 3, al terminar las sesiones de implementación: la versión de estudiantes al cierre de la segunda sesión y la de docentes en la semana 13.",
+  "porque": "El modo Evaluar se basa en la retroalimentación de los usuarios (Hasso Plattner Institute of Design at Stanford, s. f.). La valoración alimenta la matriz de ajustes, que es el producto del OE3.",
+  "ev": "Puntajes por ítem, testimonios de los docentes y valoraciones de los estudiantes.",
+  "evt": [
+   "Valoraciones",
+   "Testimonios"
+  ],
+  "est": [
+   [
+    "Categorías de investigación",
+    [
+     "C1. Pensamiento ciudadano",
+     "C2. Pueblos originarios",
+     "C3. Aplicación web progresiva (PWA)",
+     "C4. Hipermedia lúdica"
+    ]
+   ],
+   [
+    "Parte A. Versión docente",
+    [
+     "A1. Datos",
+     "A2. Escala de valoración",
+     "A3. Preguntas abiertas",
+     "A4. Guía de conversación de cierre"
+    ]
+   ],
+   [
+    "Parte B. Versión visual corta para estudiantes",
+    [
+     "B1. Instrucciones para quien aplica",
+     "B2. Formato del estudiante"
+    ]
+   ],
+   [
+    "Formatos de tabulación",
+    [
+     "T1. Respuestas de los docentes",
+     "T2. Respuestas de los estudiantes",
+     "T3. Respuestas abiertas y conversación de cierre"
+    ]
+   ],
+   [
+    "Otras secciones",
+    [
+     "Procedimiento",
+     "Criterios de calidad",
+     "Uso de los resultados"
+    ]
+   ]
+  ],
+  "muestra": {
+   "pdf": "docs/HYP-INS-ENC-01_Cuestionario_valoracion_v1.0.pdf",
+   "ver": "versión 1.0",
+   "pags": 12,
+   "pages": [
+    [
+     1,
+     "Identificación y objetivo del instrumento"
+    ],
+    [
+     2,
+     "Categorías de investigación"
+    ],
+    [
+     3,
+     "Parte A. Versión docente"
+    ],
+    [
+     4,
+     "A2. Escala de valoración (continuación)"
+    ],
+    [
+     5,
+     "A3. Preguntas abiertas y A4. Guía de conversación de cierre"
+    ],
+    [
+     6,
+     "A4. Guía de conversación de cierre (continuación)"
+    ],
+    [
+     7,
+     "Parte B. Versión visual corta para estudiantes"
+    ],
+    [
+     8,
+     "B2. Formato del estudiante (una hoja por estudiante)"
+    ],
+    [
+     9,
+     "Formatos de tabulación (los completa el equipo)"
+    ],
+    [
+     10,
+     "T3. Respuestas abiertas y conversación de cierre"
+    ],
+    [
+     11,
+     "Procedimiento, Criterios de calidad y más"
+    ],
+    [
+     12,
+     "Referencias (continuación)"
+    ]
+   ]
+  }
+ },
+ "PRI-01": {
+  "cy": 3,
+  "ph": "Evaluar",
+  "name": "Matriz de ajustes del prototipo",
+  "elem": "Ajustes necesarios al prototipo",
+  "tec": "Reflexión del equipo",
+  "que": "Matriz que compara los hallazgos del Ciclo 3 con los requisitos del Ciclo 1 y registra los ajustes que necesita el prototipo.",
+  "para": "Identificar y priorizar los ajustes del prototipo a partir de la reflexión sobre su uso en el aula.",
+  "quien": "La diligencia el equipo investigador con la información de DC-01, LOG-01, RUB-01 y ENC-01, y con los requisitos de REQ-01.",
+  "recoge": "Diferencias entre lo previsto en los requisitos y lo ocurrido en el aula, con la fuente que las evidencia y el ajuste propuesto.",
+  "cuando": "Ciclo 3, semana 13 (reflexión del equipo y matriz de ajustes). Después del trabajo de campo, el plan de la versión final orienta los ajustes antes de la socialización.",
+  "porque": "Es el producto del OE3: los ajustes que necesita el prototipo. Como en la fase de evaluar descrita por Turpin et al. (2023), los hallazgos se comparan con los requisitos del Ciclo 1 y las diferencias se registran (p. 201).",
+  "ev": "Lista priorizada de ajustes del prototipo, cada uno con su evidencia.",
+  "evt": [
+   "Registros"
+  ],
+  "est": [
+   [
+    "Categorías de investigación",
+    [
+     "C1. Pensamiento ciudadano",
+     "C2. Pueblos originarios",
+     "C3. Aplicación web progresiva (PWA)",
+     "C4. Hipermedia lúdica"
+    ]
+   ],
+   [
+    "Criterios de priorización",
+    [
+     "Cada ajuste recibe una prioridad según tres criterios propuestos por el equipo"
+    ]
+   ],
+   [
+    "Formatos",
+    [
+     "P1. Comparación con los requisitos del Ciclo 1",
+     "P2. Resumen de los criterios de éxito por sesión",
+     "P3. Matriz de ajustes",
+     "P4. Decisión sobre cada ajuste",
+     "P5. Reflexión del equipo (semana 13)",
+     "P6. Plan de la versión final",
+     "P7. Recomendaciones para el escalamiento"
+    ]
+   ],
+   [
+    "Otras secciones",
+    [
+     "Procedimiento",
+     "Criterios de calidad",
+     "Uso de los resultados"
+    ]
+   ]
+  ],
+  "muestra": {
+   "pdf": "docs/HYP-INS-PRI-01_Matriz_ajustes_prototipo_v1.0.pdf",
+   "ver": "versión 1.0",
+   "pags": 11,
+   "pages": [
+    [
+     1,
+     "Identificación y objetivo del instrumento"
+    ],
+    [
+     2,
+     "Categorías de investigación"
+    ],
+    [
+     3,
+     "Criterios de priorización"
+    ],
+    [
+     4,
+     "Formatos"
+    ],
+    [
+     5,
+     "P2. Resumen de los criterios de éxito por sesión (continuación)"
+    ],
+    [
+     6,
+     "P3. Matriz de ajustes y P4. Decisión sobre cada ajuste"
+    ],
+    [
+     7,
+     "P4. Decisión sobre cada ajuste (continuación)"
+    ],
+    [
+     8,
+     "P5. Reflexión del equipo (semana 13)"
+    ],
+    [
+     9,
+     "P6. Plan de la versión final y P7. Recomendaciones para el escalamiento"
+    ],
+    [
+     10,
+     "Procedimiento, Criterios de calidad y más"
+    ],
+    [
+     11,
+     "Referencias (continuación)"
+    ]
+   ]
+  }
+ }
 };
 
 const REFS = [
-"Brown, T. (2008). Design thinking. <i>Harvard Business Review, 86</i>(6), 84–92.",
-"Calavia, M. B., Blanco, T., Casas, R., y Dieste, B. (2023). Making design thinking for education sustainable: Training preservice teachers to address practice challenges. <i>Thinking Skills and Creativity, 47</i>, Artículo 101199. https://doi.org/10.1016/j.tsc.2022.101199",
-"Campbell, A., Adams, C., Bradley Montgomery, R., Cooper, M. y Kirkpatrick, A. (Eds.). (2024). <i>Web Content Accessibility Guidelines (WCAG) 2.2</i> [Recomendación del W3C]. W3C. https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
-"Esteve Mon, F. M., Cela-Ranilla, J. M., y De Benito Crosetti, B. (2019). DBR: una estrategia metodológica para investigar en tecnología educativa. En M. Gisbert Cervera, V. Esteve-González y J. L. Lázaro Cantabrana (Eds.), <i>¿Cómo abordar la educación del futuro? Conceptualización, desarrollo y evaluación desde la competencia digital docente</i> (pp. 79-92). Octaedro.",
-"Hasso Plattner Institute of Design at Stanford. (s. f.). <i>An introduction to design thinking: Process guide</i>. https://dschool.stanford.edu/resources/an-introduction-to-design-thinking-process-guide",
-"Hoadley, C., y Campos, F. C. (2022). Design-based research: What it is and why it matters to studying online learning. <i>Educational Psychologist, 57</i>(3), 207–220. https://doi.org/10.1080/00461520.2022.2079128",
-"Instituto Colombiano para la Evaluación de la Educación. (2024a). <i>Informe nacional de resultados de las pruebas Saber 3.º, 5.º, 7.º y 9.º: Aplicación 2023</i>. Icfes. https://www.icfes.gov.co/wp-content/uploads/2025/07/Informe-Nacional-de-Resultados-Saber-3-5-7-9.pdf",
-"Ley 1581 de 2012. Por la cual se dictan disposiciones generales para la protección de datos personales. 17 de octubre de 2012. D.O. No. 48.587. https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981",
-"McKenney, S., y Reeves, T. C. (2019). <i>Conducting educational design research</i> (2.ª ed.). Routledge. https://doi.org/10.4324/9781315105642",
-"Ministerio de Ciencia, Tecnología e Innovación. (s. f.). <i>Anexo 6. Technology Readiness Levels (TRL)</i>. https://www.minciencias.gov.co/sites/default/files/upload/convocatoria/anexo_6._descripcion_technology_readiness_levels_trl.pdf",
-"Nielsen, J. y Molich, R. (1990). Heuristic evaluation of user interfaces. En <i>Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '90)</i> (pp. 249-256). ACM. https://doi.org/10.1145/97243.97281",
-"Rivera Reyes, H. (2012). <i>\"Salvajes, maliciosos y melancólicos\". El afro y el indígena en los textos escolares de Ciencias Sociales antes y después de 1991</i> [Tesis de maestría, Universidad Pedagógica Nacional]. Repositorio institucional UPN. https://repositorio.upn.edu.co/items/4a1d4961-b5cd-4823-8fcb-0c866c81dd5e/full",
-"Turpin, M., Weilbach, L., y Kruger, S. (2023). Reaping research skills from the rigorous application of design thinking. En <i>Proceedings of the 22nd European Conference on Research Methodology in Business and Management Studies, ECRM 2023</i> (pp. 201-208). Academic Conferences International."
+ "Brown, T. (2008). Design thinking. <i>Harvard Business Review, 86</i>(6), 84–92.",
+ "Calavia, M. B., Blanco, T., Casas, R., y Dieste, B. (2023). Making design thinking for education sustainable: Training preservice teachers to address practice challenges. <i>Thinking Skills and Creativity, 47</i>, Artículo 101199. https://doi.org/10.1016/j.tsc.2022.101199",
+ "Campbell, A., Adams, C., Bradley Montgomery, R., Cooper, M. y Kirkpatrick, A. (Eds.). (2024). <i>Web Content Accessibility Guidelines (WCAG) 2.2</i> [Recomendación del W3C]. W3C. https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+ "Esteve Mon, F. M., Cela-Ranilla, J. M., y De Benito Crosetti, B. (2019). DBR: una estrategia metodológica para investigar en tecnología educativa. En M. Gisbert Cervera, V. Esteve-González y J. L. Lázaro Cantabrana (Eds.), <i>¿Cómo abordar la educación del futuro? Conceptualización, desarrollo y evaluación desde la competencia digital docente</i> (pp. 79-92). Octaedro.",
+ "Hasso Plattner Institute of Design at Stanford. (s. f.). <i>An introduction to design thinking: Process guide</i>. https://dschool.stanford.edu/resources/an-introduction-to-design-thinking-process-guide",
+ "Hoadley, C., y Campos, F. C. (2022). Design-based research: What it is and why it matters to studying online learning. <i>Educational Psychologist, 57</i>(3), 207–220. https://doi.org/10.1080/00461520.2022.2079128",
+ "Instituto Colombiano para la Evaluación de la Educación. (2024a). <i>Informe nacional de resultados de las pruebas Saber 3.º, 5.º, 7.º y 9.º: Aplicación 2023</i>. Icfes. https://www.icfes.gov.co/wp-content/uploads/2025/07/Informe-Nacional-de-Resultados-Saber-3-5-7-9.pdf",
+ "Ley 1581 de 2012. Por la cual se dictan disposiciones generales para la protección de datos personales. 17 de octubre de 2012. D.O. No. 48.587. https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981",
+ "Mayer, R. E., y Fiorella, L. (2022). Introduction to multimedia learning. En R. E. Mayer y L. Fiorella (Eds.), <i>The Cambridge handbook of multimedia learning</i> (3.ª ed., pp. 3-16). Cambridge University Press. https://doi.org/10.1017/9781108894333",
+ "McKenney, S., y Reeves, T. C. (2019). <i>Conducting educational design research</i> (2.ª ed.). Routledge. https://doi.org/10.4324/9781315105642",
+ "Mejía Delgadillo, A., y Valencia Vargas, C. (2019). <i>Competencias ciudadanas: pensamiento ciudadano y acciones y actitudes ciudadanas. Marco de referencia para la evaluación</i>. Instituto Colombiano para la Evaluación de la Educación. https://www.icfes.gov.co/wp-content/uploads/2024/11/Marco-de-Referencia-Competencias-Ciudadanas-Saber-3579.pdf",
+ "Ministerio de Ciencia, Tecnología e Innovación. (s. f.). <i>Anexo 6. Technology Readiness Levels (TRL)</i>. https://www.minciencias.gov.co/sites/default/files/upload/convocatoria/anexo_6._descripcion_technology_readiness_levels_trl.pdf",
+ "Nielsen, J., y Landauer, T. K. (1993). A mathematical model of the finding of usability problems. En <i>Proceedings of the INTERACT '93 and CHI '93 Conference on Human Factors in Computing Systems</i> (pp. 206-213). ACM. https://doi.org/10.1145/169059.169166",
+ "Rivera Reyes, H. (2012). <i>\"Salvajes, maliciosos y melancólicos\". El afro y el indígena en los textos escolares de Ciencias Sociales antes y después de 1991</i> [Tesis de maestría, Universidad Pedagógica Nacional]. Repositorio institucional UPN. https://repositorio.upn.edu.co/items/4a1d4961-b5cd-4823-8fcb-0c866c81dd5e/full",
+ "Turpin, M., Weilbach, L., y Kruger, S. (2023). Reaping research skills from the rigorous application of design thinking. En <i>Proceedings of the 22nd European Conference on Research Methodology in Business and Management Studies, ECRM 2023</i> (pp. 201-208). Academic Conferences International."
 ];
 
 const $ = s => document.querySelector(s);
@@ -699,6 +2678,7 @@ const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>
 const cyOf = code => CYCLES.find(c => c.id === I[code].cy);
 const icon = (name, cls="ic") => `<svg class="${cls}" aria-hidden="true"><use href="#i-${name}"/></svg>`;
 const insOf = cy => cy.phases.flatMap(p => p.ins);
+const pgImg = (code, n) => `img/paginas/ciclo${I[code].cy}/${code}-p${n}.webp`;
 const two = n => String(n).padStart(2,"0");
 
 // Bloques 01 02 03
@@ -817,7 +2797,7 @@ function muGo(i){
   if (!MU) return;
   const n = MU.m.pages.length; i = Math.max(0, Math.min(n - 1, i)); MU.i = i;
   const [pg, t] = MU.m.pages[i];
-  $("#muImg").src = `img/${MU.code}-p${pg}.webp`;
+  $("#muImg").src = pgImg(MU.code,pg);
   $("#muImg").alt = `Página ${pg} del instrumento: ${t}`;
   $("#muLink").href = `${MU.m.pdf}#page=${pg}`;
   $("#muCap").textContent = `Página ${pg} de ${MU.m.pags} · ${t}`;
@@ -883,11 +2863,11 @@ function openFicha(code){
         <div class="mu-head"><h3>Muestra del instrumento</h3><p>Así se materializa el instrumento en el proyecto (${esc(m.ver)}, ${m.pags} páginas). Use las flechas o las miniaturas para pasar de página.</p></div>
         <div class="mu-viewer" id="muViewer" tabindex="0" aria-roledescription="visor de páginas" aria-label="Visor del instrumento. Use las flechas izquierda y derecha para cambiar de página.">
           <button class="mu-nav" id="muPrev" aria-label="Página anterior"><svg class="ic" aria-hidden="true" style="transform:rotate(180deg)"><use href="#i-arrow"/></svg></button>
-          <figure class="mu-stage"><a id="muLink" href="${m.pdf}#page=1" target="_blank" rel="noopener" title="Abrir esta página en el PDF"><img id="muImg" src="img/${code}-p1.webp" alt="" width="910" height="1287"></a>
+          <figure class="mu-stage"><a id="muLink" href="${m.pdf}#page=1" target="_blank" rel="noopener" title="Abrir esta página en el PDF"><img id="muImg" src="${pgImg(code,1)}" alt="" width="910" height="1287"></a>
             <figcaption id="muCap" aria-live="polite"></figcaption></figure>
           <button class="mu-nav" id="muNext" aria-label="Página siguiente"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
         </div>
-        <div class="mu-thumbs" role="group" aria-label="Páginas del instrumento">${m.pages.map(([n,t],i)=>`<button class="mu-th" data-i="${i}" aria-label="Ver página ${n}: ${esc(t)}"><img src="img/${code}-p${n}.webp" alt="" width="910" height="1287" loading="lazy"><span>${n}</span></button>`).join("")}</div>
+        <div class="mu-thumbs" role="group" aria-label="Páginas del instrumento">${m.pages.map(([n,t],i)=>`<button class="mu-th" data-i="${i}" aria-label="Ver página ${n}: ${esc(t)}"><img src="${pgImg(code,n)}" alt="" width="910" height="1287" loading="lazy"><span>${n}</span></button>`).join("")}</div>
         <a class="btn" href="${m.pdf}" target="_blank" rel="noopener"><svg class="ic"><use href="#i-doc"/></svg><span>Abrir instrumento completo (PDF)</span></a>
       </section><h3 class="mu-sub">Estructura</h3>` : "") + `<div class="struct">${d.est.map(([h, items], i) =>
       `<div class="sblock"><h4><span class="n">${i+1}</span>${esc(h)}</h4><ul>${items.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`).join("")}</div>`;
